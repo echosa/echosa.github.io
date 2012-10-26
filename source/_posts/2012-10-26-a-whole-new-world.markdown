@@ -27,7 +27,7 @@ public class MyClass {
 }
 ```
 
-This will instantiate `injectedObject` in the class so that it can be used in the class methods without any other preparation. Conceivably, you could then simply replace the SomeObject class with another in the class path and thus change what gets injected, for instance, a mock or stub class for testing purposes. This is made even easier (I think?) with some other annotations (like `@Qualifier`), which I'll get into later.
+This will instantiate `injectedObject` in the class so that it can be used in the class methods without any other preparation. Conceivably, you could then simply replace the SomeObject class with another in the class path and thus change what gets injected, for instance, a mock or stub class for testing purposes. This is made even easier (I think?) with some other annotations (like `@Qualifier`), which I won't get into this in this post.
 
 JPA and hibernate I'll cover together because hibernate is an implementation of the Java Persistence API (does anyone else get a kick out of nested acronyms, or is it just me?). I should mention that I'm working with hibernate 4 which, apparently, is significantly different from previous version from what I've been told. Hibernate is an ORM and used, obviously, for database access. It can be used with or without the persistence stuff; I am developing with persistence. 
 
@@ -280,6 +280,6 @@ So, what we have here is a button that runs the `someAction.doSomething()` metho
 <hr />
 I'll be honest, my biggest issue and the reason it took me almost two days to do what I did is old information on the Internet. We are using basically the latest and greatest, so I had to make sure that the information I was reading was jboss 7, hibernate 4, etc. Wading through all the old stuff wasn't easy, though search filters helped. Also, we don't use Spring so I had to make sure I added "-spring" to my searches, especially when looking up persistence and transaction things. 
 
-Once you've filtered out all the crud, then you find the mess: several different posts showing you several different ways to achieve a particular goal. If you're like me, none of them will work right, and you'll be left picking out the pieces of each that do and trying to smash them together into something coherent that works. (Then, if you're *really* like me, you fail, get frustrated, and ask for help.) However, the entire experience, through frustrating, leaves you with much more knowledge than you had before.
+Once you've filtered out all the crud, then you find the mess: several different posts showing you several different ways to achieve a particular goal. If you're like me, none of them will work right, and you'll be left picking out the pieces of each that do and trying to smash them together into something coherent that works. (Then, if you're *really* like me, you fail, get frustrated, and ask for help.) However, the entire experience, though frustrating, leaves you with much more knowledge than you had before.
 
 Well, that's all for now. Hopefully I'll be able to put my newly-obtained information to good use.
