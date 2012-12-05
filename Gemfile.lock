@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
+    addressable (2.3.2)
     albino (1.3.3)
       posix-spawn (>= 0.3.6)
     blankslate (2.1.2.4)
@@ -25,6 +26,8 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
     kramdown (0.13.6)
+    launchy (2.1.2)
+      addressable (~> 2.3)
     liquid (2.3.0)
     maruku (0.6.0)
       syntax (>= 1.0.0)
@@ -58,6 +61,7 @@ DEPENDENCIES
   compass (~> 0.12.1)
   haml (~> 3.1.6)
   jekyll (~> 0.11.2)
+  launchy (~> 2.1.2)
   liquid (~> 2.3.0)
   pygments.rb (~> 0.2.12)
   rack (~> 1.4.1)

@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "launchy"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -83,6 +84,8 @@ task :preview do
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
+  Launchy.open("http://localhost:#{server_port}")
+
   trap("INT") {
     [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
@@ -113,6 +116,9 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
     # post.puts "#+END_HTML"
+  end
+  if !system "emacsclient #{filename}"
+    system "emacs #{filename}"
   end
 end
 
@@ -151,6 +157,9 @@ task :new_page, :filename do |t, args|
       page.puts "footer: true"
       page.puts "---"
       # post.puts "#+END_HTML"
+    end
+    if !system "emacsclient #{filename}"
+      system "emacs #{filename}"
     end
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
