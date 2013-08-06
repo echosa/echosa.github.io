@@ -39,7 +39,7 @@ public class BottleBeer implements BottleInterface
   // do beer stuff
 }
 
-public class CanSoda implements CanInterface
+public class CanBeer implements CanInterface
 {
   // do beer stuff
 }
