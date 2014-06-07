@@ -5,13 +5,13 @@ date: 2013-08-02 14:57
 comments: true
 categories: 
 ---
-I recently have been (re)learning about design patterns and had the assignment of looking into the Bridge Pattern. In fact part of the assignment was coming up with a good way of describing it. I believe I have done this and felt like I should post my findings here, if only for myself.
+I recently have been (re)learning about design patterns and had an assignment of looking into the Bridge Pattern. In fact, part of the assignment was coming up with a good way of describing the pattern. I believe I have done this and felt like I should post my findings here, if only for my future self.
 <!--more-->
-One particular "textbook definition" of the Bridge Pattern (from [SourceMaking](http://sourcemaking.com/design_patterns/bridge) is as follows:
+One particular "textbook definition" of the Bridge Pattern (from [SourceMaking](http://sourcemaking.com/design_patterns/bridge)) is as follows:
 
 "Decouple an abstraction from its implementation so that the two can vary independently."
 
-If you're like me, you'll read this and go "huh?" then proceed to stare blankly at the words looking for some meaning. That SourceMaking page does a good job of explaining what Bridge Pattern is on a technical level. What I needed was a dumbed-down explanation and example.
+If you're like me, you'll read this and go "huh?", then proceed to stare blankly at the words looking for some meaning. While that SourceMaking page does a good job of explaining what Bridge Pattern is on a technical level, what I needed was a dumbed-down explanation and example.
 
 An Internet search for "what is the point of the bridge pattern" brought me to such an explanation. It can be found [here](http://softwarejedi.wordpress.com/2013/04/16/design-patterns-and-scala-the-bridge-pattern/), and I highly recommend reading it (but not just yet).
 
@@ -19,9 +19,9 @@ An Internet search for "what is the point of the bridge pattern" brought me to s
 After reading that article, I came up with my own definition of the Bridge Pattern as follows: {" The Bridge Pattern lets you have two sets of many classes and easily mix-and-match to have any combination of them. "} Not only are they easy to mix-and-match, but without the pattern, adding an item to either set of classes would mean adding multiple combined class implementations to your code. With the pattern, you only ever have to add the single class you need. This may still sound weird, but let me explain with an example.
 {% endpullquote %}
 
-Let's say you have a program that deals with different beverages. There can be different be types of beverages (soda, beer, water, etc) and they can be contained within different types of containers (aluminum can, plastic bottle, glass bottle, etc). As you can see we have two dimensions of "things": types of beverages and types of containers. These of these is a list, and any item in one list can be paired with any item in another list. E.g. there can be canned beer, bottled beer, canned soda, bottled soda, etc.
+Let's say you have a program that deals with different beverages. There can be different be types of beverages (soda, beer, water, etc), and each can be contained within different types of containers (aluminum can, plastic bottle, glass bottle, etc). As you can see, we have two dimensions of "things": types of beverages and types of containers. Think of these as lists, and any item in one list can be paired with any item in another list. E.g. there can be canned beer, bottled beer, canned soda, bottled soda, etc.
 
-So, let's call the containers interfaces and the beverages classes (implementations). In order to have all possible combinations of beverages and containers, we could manually pair them up and make the following classes:
+So, let's say the containers are interfaces and the beverages are classes (implementations). In order to have all possible combinations of beverages and containers, we could manually pair them up and make the following classes:
 
 ```java
 public class BottleSoda implements BottleInterface
@@ -45,7 +45,7 @@ public class CanBeer implements CanInterface
 }
 ```
 
-Hopefully you can see how nasty this can get and how quickly it can get there. In this example, we're only dealing with a 2x2 matrix: two containers (bottle and can) and two drinks (beer and soda). If we needed to add, say, water, we would have to add two new classes:
+Hopefully you can see how quickly this can get really nasty. In this example, we're only dealing with a 2x2 matrix: two containers (bottle and can) and two drinks (beer and soda). If we needed to add, say, water, we would have to add two new classes:
 
 ```java
 public class BottleWater implements BottleInterface
@@ -80,7 +80,7 @@ public class GlassWater implements GlassInterface
 
 Like I said, it gets nasty really quick. We just went from 4 concrete classes to 9 just to add two things (the glass interface and the water implementation). On top of that, we have quite a bit of duplicate code. See all the comments like ```// do water stuff```?
 
-So here's where the Bridge Pattern comes into play. Let's use our original 2x2 example. First, we want to be able to treat every type of container the same, for polymorphism purposes, etc., as well as have common functionality (like having a contained beverage):
+So here's where the Bridge Pattern comes into play. Let's use our original 2x2 example. First, we want to be able to treat every type of container the same (for polymorphism purposes, etc.) as well as have common functionality (like having a contained beverage):
 
 ```java
 public abstract class Container {
@@ -164,7 +164,7 @@ Container cannedWater = new Can(new Water());
 Container plasticBottledWater = new PlasticBottle(new Water());
 ```
 
-At this point, before, in order to add glass bottles for every type of beverage, we had to add three more classes. Now, again, we only have to add a single new class.
+Previously at this point, in order to add glass bottles for every type of beverage, we had to add three more classes. Now, we only have to add a single new class.
 
 ```java
 public class GlassBottle extends Container {
@@ -181,6 +181,6 @@ Getting a glass bottle of beer is no different than the others:
 Container glassBottledBeer = new GlassBottle(new Beer());
 ```
 
-In total we now have the same functionality with 6 classes instead of 9 (if you don't include the abstract class) and we only ever have to had a single glass any time we add an item to either group (beverage or container).
+In total we now have the same functionality with 6 classes instead of 9 (if you don't include the abstract class), and we only ever have to add a single class any time we add an item to either group (beverage or container).
 
 Hopefully this clears it all up for you. Now that you're through with my post, I recommend you finally go read the [article I referenced before](http://softwarejedi.wordpress.com/2013/04/16/design-patterns-and-scala-the-bridge-pattern/).
