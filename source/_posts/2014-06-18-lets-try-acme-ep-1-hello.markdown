@@ -63,4 +63,4 @@ Success! On top of it all, it has native OS X full screen support! Bonus!
 
 Now I'm starting at the default Acme window. Time to play around. Middle-click on `New` to open a new window. Middle-click on `Del` to close it. Right click on a file to open it. Awesome. Acme seems to be working.
 
-The real fun will continue in the [next episode](http://localhost:4000/blog/2014/06/18/lets-try-acme-ep-2-wat/).
+The real fun will continue in the [next episode](/blog/2014/06/18/lets-try-acme-ep-2-wat/).
