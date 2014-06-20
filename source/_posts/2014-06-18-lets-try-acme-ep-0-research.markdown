@@ -25,3 +25,6 @@ Videos
 [Plan9 Acme Intro - Part 2](http://www.youtube.com/watch?v=2vjD_B__SbQ)
 
 [Plan9 Acme Intro - Part 3](http://www.youtube.com/watch?v=cR96WQ6OR00)
+
+
+You can read the next post [here](/blog/2014/06/18/lets-try-acme-ep-1-hello/).

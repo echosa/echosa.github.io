@@ -47,3 +47,5 @@ I press the left and right arrows, and they work normally. I press the up and do
 A couple of side notes. This entire time I'm having to use an actually three button mouse. I attempted simply using my Mac's trackpad, but it has some issues with things like middle-clicking. Specifically, middle-clicking and *holding* the click down, especially when tapping instead of actually clicking (which I prefer, as I exclusively use tapping in my everyday work). I tried [BetterTouchTool](http://www.bettertouchtool.net), and it helped with clicking, but not with tapping and holding.
 
 Also, for those who don't get the "Wat" reference in the title, [watch this](https://www.destroyallsoftware.com/talks/wat) (it's less than 5 min log).
+
+In the [next post](/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/), I discuss how many of my issues were resolved. You can read the previous post [here](/blog/2014/06/18/lets-try-acme-ep-1-hello/).
