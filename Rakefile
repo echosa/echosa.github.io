@@ -117,9 +117,10 @@ task :new_post, :title do |t, args|
     post.puts "---"
     # post.puts "#+END_HTML"
   end
-  if !system "emacsclient #{filename}"
-    system "emacs #{filename}"
-  end
+  system "9 E #{filename}"
+  #if !system "emacsclient #{filename}"
+  #  system "emacs #{filename}"
+  #end
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
@@ -158,9 +159,10 @@ task :new_page, :filename do |t, args|
       page.puts "---"
       # post.puts "#+END_HTML"
     end
-    if !system "emacsclient #{filename}"
-      system "emacs #{filename}"
-    end
+    system "9 E #{filename}"
+    #if !system "emacsclient #{filename}"
+    #  system "emacs #{filename}"
+    #end
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
