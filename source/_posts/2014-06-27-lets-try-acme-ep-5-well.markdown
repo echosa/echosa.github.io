@@ -32,4 +32,4 @@ Also, always keep backups.
 
 This post was carefully written in Acme.
 
-You can read the previous post [here](/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/).
+In the [next post](2014-07-07-lets-try-acme-episode-6-trouble-in-paradise.markdown), I break down and go back to Emacs for a night. You can read the previous post [here](/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/).
