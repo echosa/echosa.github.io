@@ -26,4 +26,5 @@ I haven't given up on Acme, yet. That time might be coming, but I'm trying to gi
 
 This post written in Acme.
 
+[Next time](/blog/2014/08/07/lets-try-acme-episode-7-equilibrium), things are significantly better.
 You can read the previous post [here](/blog/2014/06/27/lets-try-acme-ep-5-well/).
