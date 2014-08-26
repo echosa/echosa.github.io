@@ -60,4 +60,4 @@ Seriously, guys, I recommended giving Acme a fair chance.
 
 This post was written in Acme.
 
-You can read the previous post [here](/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise/).
+In the [next post](/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/), I finally begin to [grok](https://en.wikipedia.org/wiki/Grok) two important basics of Acme: scrolling and plumbing. You can read the previous post [here](/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise/).
