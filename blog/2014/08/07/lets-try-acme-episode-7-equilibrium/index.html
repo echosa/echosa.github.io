@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Let&#8217;s Try Acme: Episode 7 - Equilibrium - Dev and Such</title>
+  <meta name="author" content="Brian Zwahr">
+
+  
+  <meta name="description" content="Guys. I like Acme. Seriously. I&rsquo;ve been using Acme for all my PHP and Clojure development the past month, as well as a bit of general text &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dev and Such</a></h1>
+  
+    <h2>A blog pertaining to my own development experiences.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="echosa.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/php">PHP</a></li>
+  <li><a href="/blog/categories/java">Java</a></li>
+  <li><a href="/blog/categories/ios">iOS</a></li>
+  <li><a href="/blog/categories/node-js">Node.js</a></li>
+  <li><a href="/blog/categories/emacs">Emacs</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Let&#8217;s Try Acme: Episode 7 - Equilibrium</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-08-07T09:14:00-05:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:14 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Guys. I like Acme.</p>
+
+<!--more-->
+
+
+<p>Seriously. I&rsquo;ve been using Acme for all my PHP and Clojure development the past month, as well as a bit of general text editing (for instance, this blog post). I like it. Quite a bit.</p>
+
+<p>This is going to be a pretty long post, folks. Fair warning.</p>
+
+<p>It seriously helps that I have an actual three-button mouse now (clickable scroll wheels suck). The ability to quickly click the middle button without having to worry about accidentally scrolling, thus highlighting the wrong thing and executing a bad command, has sped up my usage to a surprisingly significant degree. I can do almost everything with my MacBook&rsquo;s trackpad that I can with a mouse using option-click as middle-click and cmd-click as right-click. I can even &ldquo;chord&rdquo; by selecting text, <em>not letting up on the trackpad</em>, pressing option to &ldquo;cut&rdquo;, and then pressing cmd to &ldquo;paste&rdquo;. This is the same as the 1-2 and 1-3 chords using a mouse. This isn&rsquo;t as convenient as a real mouse, but does allow me to not be tied to a real mouse all the time. The only thing you can&rsquo;t do with the trackpad is 2-1 chording. (Note, the numbers like &ldquo;1-3&rdquo; mean to hold the button for the first number down while pressing the second number. &ldquo;1-3&rdquo; means &ldquo;hold down button one [left click] and press button three [right click]&rdquo;.)</p>
+
+<p>I spent some time trying to think how I could describe my Acme work flow. I&rsquo;ll do my best to describe how I use Acme and why I feel like it&rsquo;s working for me.</p>
+
+<p>Let&rsquo;s start at the beginning. Since I have two main projects I&rsquo;ve been working on, I&rsquo;ve used Acme&rsquo;s <code>Dump</code> and <code>Load</code> commands to save and load the window state. It&rsquo;s quite nice, actually, since it reloads <em>everything</em>, including anything I&rsquo;ve added to any tag bar. I typically start a session by deleting all existing columns so that Acme is empty, then load the .dump file for the project I want to work on. I now have all the windows/tags/etc back the way they were when I ended my previous section (provided I remembered to <code>Dump</code> the state).</p>
+
+<p>Now I have all my windows how they were at the end of my last session for that project. Great. Usually, the next thing I do is run a <code>git status</code> and run tests, just to make sure I&rsquo;m starting from a clean state. This is easy enough. When I first start on a project (the very first time), I start with the root project directory open in a window, then run <code>git status</code> from the tag bar. This opens up a <code>+Errors</code> window for that directory (ignore the name, this is a very good and useful window) with the output of the command. From here on out, I will use this window to run commands, including git and running tests, instead of the main directory window.</p>
+
+<p>The great thing about this window is, because it&rsquo;s just text, I can type anywhere or modify and use any existing text. A couple of examples:</p>
+
+<ul>
+<li><p>I run <code>git status</code> and see a file needs to be added. I can simply type <code>git add</code> in front of that file <em>inline in the git status response</em>, then use middle-click to execute the command.</p></li>
+<li><p>I run <code>git status</code> and see that there are changes to be pulled. The git output says something like <code>Use "git pull" to get the changes.</code>, so I can use the existing text to execute <code>git pull</code> with middle-click. (The double quotes around <code>git pull</code> make this even easier, but we&rsquo;ll get to that in a bit.)</p></li>
+</ul>
+
+
+<p>Keep in mind that, in order to run a command, I just type it anywhere in the <code>+Errors</code> window and use middle-click. However, having to find the command in the window each time is a pain, so I put common commands (usually <code>git status</code> <code>git commit</code> and <code>make</code> [or whatever I&rsquo;m using to run tests]) in the tag bar. Instant access.</p>
+
+<p>Remember what I said about double quotes? If you click on a word with middle-click, Acme will try to execute that word as a command. If you need arguments to the command (like <code>git status</code>), you can use middle-click to drag and select the entire command. It will be executed when you release middle-click. Alternatively, you can drag to select the command with left-click, then middle-click the selection to execute. Of course, if you do this in the window itself, you lose that selection whenever you select anything else. If you put the command in the tag bar and selected, it will stay selected until you select something else <em>in that tag bar</em>. This means that I can keep <code>git status</code> selected (because I use it a lot) and just middle-click it without having to worry about having to select the command first.</p>
+
+<p>Double quotes make commands with arguments even easier. In Acme, if you double-click just inside the first or last of a grouping pair of punctuation (quotes, brackets, etc), you will select the contents inside. So, if I change <code>git status</code> to <code>"git status"</code>, I never have to drag to select; I just double click between <code>"</code> and <code>g</code>. Why would I need to do this if the command stays selected for me? When I need to run another command.</p>
+
+<p>For instance, say part of my tag bar looks like <code>"git status" "git commit -a"</code>. Usually, I&rsquo;ll have <code>git status</code> selected so I can execute it immediately. When I&rsquo;m ready to commit, instead of having to drag to select the entire command to execute, I simply double-click just inside the opening double quote, then middle-click to execute. I then double-click just inside the <code>git status</code> double quotes, and I&rsquo;m back to having that selected and ready to go.</p>
+
+<p>When it comes to running other commands like unit tests or <code>git diff</code>, the window works the same. Any commands I don&rsquo;t keep in the tag bar (like <code>git diff</code>) I just type into the window and execute from there. Being able to use existing output as editable text and executable commands is extremely handy; there&rsquo;s little need to hop out to a terminal.</p>
+
+<p>I&rsquo;ve described all this productivity, and I haven&rsquo;t even opened a file yet! I&rsquo;ll point out here that, since the <code>+Errors</code> window will fill up <em>quickly</em>, you can always clear the window (e.g. <code>Edit , d</code>). You can also delete any chunks of text in the window you don&rsquo;t want or need, allowing you to leave a curated window of output that could be useful for making instructions and examples that can be saved and distributed.</p>
+
+<p>Now, let&rsquo;s actually get some work done. If I&rsquo;m not starting fresh, I&rsquo;ve already got some files and directories open to get me going, but let&rsquo;s continue on with the starting fresh example. I&rsquo;ve got my main project directory and its <code>+Errors</code> window. To open a file, if I get it in output at some point in <code>+Errors</code>, I can right-click it to open (if the path and such is correct, though the plumber can be customized to make this easier and more robust). However, if I need to open some other file somewhere in the project, I have to do so manually. This is one of the drawbacks of Acme. In order to open a file, I either have to right-click through directories starting from the project root (each directory will be in its own window) until I get to the file to open (which is done with right-click), or I can open a new window and type the file path and name into the left part of the tag window (<code>Ctrl-f</code> for completion) then also type <code>Get</code> into the tag bar and middle-click it to load the file.</p>
+
+<p>Both of these methods are a bit more cumbersome than other editors, but they aren&rsquo;t too bad once you&rsquo;re used to it. Usually I&rsquo;m not starting with a blank slate, so I have a better place to start. For instance, if I have a file open, but need to open a file elsewhere in the same directory structure (say, two directories up), I can right-click select the portion of the file path in the tag bar that is the directory I need to get to and that directory will open. So, if I&rsquo;m in <code>/Users/me/dev/file</code> and I want to get to <code>/Users/me/</code>, I can drag with right-click on that text and let go to open that directory. I can also select with regular left-click dragging, then right-click the selection.</p>
+
+<p>Now that we&rsquo;ve got some code open, we&rsquo;re all set. Type in some code, middle-click <code>Put</code> to save, middle-click <code>make</code> (or whatever your test command is) in the <code>+Errors</code> window tag bar, occasionally run other commands like git, rinse, repeat. As far as editing goes, there&rsquo;s lots of mouse usage, but it actually works to your benefit. Mouse chording (covered in previous posts by myself and many others) is a wonderful thing. The only issue I still commonly have when editing in Acme is the up and down arrow keys being page up and down instead of cursor movement. Need to go up or down a line? You have to click. This continues to be the one thing I wish were different about Acme. I don&rsquo;t need to arrows to scroll, especially since scrolling in Acme with the mouse is quite nice already, and since you have to use the mouse so much anyway, it&rsquo;s not all that inconvenient.</p>
+
+<p>Speaking of scrolling, the way it works takes a bit of getting used to. Using middle-click, you scroll more or less like how you would expect in other programs. However, the left and right buttons are different. Left-click scrolls up, and right-click scrolls down. This seems backwards, but I&rsquo;ve gotten used to it pretty quick. The interesting thing is that those buttons scroll in their respective direction <em>regardless of where the mouse is in the scroll bar</em>. The mouse&rsquo;s position in the scroll bar determines the amount the window scrolls. Towards the top of the bar scrolls one line; towards the bottom scrolls a full page. It&rsquo;s actually a pretty powerful mechanism that allows some pretty accurate scrolling.</p>
+
+<p>Anyway, now we&rsquo;ve got all we need to use Acme and get some work done (sort of - more on this soon). I&rsquo;ll interject here that I rarely (never, really) miss having colors and syntax highlighting. However, indention can be a contention in Acme. In Acme, tab is tab, no matter what. Want spaces? Use the space bar. I prefer spaces myself, so this can be in a issue. &ldquo;No problem.&rdquo; You might be thinking. &ldquo;Auto-indent will solve this!&rdquo; Well, sort of.</p>
+
+<p>Acme gives you two options for auto-indention: none and match previous line. The latter (which you get by starting acme with the <code>-a</code> option) does exactly what it says. When you press return to get a newline, whatever the previous line has for indentation is copied and placed for you at the beginning of the new line. This includes copying spaces and tabs as they are. You still have to manually indent further in if, for instance, you&rsquo;re going inside an <code>if</code> statement and need to be indented further than the <code>if</code> line itself.</p>
+
+<p>What about mass indenting? Say we remove an <code>if</code> and need to &ldquo;de-indent&rdquo; the code that was inside. We select the code (with the mouse, of course), but then what? This is where Acme&rsquo;s reputation as an &ldquo;integrat<em>ing</em> editor&rdquo; comes into play. Acme gives you essentially the bare minimum (not quite completely bare, but relatively bare compared to many other editors) to do your editing. Everything else is left to external programs and resources. An Internet search will provide you scripts and such that people have written to do things like mass indentation (search for the <code>a+</code> and <code>a-</code> scripts). You can also do other things, such as spell checking and getting the current date, by calling external scripts and programs. You can use <code>&lt;</code>, <code>&gt;</code>, and <code>|</code> to redirect information to and from these programs. For instance, when I&rsquo;m keeping time of when I worked on certain projects, I go to a time sheet text file, go to a new line, type <code>|date</code>, select it (press Esc to select the most recently typed text), and middle-click it. This runs that command on the system, takes the output, and pastes it into the window at the cursor. Since the <code>|date</code> command itself is selected in my case, it gets replaced with the actual date and time.</p>
+
+<p>One other complaint I had in a previous post was concerning window management. At first I didn&rsquo;t like it. Then I discovered that using the middle and right buttons, you can maximize or &ldquo;full column&rdquo; (like full screen, but within a column) windows to de-clutter a bit. Moving them about is easy, as well. To do any of this, you interact with the little box in the upper-left of the window, the thing all the way to the left in the tag bar. Again, this is required mouse usage, but it works to your advantage and even feels intuitive after a very short period of time. The window management still feels different, but I no longer feel like it is getting in my way.</p>
+
+<p>So, that&rsquo;s the basics of (really, a pretty complete look at) my Acme workflow. Typing it out and reading it back makes it sound like a lot more work that it really is. I do find myself quite productive using Acme and still find myself missing certain aspects of Acme (like mouse-chording) when I&rsquo;m using other programs.</p>
+
+<p>Seriously, guys, I recommended giving Acme a fair chance.</p>
+
+<p>This post was written in Acme.</p>
+
+<p>In the <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">next post</a>, I finally begin to <a href="https://en.wikipedia.org/wiki/Grok">grok</a> two important basics of Acme: scrolling and plumbing. You can read the previous post <a href="/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise/">here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Zwahr</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-08-07T09:14:00-05:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:14 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/acme/'>acme</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise/" title="Previous Post: Let's Try Acme: Episode 6 - Trouble in Paradise">&laquo; Let&#8217;s Try Acme: Episode 6 - Trouble in Paradise</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/" title="Next Post: Let's Try Acme: Episode 8 - Scrolling and Plumbing">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Brian</h1>
+  Brian has been programming since learning BASIC back in grade school. Having programmed PHP for Texas A&amp;M University for almost 5 years, he is now a Consultant at <a href="http://www.improvingenterprises.com">Improving Enterprises</a> where he mostly writes Java.
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/gopher-php-update/">Gopher-php and Phlog Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">Let&#8217;s Try Acme: Episode 9 - the End</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/echosa">@echosa</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'echosa',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/echosa" class="twitter-follow-button" data-show-count="false">Follow @echosa</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Brian Zwahr -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'devstuff-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/';
+        var disqus_url = 'http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

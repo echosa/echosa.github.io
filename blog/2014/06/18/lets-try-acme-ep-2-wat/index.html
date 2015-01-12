@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Let&#8217;s Try Acme: Ep. 2 - Wat - Dev and Such</title>
+  <meta name="author" content="Brian Zwahr">
+
+  
+  <meta name="description" content="Now that I&rsquo;ve got Acme running, it&rsquo;s time to start giving it a fair shot. The first thing I notice is the color scheme. Not bad, but not &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dev and Such</a></h1>
+  
+    <h2>A blog pertaining to my own development experiences.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="echosa.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/php">PHP</a></li>
+  <li><a href="/blog/categories/java">Java</a></li>
+  <li><a href="/blog/categories/ios">iOS</a></li>
+  <li><a href="/blog/categories/node-js">Node.js</a></li>
+  <li><a href="/blog/categories/emacs">Emacs</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Let&#8217;s Try Acme: Ep. 2 - Wat</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-06-18T09:17:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:17 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Now that <a href="/blog/2014/06/18/lets-try-acme-ep-1-hello/">I&rsquo;ve got Acme running</a>, it&rsquo;s time to start giving it a fair shot.</p>
+
+<!--more-->
+
+
+<p>The first thing I notice is the color scheme. Not bad, but not changeable either. Makes me wonder what code syntax highlighting will look like.</p>
+
+<p>&hellip;</p>
+
+<p>Ah. No syntax highlighting, either. Well, ok then. I suppose I don&rsquo;t <em>need</em> syntax highlighting.</p>
+
+<p>Welp, let&rsquo;s try typing some text. I open up a couple of editor windows, click in one of them, then move my mouse out of the way to start typing. I don&rsquo;t see any text. Scratching my head, I try typing some more text. Something catches my eye.</p>
+
+<p>Huh. There&rsquo;s the text I typed. In a different window. Baffled for a bit, I click in the original window I was trying to type in again (maybe my first click didn&rsquo;t focus the window properly?), move the mouse out of the way again, and type some text. Again, I see no text in my window. I don&rsquo;t see text in the previously accidentally typed in window, either. A quick glance shows my text in yet another window.</p>
+
+<p>Now I&rsquo;m confused for a while, until I realize what&rsquo;s going on. Acme has mouse follow focus. The window that has focus is the one that the mouse is actually hovering over. When I moved my mouse of the way, I refocused Acme&rsquo;s cursor. Not what I was expected at all, and certainly not preferable.</p>
+
+<p>Oh well. At least I figured that one out. I move the mouse over the still empty window I&rsquo;ve been trying to type into this whole time. I type some some text and, hey, look at that! The text I typed is in the correct window!</p>
+
+<p>I gleefully type some more text, pleased with my own achievement, all the while envisioning an Xbox style &ldquo;achievement unlocked&rdquo; screen. Now, let&rsquo;s try to save the file.</p>
+
+<p>I know from my research that I need to middle-click <code>Put</code> to save. However, there&rsquo;s no <code>Put</code> tag for this window. That&rsquo;s simple enough to fix, I presume. Using the knowledge I have from my research, I simply type &ldquo;Put&rdquo; into the tags area for this window (making sure the mouse is over the tags area so it stays focused) and middle-click it. Certainly, since I&rsquo;m trying to save a file that hasn&rsquo;t been saved before, it&rsquo;ll ask me where I want to save the file and what to name it.</p>
+
+<p>Nope.</p>
+
+<p>In fact, nothing happens. Nothing at all. I try middle-clicking a few more times to make sure I didn&rsquo;t do something wrong. Still nothing. After thinking about it for a while, I open an existing file to see how it works. Interestingly enough, it also does not have &ldquo;Put&rdquo; in its tag area. I type some text into it (ok, this mouse focus thing isn&rsquo;t so bad, except for the mouse cursor visibly being in the way sometimes), and notice that I then get the Put option. Ok, cool. You only see &ldquo;Put&rdquo; if there are unsaved changes.</p>
+
+<p>Why am I not seeing &ldquo;Put&rdquo; in my other window, though? I gaze it at with all my staring power (learned from being a programmer for years) noting the differences. Ah. I see that there are several file related tags not present in my window that are present in the existing file&rsquo;s window. Obviously, this window isn&rsquo;t being considered a file window yet. The only other difference I see is that the first part of the tags area for the existing file is the file path.</p>
+
+<p>Let&rsquo;s fix that. I type a file path into the left side of the tag area of my new window. Hey! I have <code>Put</code> now! I middle-click it, and voila! The file is saved!</p>
+
+<p>Achievement unlocked.</p>
+
+<p>It then dawns on me that having to manually type the a new file name every time is going to be inefficient at worst and annoying at best. A little Internet searching leads me to a partial solution (really, more of a helper). <code>Ctrl-f</code> will do completion, so I at least don&rsquo;t have to type the entire file path out by hand. Not the best solution, but better than <em>not</em> having completion.</p>
+
+<p>Speaking of completion, I wonder if I can complete text in my windows? I go to a window, type a word, then starting typing the same word and press <code>Ctrl-f</code>. Nope. It tries to complete file names only. That&rsquo;s a shame. If there&rsquo;s a way to do text completion, I haven&rsquo;t found it.</p>
+
+<p>I decide to try one last thing before ending this Acme session. Coming from using Emacs and Vim, cursor movement is an important factor in my text editing. Obviously, Acme is mouse based, but certainly some basic cursor movement can be done with the keyboard.</p>
+
+<p>I press the left and right arrows, and they work normally. I press the up and down arrows, and they scroll the window. Hm. I try a couple of other ways to move up and down between lines of text with the keyboard, including Emacs&#8217; <code>Ctrl-n</code> and <code>Ctrl-p</code> to no avail. As far as I can tell, you <em>have</em> to use the mouse to move the cursor between different lines. I understand that Acme (and Plan9) are very mouse-heavy, but this just seems ridiculous. Hopefully, I&rsquo;m just missing something as the Acme noob I am. Either way, this whole using the mouse thing is new (especially having to use it this much), so there&rsquo;s going to have to be some concession on my part. We&rsquo;ll see how long it takes me to adjust, if I even can.</p>
+
+<hr />
+
+
+<p>A couple of side notes. This entire time I&rsquo;m having to use an actually three button mouse. I attempted simply using my Mac&rsquo;s trackpad, but it has some issues with things like middle-clicking. Specifically, middle-clicking and <em>holding</em> the click down, especially when tapping instead of actually clicking (which I prefer, as I exclusively use tapping in my everyday work). I tried <a href="http://www.bettertouchtool.net">BetterTouchTool</a>, and it helped with clicking, but not with tapping and holding.</p>
+
+<p>Also, for those who don&rsquo;t get the &ldquo;Wat&rdquo; reference in the title, <a href="https://www.destroyallsoftware.com/talks/wat">watch this</a> (it&rsquo;s less than 5 min log).</p>
+
+<p>In the <a href="/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/">next post</a>, I discuss how many of my issues were resolved. You can read the previous post <a href="/blog/2014/06/18/lets-try-acme-ep-1-hello/">here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Zwahr</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-06-18T09:17:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>9:17 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/acme/'>acme</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/18/lets-try-acme-ep-1-hello/" title="Previous Post: Let's Try Acme: Ep. 1 - Hello, World">&laquo; Let&#8217;s Try Acme: Ep. 1 - Hello, World</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/" title="Next Post: Let's Try Acme: Ep. 3 - Problem Solving">Let&#8217;s Try Acme: Ep. 3 - Problem Solving &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Brian</h1>
+  Brian has been programming since learning BASIC back in grade school. Having programmed PHP for Texas A&amp;M University for almost 5 years, he is now a Consultant at <a href="http://www.improvingenterprises.com">Improving Enterprises</a> where he mostly writes Java.
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/gopher-php-update/">Gopher-php and Phlog Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">Let&#8217;s Try Acme: Episode 9 - the End</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/echosa">@echosa</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'echosa',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/echosa" class="twitter-follow-button" data-show-count="false">Follow @echosa</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Brian Zwahr -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'devstuff-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat/';
+        var disqus_url = 'http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

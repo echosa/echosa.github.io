@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>A Possible Paradigm Shift - Dev and Such</title>
+  <meta name="author" content="Brian Zwahr">
+
+  
+  <meta name="description" content="Lately I&rsquo;ve been experiencing a change in the way I look at, think about, and use Emacs. Emacs was always a one-stop shop for me. If I could do &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dev and Such</a></h1>
+  
+    <h2>A blog pertaining to my own development experiences.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="echosa.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/php">PHP</a></li>
+  <li><a href="/blog/categories/java">Java</a></li>
+  <li><a href="/blog/categories/ios">iOS</a></li>
+  <li><a href="/blog/categories/node-js">Node.js</a></li>
+  <li><a href="/blog/categories/emacs">Emacs</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">A Possible Paradigm Shift</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-06-17T08:57:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:57 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Lately I&rsquo;ve been experiencing a change in the way I look at, think about, and use Emacs.</p>
+
+<!--more -->
+
+
+<p>Emacs was always a one-stop shop for me. If I <em>could</em> do it in Emacs, I did. Email. Web browsing. Twitter. Listening to music. Games. Shells and terminals. Even <a href="http://echosa.github.io/blog/2010/11/10/google-maps-in-emacs/">Google Maps</a>. Of course, I did coding and actual text editing as well.</p>
+
+<p>Well, a while back a gave ol&#8217; vim a shot. I like it. Quite a bit, actually. It is my second preferred editor, and I even use <a href="https://gitorious.org/evil/pages/Home">evil-mode</a> in Emacs now. I learned a lot during my time with vim, and I have been applying lessons learned to my other work flows. It has created a dichotomy in me that I&rsquo;ve been struggling back and forth with for a while now.</p>
+
+<p>Vi(m)&rsquo;s big motive, so to speak, is to do one thing and do it well. It accomplishes this. It&rsquo;s fast and efficient. Editing in Vim is fast and efficient. This is largely why I have adopted evil-mode. However, I found myself asking &ldquo;where is X?&rdquo;, where X could be terminals, web browsers, etc. These things simply don&rsquo;t exist in Vim (and, really, rightfully shouldn&rsquo;t). Those things aren&rsquo;t part of the One Thing it does well. That forced me to outsource these things to other programs. Programs I already used, mind you. This was, as crazy as it seems, a revelation. If I&rsquo;m going to have a terminal, a web browser, etc. open <em>anyway</em>, I may as well make use of them.</p>
+
+<p>So, here I am, years into my Emacs experience, finding myself with, once again, a new look on all things Emacs. Emacs is a <a href="http://echosa.github.io/blog/2009/09/25/oh-yeah-its-text-editor/">hell of a text editor</a>. It does lots of other things as well, some of which it does <a href="https://github.com/magit/magit">extremely well</a>. However, not <em>everything</em> needs to be done, or <em>should</em> be done, in Emacs. It hurts me just a little to say that, but I&rsquo;m increasingly believing that to be true. Heresy, thy name is me.</p>
+
+<p>I&rsquo;d be remiss if I didn&rsquo;t mention another potential factor in this recent change of mind and heart. I&rsquo;m slowly (but not <em>that</em> slowly) severing ties with the Google Machine. In doing so, I&rsquo;ve become aware of just how tied in I was. It was eye opening and scary. Having all your eggs in one basket, so to speak, has its benefits, but also can basically be a self-imposed lock down.</p>
+
+<p>As I was untangling myself from this web (heh&hellip; <em>get it?</em>), I began recognizing other similar situations I was in. Emacs was at the forefront. Being so tied in to Emacs, when it crashed (which, to be fair, is rare), an update went badly, or anything else prevented Emacs from working appropriately, it was detrimental. Spreading tasks to the appropriate <em>separate</em> handlers is important. This is the same reason why micro-frameworks have become a huge deal, especially in the PHP world. It&rsquo;s piecing together your own solutions with several parts that each do one thing and do it well.</p>
+
+<p>The end result of all this is I&rsquo;m going to use Emacs for what it&rsquo;s good for: development and text editing. This includes things like running terminals for tests or other things, using version control (seriously, magit is the shit [technical term]), and other development and text editing related things. Other tasks will be delegated elsewhere, including <a href="https://github.com/sprang/emacs-2048">2048</a>.</p>
+
+<p>If you go through the history of Emacs posts on this blog, you&rsquo;ll see that I&rsquo;ve flip-flopped on several topics and not kept up with various changes I&rsquo;ve made (<em>cough</em> org-mode <em>cough</em>). This may very well fall into that category as well, and I may find myself back to doing as much in Emacs as possible. For now, though, I&rsquo;ll be spreading my work across multiple applications.</p>
+
+<hr />
+
+
+<p>Side notes:</p>
+
+<p>You&rsquo;ll notice the title of this article says &ldquo;possible&rdquo;. That&rsquo;s largely due to what I said in the last paragraph.</p>
+
+<p>Also, as far as getting myself away from the Google Machine, to be fair, I&rsquo;ve basically just jumped ship to Apple (for most, but not all, things). This may sound hypocritical, but a.) as I&rsquo;m basically all Apple hardware these days anyway, it at least makes more sense than being tied into Google, and b.) Apple is now at least on par with Google <a href="http://9to5mac.com/2014/05/15/eff-marks-apples-remarkable-improvement-in-protecting-customer-data-from-governments/">as far as the EFF is concerned</a>. I&rsquo;m not a complete hypocrite, though, as I&rsquo;ve been looking at what Apple services I can move to other providers, so I&rsquo;m at least trying to apply this same separation of services thought to my Apple tie-ins as well.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Zwahr</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-06-17T08:57:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:57 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emacs/'>emacs</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/31/emacsagist/" title="Previous Post: Emacsagist">&laquo; Emacsagist</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/06/18/lets-try-acme-ep-0-research/" title="Next Post: Let's Try Acme: Ep. 0 - Research">Let&#8217;s Try Acme: Ep. 0 - Research &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Brian</h1>
+  Brian has been programming since learning BASIC back in grade school. Having programmed PHP for Texas A&amp;M University for almost 5 years, he is now a Consultant at <a href="http://www.improvingenterprises.com">Improving Enterprises</a> where he mostly writes Java.
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/gopher-php-update/">Gopher-php and Phlog Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">Let&#8217;s Try Acme: Episode 9 - the End</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/echosa">@echosa</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'echosa',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/echosa" class="twitter-follow-button" data-show-count="false">Follow @echosa</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Brian Zwahr -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'devstuff-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift/';
+        var disqus_url = 'http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

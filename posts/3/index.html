@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Dev and Such</title>
+  <meta name="author" content="Brian Zwahr">
+
+  
+  <meta name="description" content="I recently have been (re)learning about design patterns and had an assignment of looking into the Bridge Pattern. In fact, part of the assignment was &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://echosa.github.io/posts/3">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dev and Such</a></h1>
+  
+    <h2>A blog pertaining to my own development experiences.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="echosa.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/php">PHP</a></li>
+  <li><a href="/blog/categories/java">Java</a></li>
+  <li><a href="/blog/categories/ios">iOS</a></li>
+  <li><a href="/blog/categories/node-js">Node.js</a></li>
+  <li><a href="/blog/categories/emacs">Emacs</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/02/design-patterns-bridge-pattern/">Design Patterns: Bridge Pattern</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-08-02T14:57:00-05:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2013</span></span> <span class='time'>2:57 pm</span></time>
+        
+           | <a href="/blog/2013/08/02/design-patterns-bridge-pattern/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2013/08/02/design-patterns-bridge-pattern/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently have been (re)learning about design patterns and had an assignment of looking into the Bridge Pattern. In fact, part of the assignment was coming up with a good way of describing the pattern. I believe I have done this and felt like I should post my findings here, if only for my future self.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/02/design-patterns-bridge-pattern/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/05/how-my-emacs-setup-changed-me-and-is-it-time-to-change-again/">How My Emacs Setup Changed Me (and Is It Time to Change Again)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-07-05T09:08:00-05:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>9:08 am</span></time>
+        
+           | <a href="/blog/2013/07/05/how-my-emacs-setup-changed-me-and-is-it-time-to-change-again/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2013/07/05/how-my-emacs-setup-changed-me-and-is-it-time-to-change-again/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A little over a year ago, I committed <a href="https://github.com/echosa/emacs-setup">emacs-setup to GitHub</a>. emacs-setup is a package I&rsquo;d written previously and had tweaked and used enough to finally warrant putting out to the public (it is available through <a href="http://melpa.milkbox.net">MELPA</a>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/05/how-my-emacs-setup-changed-me-and-is-it-time-to-change-again/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/12/emacs-paredit-multiple-cursors/">Emacs, Paredit, and Multiple Cursors</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-04-12T14:58:00-05:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>2:58 pm</span></time>
+        
+           | <a href="/blog/2013/04/12/emacs-paredit-multiple-cursors/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2013/04/12/emacs-paredit-multiple-cursors/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Inspired by <a href="http://emacsrocks.com">Emacs Rocks</a>, I made <a href="http://www.youtube.com/watch?v=4wvLGJQxEjQ">my own video</a> showing some of the power of using Emacs with paredit and multiple cursors.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/12/node-dot-js-and-turntable-dot-fm/">Node.js and TurnTable.fm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-04-12T14:40:00-05:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>2:40 pm</span></time>
+        
+           | <a href="/blog/2013/04/12/node-dot-js-and-turntable-dot-fm/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2013/04/12/node-dot-js-and-turntable-dot-fm/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, a friend recently turned me on to <a href="https://turntable.fm">TurnTable.fm</a> which is an awesome place to listen to, discover, and share the music you love. In checking out some of the different rooms, I discovered that some people had written bots that do different things: manage who can play songs, post fun messages, keep stats, etc. Out of curiosity, I decided to try my hand at making a bot.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/04/12/node-dot-js-and-turntable-dot-fm/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/01/emacs-with-tramp-causing-os-x-kernel-panic/">Emacs With TRAMP Causing OS X Kernel Panic</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-02-01T09:25:00-06:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2013</span></span> <span class='time'>9:25 am</span></time>
+        
+           | <a href="/blog/2013/02/01/emacs-with-tramp-causing-os-x-kernel-panic/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2013/02/01/emacs-with-tramp-causing-os-x-kernel-panic/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;ve had a couple of kernel panics while using my MacBook lately, and I have figured out the culprit. It&rsquo;s Emacs, specifically when using TRAMP (in my case, to open a file via sudo).</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/02/01/emacs-with-tramp-causing-os-x-kernel-panic/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/13/php-plus-mode-an-apology/">Php+-mode: An Apology, a Promise, and a Call for Help</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-01-13T08:47:00-06:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>8:47 am</span></time>
+        
+           | <a href="/blog/2013/01/13/php-plus-mode-an-apology/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2013/01/13/php-plus-mode-an-apology/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While browsing through some posts in the Google+ <a href="https://plus.google.com/communities/114815898697665598016">Emacs community</a>, I came across at least one post or comment where someone mentioned my <a href="https://github.com/echosa/phpplus-mode">php+-mode</a>. While it pleases me whenever I hear of someone using something I wrote, it reminded me of just how derelict and forgotten php+-mode has become. Thus, this post.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/01/13/php-plus-mode-an-apology/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/05/file-temporary-backup-functions-bash/">File Temporary Backup/Move Functions (Bash)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-12-05T10:22:00-06:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>10:22 am</span></time>
+        
+           | <a href="/blog/2012/12/05/file-temporary-backup-functions-bash/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2012/12/05/file-temporary-backup-functions-bash/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A lot of the time, when I&rsquo;m working in a bash terminal, I find myself needing to move a file out of the way temporarily.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/12/05/file-temporary-backup-functions-bash/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/04/os-x-text-substitution/">OS X Text Substitution</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-12-04T09:50:00-06:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>9:50 am</span></time>
+        
+           | <a href="/blog/2012/12/04/os-x-text-substitution/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2012/12/04/os-x-text-substitution/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The last couple of versions of OS X have had a cool feature: user-added text substitutions. Meaning, you can set some placeholder text (like &ldquo;lod&rdquo;) that will be auto-corrected to something else (in my case, the <a href="http://www.disapprovallook.com">Look of Disapproval</a>).</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/12/04/os-x-text-substitution/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/26/a-whole-new-world/">A Whole New World</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-10-26T07:42:00-05:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>7:42 am</span></time>
+        
+           | <a href="/blog/2012/10/26/a-whole-new-world/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2012/10/26/a-whole-new-world/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I started working at <a href="http://improvingenterprises.com">Improving</a> this week which has required a major shift in my development ways. First and foremost is the change from PHP (which I&rsquo;ve been coding for <em>years</em>) to Java. It wouldn&rsquo;t be so bad if it was <em>just</em> Java, though. However, that is not the case.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/10/26/a-whole-new-world/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/16/combining-blogs/">Combining Blogs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-10-16T16:22:00-05:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>4:22 pm</span></time>
+        
+           | <a href="/blog/2012/10/16/combining-blogs/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2012/10/16/combining-blogs/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today I decided to combine my Emacs blog (formerly a Blogger blog) with this development blog. You will see all the old posts, and I have created a new menu entry for the &ldquo;emacs&rdquo; category.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/4">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/2">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Brian</h1>
+  Brian has been programming since learning BASIC back in grade school. Having programmed PHP for Texas A&amp;M University for almost 5 years, he is now a Consultant at <a href="http://www.improvingenterprises.com">Improving Enterprises</a> where he mostly writes Java.
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/gopher-php-update/">Gopher-php and Phlog Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">Let&#8217;s Try Acme: Episode 9 - the End</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/echosa">@echosa</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'echosa',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/echosa" class="twitter-follow-button" data-show-count="false">Follow @echosa</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Brian Zwahr -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'devstuff-blog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

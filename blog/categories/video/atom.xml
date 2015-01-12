@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Video | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/video/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs, Paredit, and Multiple Cursors]]></title>
+    <link href="http://echosa.github.io/blog/2013/04/12/emacs-paredit-multiple-cursors/"/>
+    <updated>2013-04-12T14:58:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2013/04/12/emacs-paredit-multiple-cursors</id>
+    <content type="html"><![CDATA[<p>Inspired by <a href="http://emacsrocks.com">Emacs Rocks</a>, I made <a href="http://www.youtube.com/watch?v=4wvLGJQxEjQ">my own video</a> showing some of the power of using Emacs with paredit and multiple cursors.</p>
+]]></content>
+  </entry>
+  
+</feed>

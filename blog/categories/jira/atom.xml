@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Jira | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/jira/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jira-mode 0.3.3 Available!]]></title>
+    <link href="http://echosa.github.io/blog/2009/10/12/jira-mode-033-available/"/>
+    <updated>2009-10-12T16:30:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2009/10/12/jira-mode-033-available</id>
+    <content type="html"><![CDATA[<p>I have uploaded the latest version of jira-mode (0.3.3) to <a href="http://www.emacswiki.org">Emacs Wiki</a>. Information about jira-mode, including the newest features, can be found <a href="http://www.emacswiki.org/emacs/JiraMode">here</a>. The source can be downloaded <a href="http://www.emacswiki.org/emacs/jira.el">here</a>. Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jira-mode Pt. 2]]></title>
+    <link href="http://echosa.github.io/blog/2009/07/10/jira-mode-pt-2/"/>
+    <updated>2009-07-10T11:42:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2009/07/10/jira-mode-pt-2</id>
+    <content type="html"><![CDATA[<p>Well, folks, you asked and I&rsquo;m delivering! I&rsquo;ve creating a page on EmacsWiki for <a href="http://www.emacswiki.org/emacs/JiraMode">jira-mode</a>. There you will find information, instructions, and a link to the source code!</p>
+
+<!--more-->
+
+
+<p>Many thanks go to Dave Benjamin, who first wrote jira.el and has allowed me to improve it and, basically, take over the project code and wiki page.</p>
+
+<p>A bit of a bad news, though. As stated in the known issues section of the wiki page, XMLRPC (which jira-mode uses) does not support all functions, for instance, resolving tickets or changing status. There is nothing I can do about this. Therefore, as long as jira-mode uses XMLRPC, these abilities will never be available.</p>
+
+<p>However, many other functions are there, and are quite usable and just a keystroke away! I figure I spend more time working on tickets (i.e. creating, commenting, assigning, etc.) than closing them anyway, so jira-mode still has some use.</p>
+
+<p>So, please, check it out and let me know what you think! If anyone wants to improve on it, let me know as I am definitely interested. Also, if anyone wants to convert jira-mode to use SOAP instead of XMLRPC, by all means do! Supposedly, Jira allows SOAP access to the functions that XMLRPC can not perform.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jira-mode Pt. 1]]></title>
+    <link href="http://echosa.github.io/blog/2009/06/25/jira-mode-pt-1/"/>
+    <updated>2009-06-25T18:13:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2009/06/25/jira-mode-pt-1</id>
+    <content type="html"><![CDATA[<p>Well, folks, it&rsquo;s been only a matter of time. I&rsquo;ve begun working on my first major mode project. Where I work we use <a href="http://www.atlassian.com/software/jira/">Jira</a> for bug tracking, ticketing, and support requests. Naturally, like any obsessed emacs user, I found myself wondering &ldquo;how can I work with Jira without leaving emacs?&rdquo; Of course, the first obvious answer was to use the Jira web interface via the w3m web browser in emacs. However, not everything worked.</p>
+
+<!--more-->
+
+
+<p>So, I did what I always do in situations like these: I went to <a href="http://www.emacswiki.org">EmacsWiki</a>. After a quick search I found <a href="http://www.emacswiki.org/emacs/jira.el">jira.el</a>, an elisp file for working with Jira via XMLRPC written by Dave Benjamin. I tried it out, and it worked. It is quite incomplete, though. Therefore, I decided to start adding to it.</p>
+
+<p>For instance, it could get the information for a ticket, but couldn&rsquo;t add comments or even add new tickets. I started adding all this functionality and found myself thinking it would be great to have a jira-mode that I could set in a buffer where I could do things like press &ldquo;r&rdquo; to refresh a ticket, &ldquo;c&rdquo; to create a new one, etc. I looked around, and noone else seems to have made anything like this, so I decided I would.</p>
+
+<p>As of now, I have a working mode, with some customizable faces, that can create tickets, refresh tickets, update tickets, list projects, and a few other basic functions. I am adding more and more to jira-mode and will definitely keep an update on it. I will probably re-post it back to EmacsWiki at some point. For now, I just want to get it useable and practical.</p>
+
+<p>That said, I have to say, its incredibly easier to write a major mode than I had anticipated. Of course, the more complicated the application, the more complicated the mode will be to write. I&rsquo;m rather pleased with what I&rsquo;ve done so far and, as I&rsquo;ve said, will post updates about jira-mode here as I make more breakthroughs.</p>
+
+<p>So, keep an eye out for pt. 2!</p>
+]]></content>
+  </entry>
+  
+</feed>

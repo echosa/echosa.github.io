@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Zf-mode | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/zf-mode/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Zf-mode Is No More... Viva Php+!]]></title>
+    <link href="http://echosa.github.io/blog/2012/05/25/zf-mode-is-no-more-viva-php/"/>
+    <updated>2012-05-25T15:22:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/05/25/zf-mode-is-no-more-viva-php</id>
+    <content type="html"><![CDATA[<p>My emacs package for working with php has just undergone a significant change. It is no longer called zf-mode.</p>
+
+<!--more-->
+
+
+<p>Introducing: php+-mode!</p>
+
+<p>PHP+-mode is just that. Its a mode for working with PHP files, <em>plus</em> other things (including some Zend Framework support [which is where it got its original name from]).</p>
+
+<p>You can find it at <a href="https://github.com/echosa/phpplus-mode">https://github.com/echosa/phpplus-mode</a>. If you already use zf-mode, I suggest deleting it and getting php+. However, bear in mind that there have been changes to the names of customized variables. Please update (or reset) these accordingly.</p>
+
+<p>If you use zf-mode and got it from MELPA, bear with me. I have submitted a pull request to the MELPA github with a new recipe for php+. Once that has been accepted, you&rsquo;ll be able to download php+ from MELPA once again.</p>
+
+<p>In other news, I have just discovered the awesomeness of snippets via yasnippet.el. This has opened a <em>whole new world</em> to me, and means some big changes to php+. I&rsquo;ve already begun working on some major usage improvement using snippets that will make php+ a lot easier to use and, in my opinion, a lot more fun.</p>
+
+<p>Stay tuned for more details on php+!</p>
+
+<p>Finally, I learned about yasnippet from <a href="http://twitter.com/#!/emacsrocks">@EmacsRocks</a> on Twitter. EmacsRocks puts out <a href="http://emacsrocks.com/">videos</a> show casing some of the cool things you can do with emacs. I highly recommend you check them out; they&rsquo;re typically only a couple minutes long.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zf-mode Has Been Released!]]></title>
+    <link href="http://echosa.github.io/blog/2012/04/16/zf-mode-has-been-released/"/>
+    <updated>2012-04-16T13:01:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/04/16/zf-mode-has-been-released</id>
+    <content type="html"><![CDATA[<p>That&rsquo;s right, after all this time, its finally out in the open! You can find it at github <a href="https://github.com/echosa/zf-mode">here</a>.</p>
+
+<p>Enjoy, and let me know what you think!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Zf-mode Features Teaser #1]]></title>
+    <link href="http://echosa.github.io/blog/2011/11/16/zf-mode-features-teaser-1/"/>
+    <updated>2011-11-16T16:30:00-06:00</updated>
+    <id>http://echosa.github.io/blog/2011/11/16/zf-mode-features-teaser-1</id>
+    <content type="html"><![CDATA[<p>Interactive class/method modification.</p>
+
+<p>Oh yeah. That&rsquo;s right. Be jealous. ^_^</p>
+
+<p>We&rsquo;re working on getting it out. I promise it will be worth the wait.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[We've Created a Monster... And It's Call Zf-mode!]]></title>
+    <link href="http://echosa.github.io/blog/2011/11/01/weve-created-monster-and-its-call-zf/"/>
+    <updated>2011-11-01T14:44:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2011/11/01/weve-created-monster-and-its-call-zf</id>
+    <content type="html"><![CDATA[<p>Ok, so it&rsquo;s been quite a while since I&rsquo;ve posted anything here. I&rsquo;ve been busy. Sue me. However, I&rsquo;ve been busy writing php apps with zf-mode. Why, you may ask? Because 1.) it&rsquo;s awesome, 2.) I&rsquo;m testing it for bugs, and 3.) its the single most useful emacs mode I&rsquo;ve ever used.</p>
+
+<!--more-->
+
+
+<p>Here&rsquo;s the exciting part: I think we&rsquo;re getting really close to a release! I still don&rsquo;t have a date, but it&rsquo;s definitely coming. Prepare yourselves; this is not the little zf-mode you knew before. Here&rsquo;s just a few of the new abilities you can look forward to:</p>
+
+<ul>
+<li>Automatic, correct line/statement breaking (with customizable options)</li>
+<li>Integrated support for php testing using phpunit, phpcs, and phpmd</li>
+<li>Easy navigation between files and parts of files (methods, properties, etc).</li>
+<li>Project handling</li>
+<li>So much more&hellip;.</li>
+</ul>
+
+
+<p>We&rsquo;re really excited about releasing zf-mode, but we really want to make sure we have as many bugs worked out as we can find prior to release. We&rsquo;re working on the last couple of features we want for the first release right now, so it can&rsquo;t be <em>too</em> long before the release. Please, be patient.</p>
+
+<p>Also, just as a side note, zf-mode is now its own major-mode, no longer dependent upon using php-mode. zf-mode is currently well over 7000 lines of code (actual lines of code, not including comments or blank lines). Its hard to believe its come so far since its initial creation back in 2008 as a single function to insert a Zend_Debug::dump() statement with or without a die afterwards. My little program is all grown up!</p>
+]]></content>
+  </entry>
+  
+</feed>

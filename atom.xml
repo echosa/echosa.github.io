@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Dev and Such]]></title>
+  <link href="http://echosa.github.io/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Software Freedom]]></title>
+    <link href="http://echosa.github.io/blog/2015/01/12/software-freedom/"/>
+    <updated>2015-01-12T15:08:36-06:00</updated>
+    <id>http://echosa.github.io/blog/2015/01/12/software-freedom</id>
+    <content type="html"><![CDATA[<p>Over on my personal blog, I posted <a href="http://echosa.freeshell.org/phlog/0014-software-freedom">an article</a> concerning software freedom.</p>
+
+<!--more-->
+
+
+<p>The post was the product of a few days of thinking and consideration after watching a presentation by Richard Stallman concerning freedom and free (as in liberty) software. There&rsquo;s a link to the video in the blog post, as well.</p>
+
+<p>I don&rsquo;t usually cross-post blogs like this, but in this case the information is both personal and developer-oriented in nature. Therefore, I decided to mention it here as well. It is an important topic which deserves discussion.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gopher-php and Phlog Update]]></title>
+    <link href="http://echosa.github.io/blog/2015/01/12/gopher-php-update/"/>
+    <updated>2015-01-12T14:37:53-06:00</updated>
+    <id>http://echosa.github.io/blog/2015/01/12/gopher-php-update</id>
+    <content type="html"><![CDATA[<p>I recently updated my <a href="https://github.com/echosa/gopher-php">gopher-php</a> package on GitHub as well as the <a href="http://echosa.freeshell.org/">web interface to my phlog</a> that uses it.</p>
+
+<!--more-->
+
+
+<p>Most of the updates came about due to a change in the Gopher server that is serving my gopherspace. We are now using <a href="http://gopherproxy.meulie.net/gophernicus.org/">Gophernicus</a> which supports some extra gophermap file types, most notably <code>h</code> for HTTP URLs.</p>
+
+<p>Gophernicus brought with it some other changes as well, some of which required changes to not only the gopher-php library but my web frontend as well. While I was in there tinkering away anyway, I decided to finally get some items from my TODO list taken care of. Most notably, I added pagination as well as information about viewing the phlog via Gopher instead of HTTP.</p>
+
+<p>Of course, the most interesting changes came in the form of updating the library and its unit tests. To my gleeful surprise, adding support for new gophermap item types (<code>h</code> and <code>i</code>, specifically) was as simple as updating a single switch statement; the rest of the library continued working and supported the new item types with no other changes. I should probably do something about that switch statement before it gets too unwieldy, though.</p>
+
+<p>Anyway, it was nice to get some dev time in on this project. I do so much programming for other people and businesses and tend to spend my personal dev time on hobby projects. I&rsquo;m glad I was able to work on something that is personal but also practical and in production, instead of just a hobby project.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Episode 9 - the End]]></title>
+    <link href="http://echosa.github.io/blog/2014/10/06/lets-try-acme-episode-9-the-end/"/>
+    <updated>2014-10-06T16:29:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/10/06/lets-try-acme-episode-9-the-end</id>
+    <content type="html"><![CDATA[<p>All good things must come to an end.</p>
+
+<!--more-->
+
+
+<p>I&rsquo;ll be honest with you all. I really enjoyed using Acme, but the required mouse is too inconvenient. When I grab my laptop to do some coding in bed, I don&rsquo;t want to also have to grab a mouse, some sort of flat surface, possibly a mouse pad, and then position everything just right.</p>
+
+<p>Acme has a lot going for it. I learned new ways to think about text editing that will stick with me through the years. I still find myself thinking in terms of the way Acme does things every now and then, but I just can&rsquo;t justify the inconvenience of the mouse. This has nothing to do with whether using the keyboard is better/faster/more l337/etc. than using a mouse. It&rsquo;s sheer physical convenience.</p>
+
+<p>We had some good times. We laughed. We cried. We learned a lot. I hope you all enjoyed reading these posts and that y&#8217;all learned as much from them as I learned from the experiment and all the comments.</p>
+
+<p>I&rsquo;ll end with a big thank you to all who commented on my blog posts or responded to my questions on Twitter. Your information was invaluable to the experience.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New and Improved Emacs Config!]]></title>
+    <link href="http://echosa.github.io/blog/2014/10/06/new-and-improved-emacs-config/"/>
+    <updated>2014-10-06T16:20:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/10/06/new-and-improved-emacs-config</id>
+    <content type="html"><![CDATA[<p>I finally did it. I moved my Emacs configuration into a .org file.</p>
+
+<!--more-->
+
+
+<p>You can see the results <a href="https://github.com/echosa/emacs.d">here</a> on GitHub. There&rsquo;s not much else to say in this post, honestly. The configuration pretty much speaks for itself.</p>
+
+<p>Thanks to Sacha Chua for <a href="http://sachachua.com/blog/2012/06/literate-programming-emacs-configuration-file/">the inspiration</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Episode 8 - Scrolling and Plumbing]]></title>
+    <link href="http://echosa.github.io/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/"/>
+    <updated>2014-08-26T14:08:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing</id>
+    <content type="html"><![CDATA[<p>After using Acme for over two months now, I finally figured out two fairly basic things: scrolling and plumbing.</p>
+
+<!--more-->
+
+
+<p>Let&rsquo;s start with scrolling. I knew (and have explained before) how scrolling works by scrolling down with right-click, scrolling up with left-click, and scrolling to an exact position with middle-click. I&rsquo;ve also explained how the amount scrolled is directly tied to where the mouse cursor is in the scroll bar. If the mouse is pointing close to the top of the scroll bar, you&rsquo;ll scroll a little amount. If you&rsquo;re pointing at the bottom of the scroll bar, you&rsquo;ll scroll a lot, up to a full page.</p>
+
+<p>What I&rsquo;ve recently learned is that these &ldquo;little&rdquo; and &ldquo;lot&rdquo; amounts are not arbitrary. Where you point is exactly the line that will be used to scroll to. So, if you point to the scroll bar next to line 10 and then right-click, you&rsquo;ll scroll up such that line 10 is at the top of the window. If you then left-click, you&rsquo;ll scroll down so that line 10 is back where is was (on the line the mouse is pointing to). So, scrolling down puts the line your mouse cursor is on at the top of the window, while scrolling up puts the line at the top of the window where the line you&rsquo;re mouse cursor is pointing to is. This allows for some really specific scrolling and is quite useful in that regard.</p>
+
+<p>Let&rsquo;s move on to the next thing I figured out: plumbing. This is really more of a plan9port thing (or, more generically, a Plan 9 thing), but it ties directly into Acme. The plumber in Plan 9 is essentially a program or process that allows for routing of requests to determine actions to take. It&rsquo;s similar to the <code>open</code> command in OS X.</p>
+
+<p>As far as Acme is concerned, the plumber is what allows different things to happen when you right-click different bits of text. For instance, right-click a file name to open a file. Right-click a directory to open that directory. Right-click a URL to open it in your web browser. You, as a user, are just right-clicking on text, and that text is sent to the plumber to determine the action to take.</p>
+
+<p>The great thing is that you can add your own rules to the plumber! I&rsquo;ve seen where people have added rules that allow them to, for instance, right-click <code>GH1234</code> and be taken to GitHub issue #1234 in some project. I, however, used the plumber to make my life in one particular project significantly better.</p>
+
+<p>I have a project I work on that lives in a VM, but the dev work is all done on the host machine. So, on my host machine, I have a directory called <code>/mnt/project1</code>. This directory is the project root and has all the code in it. However, this directory is mounted in the project&rsquo;s VM as <code>/www/sites/www.project1.com</code>. The way this project works is that all tests are run in the VM. This means that when I get output (in Acme, of course, because I&rsquo;m running my tests in an Acme win session), the errors I see are rooted in <code>/www/sites/www.project1.com</code>. That&rsquo;s not where the files are on my host, though, so right-clicking the files in the errors does nothing.</p>
+
+<p>At least, it <em>did</em> nothing until I added a plumbing rule to recognize <code>/www/sites/www.project1.com</code> and replace it with <code>/mnt/project1</code>. Now I can right-click these files in the errors and stack traces and be taken directly to the offending line in the file. If you&rsquo;re curious what that plumbing rule looks like, here it is:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># project1.com rules
+</span><span class='line'>
+</span><span class='line'>project1RemotePrefix='/www/sites/www\.project1\.com/'
+</span><span class='line'>project1LocalPrefix='/mnt/project1'
+</span><span class='line'>
+</span><span class='line'># /www/sites/www.project1.com -&gt; /mnt/project1 (with "on line" number)
+</span><span class='line'>type is text
+</span><span class='line'>data matches $project1RemotePrefix'(.+) on line ([0-9]+)'
+</span><span class='line'>arg isfile $project1LocalPrefix/$1
+</span><span class='line'>data set $file
+</span><span class='line'>attr add addr=$2
+</span><span class='line'>plumb to edit
+</span><span class='line'>plumb client $editor
+</span><span class='line'>
+</span><span class='line'># /www/sites/www.project1.com -&gt; /mnt/project1 (with line number)
+</span><span class='line'>type is text
+</span><span class='line'>data matches $project1RemotePrefix'(.+):([0-9]+)'
+</span><span class='line'>arg isfile $project1LocalPrefix/$1
+</span><span class='line'>data set $file
+</span><span class='line'>attr add addr=$2
+</span><span class='line'>plumb to edit
+</span><span class='line'>plumb client $editor
+</span><span class='line'>
+</span><span class='line'># /www/sites/www.project1.com -&gt; /mnt/project1 (without line number)
+</span><span class='line'>type is text
+</span><span class='line'>data matches $project1RemotePrefix'(.+)'
+</span><span class='line'>arg isfile $project1LocalPrefix/$1
+</span><span class='line'>data set $file
+</span><span class='line'>plumb to edit
+</span><span class='line'>plumb client $editor
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, I actually have three rules, one each to match the following file/line output strings, respectively:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># file with line and column numbers
+</span><span class='line'>/www/sites/www.project1.com/src/path/to/file:10:8
+</span><span class='line'>
+</span><span class='line'># file with line number
+</span><span class='line'>/www/sites/www.project1.com/src/path/to/file:10
+</span><span class='line'>
+</span><span class='line'># just the file name
+</span><span class='line'>/www/sites/www.project1.com/src/path/to/file</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I might be able to improve or combine these rules, but this is how I was able to get it working, and if it ain&rsquo;t broke I&rsquo;m not fixing it.</p>
+
+<p>So, you can see how the plumber can be quite useful. It has certainly helped me, and I will definitely be making more rules as the need arises.</p>
+
+<p>The next episode of &ldquo;Let&rsquo;s Try Acme&rdquo; might be a bit different. Now that I&rsquo;ve used Acme for over two months straight, I&rsquo;m considering going back to Emacs to see how it feels, what I miss, what I enjoy, and really allow myself to compare and contrast the two different workflows. Then again, I might not, so I make no promises. You can read the previous post <a href="http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Episode 7 - Equilibrium]]></title>
+    <link href="http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/"/>
+    <updated>2014-08-07T09:14:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium</id>
+    <content type="html"><![CDATA[<p>Guys. I like Acme.</p>
+
+<!--more-->
+
+
+<p>Seriously. I&rsquo;ve been using Acme for all my PHP and Clojure development the past month, as well as a bit of general text editing (for instance, this blog post). I like it. Quite a bit.</p>
+
+<p>This is going to be a pretty long post, folks. Fair warning.</p>
+
+<p>It seriously helps that I have an actual three-button mouse now (clickable scroll wheels suck). The ability to quickly click the middle button without having to worry about accidentally scrolling, thus highlighting the wrong thing and executing a bad command, has sped up my usage to a surprisingly significant degree. I can do almost everything with my MacBook&rsquo;s trackpad that I can with a mouse using option-click as middle-click and cmd-click as right-click. I can even &ldquo;chord&rdquo; by selecting text, <em>not letting up on the trackpad</em>, pressing option to &ldquo;cut&rdquo;, and then pressing cmd to &ldquo;paste&rdquo;. This is the same as the 1-2 and 1-3 chords using a mouse. This isn&rsquo;t as convenient as a real mouse, but does allow me to not be tied to a real mouse all the time. The only thing you can&rsquo;t do with the trackpad is 2-1 chording. (Note, the numbers like &ldquo;1-3&rdquo; mean to hold the button for the first number down while pressing the second number. &ldquo;1-3&rdquo; means &ldquo;hold down button one [left click] and press button three [right click]&rdquo;.)</p>
+
+<p>I spent some time trying to think how I could describe my Acme work flow. I&rsquo;ll do my best to describe how I use Acme and why I feel like it&rsquo;s working for me.</p>
+
+<p>Let&rsquo;s start at the beginning. Since I have two main projects I&rsquo;ve been working on, I&rsquo;ve used Acme&rsquo;s <code>Dump</code> and <code>Load</code> commands to save and load the window state. It&rsquo;s quite nice, actually, since it reloads <em>everything</em>, including anything I&rsquo;ve added to any tag bar. I typically start a session by deleting all existing columns so that Acme is empty, then load the .dump file for the project I want to work on. I now have all the windows/tags/etc back the way they were when I ended my previous section (provided I remembered to <code>Dump</code> the state).</p>
+
+<p>Now I have all my windows how they were at the end of my last session for that project. Great. Usually, the next thing I do is run a <code>git status</code> and run tests, just to make sure I&rsquo;m starting from a clean state. This is easy enough. When I first start on a project (the very first time), I start with the root project directory open in a window, then run <code>git status</code> from the tag bar. This opens up a <code>+Errors</code> window for that directory (ignore the name, this is a very good and useful window) with the output of the command. From here on out, I will use this window to run commands, including git and running tests, instead of the main directory window.</p>
+
+<p>The great thing about this window is, because it&rsquo;s just text, I can type anywhere or modify and use any existing text. A couple of examples:</p>
+
+<ul>
+<li><p>I run <code>git status</code> and see a file needs to be added. I can simply type <code>git add</code> in front of that file <em>inline in the git status response</em>, then use middle-click to execute the command.</p></li>
+<li><p>I run <code>git status</code> and see that there are changes to be pulled. The git output says something like <code>Use "git pull" to get the changes.</code>, so I can use the existing text to execute <code>git pull</code> with middle-click. (The double quotes around <code>git pull</code> make this even easier, but we&rsquo;ll get to that in a bit.)</p></li>
+</ul>
+
+
+<p>Keep in mind that, in order to run a command, I just type it anywhere in the <code>+Errors</code> window and use middle-click. However, having to find the command in the window each time is a pain, so I put common commands (usually <code>git status</code> <code>git commit</code> and <code>make</code> [or whatever I&rsquo;m using to run tests]) in the tag bar. Instant access.</p>
+
+<p>Remember what I said about double quotes? If you click on a word with middle-click, Acme will try to execute that word as a command. If you need arguments to the command (like <code>git status</code>), you can use middle-click to drag and select the entire command. It will be executed when you release middle-click. Alternatively, you can drag to select the command with left-click, then middle-click the selection to execute. Of course, if you do this in the window itself, you lose that selection whenever you select anything else. If you put the command in the tag bar and selected, it will stay selected until you select something else <em>in that tag bar</em>. This means that I can keep <code>git status</code> selected (because I use it a lot) and just middle-click it without having to worry about having to select the command first.</p>
+
+<p>Double quotes make commands with arguments even easier. In Acme, if you double-click just inside the first or last of a grouping pair of punctuation (quotes, brackets, etc), you will select the contents inside. So, if I change <code>git status</code> to <code>"git status"</code>, I never have to drag to select; I just double click between <code>"</code> and <code>g</code>. Why would I need to do this if the command stays selected for me? When I need to run another command.</p>
+
+<p>For instance, say part of my tag bar looks like <code>"git status" "git commit -a"</code>. Usually, I&rsquo;ll have <code>git status</code> selected so I can execute it immediately. When I&rsquo;m ready to commit, instead of having to drag to select the entire command to execute, I simply double-click just inside the opening double quote, then middle-click to execute. I then double-click just inside the <code>git status</code> double quotes, and I&rsquo;m back to having that selected and ready to go.</p>
+
+<p>When it comes to running other commands like unit tests or <code>git diff</code>, the window works the same. Any commands I don&rsquo;t keep in the tag bar (like <code>git diff</code>) I just type into the window and execute from there. Being able to use existing output as editable text and executable commands is extremely handy; there&rsquo;s little need to hop out to a terminal.</p>
+
+<p>I&rsquo;ve described all this productivity, and I haven&rsquo;t even opened a file yet! I&rsquo;ll point out here that, since the <code>+Errors</code> window will fill up <em>quickly</em>, you can always clear the window (e.g. <code>Edit , d</code>). You can also delete any chunks of text in the window you don&rsquo;t want or need, allowing you to leave a curated window of output that could be useful for making instructions and examples that can be saved and distributed.</p>
+
+<p>Now, let&rsquo;s actually get some work done. If I&rsquo;m not starting fresh, I&rsquo;ve already got some files and directories open to get me going, but let&rsquo;s continue on with the starting fresh example. I&rsquo;ve got my main project directory and its <code>+Errors</code> window. To open a file, if I get it in output at some point in <code>+Errors</code>, I can right-click it to open (if the path and such is correct, though the plumber can be customized to make this easier and more robust). However, if I need to open some other file somewhere in the project, I have to do so manually. This is one of the drawbacks of Acme. In order to open a file, I either have to right-click through directories starting from the project root (each directory will be in its own window) until I get to the file to open (which is done with right-click), or I can open a new window and type the file path and name into the left part of the tag window (<code>Ctrl-f</code> for completion) then also type <code>Get</code> into the tag bar and middle-click it to load the file.</p>
+
+<p>Both of these methods are a bit more cumbersome than other editors, but they aren&rsquo;t too bad once you&rsquo;re used to it. Usually I&rsquo;m not starting with a blank slate, so I have a better place to start. For instance, if I have a file open, but need to open a file elsewhere in the same directory structure (say, two directories up), I can right-click select the portion of the file path in the tag bar that is the directory I need to get to and that directory will open. So, if I&rsquo;m in <code>/Users/me/dev/file</code> and I want to get to <code>/Users/me/</code>, I can drag with right-click on that text and let go to open that directory. I can also select with regular left-click dragging, then right-click the selection.</p>
+
+<p>Now that we&rsquo;ve got some code open, we&rsquo;re all set. Type in some code, middle-click <code>Put</code> to save, middle-click <code>make</code> (or whatever your test command is) in the <code>+Errors</code> window tag bar, occasionally run other commands like git, rinse, repeat. As far as editing goes, there&rsquo;s lots of mouse usage, but it actually works to your benefit. Mouse chording (covered in previous posts by myself and many others) is a wonderful thing. The only issue I still commonly have when editing in Acme is the up and down arrow keys being page up and down instead of cursor movement. Need to go up or down a line? You have to click. This continues to be the one thing I wish were different about Acme. I don&rsquo;t need to arrows to scroll, especially since scrolling in Acme with the mouse is quite nice already, and since you have to use the mouse so much anyway, it&rsquo;s not all that inconvenient.</p>
+
+<p>Speaking of scrolling, the way it works takes a bit of getting used to. Using middle-click, you scroll more or less like how you would expect in other programs. However, the left and right buttons are different. Left-click scrolls up, and right-click scrolls down. This seems backwards, but I&rsquo;ve gotten used to it pretty quick. The interesting thing is that those buttons scroll in their respective direction <em>regardless of where the mouse is in the scroll bar</em>. The mouse&rsquo;s position in the scroll bar determines the amount the window scrolls. Towards the top of the bar scrolls one line; towards the bottom scrolls a full page. It&rsquo;s actually a pretty powerful mechanism that allows some pretty accurate scrolling.</p>
+
+<p>Anyway, now we&rsquo;ve got all we need to use Acme and get some work done (sort of - more on this soon). I&rsquo;ll interject here that I rarely (never, really) miss having colors and syntax highlighting. However, indention can be a contention in Acme. In Acme, tab is tab, no matter what. Want spaces? Use the space bar. I prefer spaces myself, so this can be in a issue. &ldquo;No problem.&rdquo; You might be thinking. &ldquo;Auto-indent will solve this!&rdquo; Well, sort of.</p>
+
+<p>Acme gives you two options for auto-indention: none and match previous line. The latter (which you get by starting acme with the <code>-a</code> option) does exactly what it says. When you press return to get a newline, whatever the previous line has for indentation is copied and placed for you at the beginning of the new line. This includes copying spaces and tabs as they are. You still have to manually indent further in if, for instance, you&rsquo;re going inside an <code>if</code> statement and need to be indented further than the <code>if</code> line itself.</p>
+
+<p>What about mass indenting? Say we remove an <code>if</code> and need to &ldquo;de-indent&rdquo; the code that was inside. We select the code (with the mouse, of course), but then what? This is where Acme&rsquo;s reputation as an &ldquo;integrat<em>ing</em> editor&rdquo; comes into play. Acme gives you essentially the bare minimum (not quite completely bare, but relatively bare compared to many other editors) to do your editing. Everything else is left to external programs and resources. An Internet search will provide you scripts and such that people have written to do things like mass indentation (search for the <code>a+</code> and <code>a-</code> scripts). You can also do other things, such as spell checking and getting the current date, by calling external scripts and programs. You can use <code>&lt;</code>, <code>&gt;</code>, and <code>|</code> to redirect information to and from these programs. For instance, when I&rsquo;m keeping time of when I worked on certain projects, I go to a time sheet text file, go to a new line, type <code>|date</code>, select it (press Esc to select the most recently typed text), and middle-click it. This runs that command on the system, takes the output, and pastes it into the window at the cursor. Since the <code>|date</code> command itself is selected in my case, it gets replaced with the actual date and time.</p>
+
+<p>One other complaint I had in a previous post was concerning window management. At first I didn&rsquo;t like it. Then I discovered that using the middle and right buttons, you can maximize or &ldquo;full column&rdquo; (like full screen, but within a column) windows to de-clutter a bit. Moving them about is easy, as well. To do any of this, you interact with the little box in the upper-left of the window, the thing all the way to the left in the tag bar. Again, this is required mouse usage, but it works to your advantage and even feels intuitive after a very short period of time. The window management still feels different, but I no longer feel like it is getting in my way.</p>
+
+<p>So, that&rsquo;s the basics of (really, a pretty complete look at) my Acme workflow. Typing it out and reading it back makes it sound like a lot more work that it really is. I do find myself quite productive using Acme and still find myself missing certain aspects of Acme (like mouse-chording) when I&rsquo;m using other programs.</p>
+
+<p>Seriously, guys, I recommended giving Acme a fair chance.</p>
+
+<p>This post was written in Acme.</p>
+
+<p>In the <a href="http://echosa.github.io/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">next post</a>, I finally begin to <a href="https://en.wikipedia.org/wiki/Grok">grok</a> two important basics of Acme: scrolling and plumbing. You can read the previous post <a href="http://echosa.github.io/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Episode 6 - Trouble in Paradise]]></title>
+    <link href="http://echosa.github.io/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise/"/>
+    <updated>2014-07-07T09:08:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise</id>
+    <content type="html"><![CDATA[<p>So, there I was, doing some PHP work in Acme, when I broke down and went back to Emacs for the night.</p>
+
+<!--more-->
+
+
+<p>Honestly, there were two reasons for switching back: <a href="https://github.com/bbatsov/projectile">Projectile</a> and buffer/window handling.</p>
+
+<p>Let&rsquo;s start with the latter. Acme is nice and all, but as you start getting more and more windows open, they become harder to manage. Worse still, you can&rsquo;t &ldquo;hide&rdquo; any windows, with the exception of being able to hide all but one in a column. This means that the more windows you open, the more you clutter your workspace.</p>
+
+<p>In contrast, Emacs hides all those buffers in the background, letting the user get back to them easily and quickly when needed, without them causing clutter. This was becoming a big issue in Acme to where I was having to close convenient windows just to declutter.</p>
+
+<p>Now, to the big one: Projectile. The code base I was working in is large. Really large. Navigating around it in Acme was doable, but not convenient or quick. Finding files or greping text was also inconvenient, especially since Acme uses a plan9port version of grep (as well as other commands&hellip; see the <a href="http://echosa.github.io/blog/2014/06/27/lets-try-acme-ep-5-well/">last post</a> for my issues with rm), so I ended up needing to actually run /usr/bin/grep explicitly to get, in this case, recursive functionality.</p>
+
+<p>Projectile makes project navigation and finding what you need simple and fast. It automatically limits searches to the root project directory, allows you to do fuzzy or partial matching with live results, and just makes project navigation a breeze.</p>
+
+<p>Sorry, Acme. Emacs wins this round. Then again, I typically limit my learning new editors to hobby projects, specifically <em>not</em> using the new editor for actual work. The fact that I was able to work for at least some period of time in Acme before switching is a testament to the good Acme has to offer.</p>
+
+<p>If there&rsquo;s a Projectile-ish workflow for Acme that I&rsquo;m missing, please let me know. There are probably some Acme commands I could write to do this; hell, I could probably write an Acme command to run Projectile <em>from</em> Emacs, and use its results. (Hm&hellip; I might have to try that.) Then again, maybe I&rsquo;m just missing something in Acme. I doubt it, though, since Acme is fairly bare bones and meant to integrate with your existing environment (except when plan9port&rsquo;s binaries overshadow your system ones).</p>
+
+<p>I haven&rsquo;t given up on Acme, yet. That time might be coming, but I&rsquo;m trying to give it at least a month. Come on, Acme. You&rsquo;ve wowed me once. It&rsquo;s time to wow me again.</p>
+
+<p>This post written in Acme.</p>
+
+<p><a href="http://echosa.github.io/blog/2014/08/07/lets-try-acme-episode-7-equilibrium">Next time</a>, things are significantly better.
+You can read the previous post <a href="http://echosa.github.io/blog/2014/06/27/lets-try-acme-ep-5-well/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Ep. 5 - Well, Shit]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/27/lets-try-acme-ep-5-well/"/>
+    <updated>2014-06-27T16:17:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/27/lets-try-acme-ep-5-well</id>
+    <content type="html"><![CDATA[<p>Well, shit. I made my first huge Acme mistake, and I paid the price.</p>
+
+<!--more-->
+
+
+<p>Long story short: Acme has its own <code>rm</code> command. I don&rsquo;t know exactly how, but it works differently than the one I&rsquo;m used to. Some combination of that and how Acme executes commands screwed me.</p>
+
+<p>Big time.</p>
+
+<p>I tried to delete some obsolete directories in my home folder. In the directory listing window for my home folder in Acme, I found the thing I wanted to delete (in this case several things), and added and <code>rm -Rf</code> before it and an asterisk after it, like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># other files here
+</span><span class='line'>rm -Rf .offlineimap*
+</span><span class='line'>.offlineimap.py
+</span><span class='line'>.offlineimap/
+</span><span class='line'># even more files here</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, along with the other things in my home directory, I had several offlineimap related things. I wanted to delete them, and <code>rm -Rf .offlineimap*</code> is how I would normally achieve this.</p>
+
+<p>My first clue that something was wrong should have been when I got an error that <code>-R</code> wasn&rsquo;t a proper flag. <code>-r</code> was required instead. Hm. I could have sworn that <code>rm</code> took a capital R, but I tend to get capital and lower-case R confused in various commands, so I just went with it. I changed the R to an r and executed the command. After running <code>Get</code> to see the updated contents of my home folder, I realized that a <em>lot</em> more was missing than just the offlineimap stuff.</p>
+
+<p>In fact, <em>most</em> of my home folder was gone. Luckily, I had a backup from just a few nights ago, so I was able to restore with minimum loss. However, this is a mistake I won&rsquo;t be making again.</p>
+
+<p>Also, always keep backups.</p>
+
+<p>This post was carefully written in Acme.</p>
+
+<p>In the <a href="http://echosa.github.io/blog/2014/07/07/lets-try-acme-episode-6-trouble-in-paradise/">next post</a>, I break down and go back to Emacs for a night. You can read the previous post <a href="http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Ep. 4 - Enough Messing Around]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/"/>
+    <updated>2014-06-26T15:27:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around</id>
+    <content type="html"><![CDATA[<p>This is it, folks. It&rsquo;s time to finally roll up my sleeves and do some programming in Acme.</p>
+
+<!--more-->
+
+
+<p>I&rsquo;ll get this out of the way right off the bat. <em>So far</em>, I haven&rsquo;t missed syntax highlighting. Strange as that may sound, it&rsquo;s true. Time will tell on whether or not lack of colors becomes an issue, but for now it isn&rsquo;t.</p>
+
+<p>With that out of the way, a little background. I decided to use a small PHP/Symfony2/Angular.js app as my first foray into coding in Acme. That means I don&rsquo;t need to compile, but I already had a Makefile written that runs various checks and test on the code. Also, this application is already a git repo. Coming from Emacs, and having read about Acme being an &ldquo;integrating editor&rdquo; that integrates with your existing system and lets you run things and use tools you already have on your system, I decided I should be able to work with make and git from Acme.</p>
+
+<p>Long story short: both were large successes.</p>
+
+<p>Since I hadn&rsquo;t touched this code in a while, my first steps were to check to see if git was clean (make sure I didn&rsquo;t have any uncommitted changes hanging around from before) and to make sure my application still passed all its tests. I decided to start with the later. Since commands in Acme run in the context of the window in which they are run, I needed to get to my project directory to run make.</p>
+
+<p>First, I simply opened a <code>win</code> window, changed to my project directory, and ran make from there. So far so good, but did I really need a shell window open for this? Certainly not. I closed the window, and navigated to my project root in the directory listing window(s). I knew it was only a couple of directories away from the starting directory window Acme gives me every time I open it, otherwise I would have simply opened a new window, typed in the directory, and used <code>Get</code>.</p>
+
+<p>Anyway, now that I had a directory window open to my project&rsquo;s root, I simply typed <code>make</code> into the tag bar and middle-clicked. The Makefile ran perfectly, and showed me that I had some outstanding issues. Part of the output of make, of course, was the file name of the offending file. Could it be so easy? I right-clicked the file, and it opened in a new window. Awesome. That&rsquo;ll certainly save time.</p>
+
+<p>I fixed the issue, and ran <code>make</code> again. Everything passed. Awesome. Now, let&rsquo;s go see what my git status is like. Next to <code>make</code> in the project directory window&rsquo;s tag bar, I add <code>git status</code>. Since there&rsquo;s more than one word in this command, I know I need to highlight it to run it. Luckily, I remember that simply pressing <code>Esc</code> will select the most previously written text. I do so, <code>git status</code> is highlighted, and I middle-click. Git runs as expected, and the output is appended to the same window as the <code>make</code> results. I thought this would be an issue, but it actually never hindered me the entire time.</p>
+
+<p>Inspecting my git results, I see that there was a file modified that hadn&rsquo;t been previously committed. I couldn&rsquo;t remember what was in that file, so I needed to run <code>git diff</code> on it. Since Acme is just text, I actually typed &ldquo;git diff &rdquo; before the file name right there in the git output, selected and right-clicked (I&rsquo;m working with a scroll wheel for a third button, so middle-button dragging is a pain), and the diff was run and the output once again appended to this window. Very convenient being able to turn the previous output into my next command quite easily.</p>
+
+<p>I see the diff and remember what I had done. A couple of minor changes that just hadn&rsquo;t been committed yet. Well, may as well commit it now. I made a <code>git commit -am "some message"</code> command in the tag bar, but unfortunately it actually didn&rsquo;t work. Sadly, I don&rsquo;t recall the issue right now (I really should have taken notes), but it was easy enough to circumvent this by simply opening a <code>win</code> window to run the commit. I could have just as easily switched to regular terminal, but again, the goal was to try and work in Acme. I&rsquo;m still investigating the <code>git commit</code> issue, though. I haven&rsquo;t given up on that yet.</p>
+
+<p>Now that I knew I could run my tests and use git, it was time to actually do some coding. I checked my TODO list for the app, and chose a task. Opening the first file I needed was pretty easy, though the whole right-click to navigate directory windows is still a little cumbersome at times (mostly, its finding the right directory or file to click on each time that&rsquo;s the issue). I knew the function I needed to get to as a starting point, so I typed part of its name in the tag bar and right-clicked to search and get to it in the code. This as it turns out, became a very important and useful part of navigating code.</p>
+
+<p>I made some changes in the code and ran <code>make</code> again. Easy. As a bonus, everything still passed. Rinse and repeat, throwing in a few git commits for good measure. Honestly, the only trip ups I really had were when I tried to use the keyboard for navigation (those up and down arrows still get me).</p>
+
+<p>The end results is that the programming session went well, Acme stayed out of my way but was also there when I needed it to be, and all the tags and mouse clicks and other stuff that make Acme what it is quickly started becoming natural and intuitive.</p>
+
+<p>I like Acme, y&#8217;all. I can admit that now. I&rsquo;m not ready to call it my editor of choice, but I like it. It&rsquo;s neat. It&rsquo;s quirky. It&rsquo;s fun. Most importantly, it&rsquo;s useful.</p>
+
+<p>One final thing I want to mention. Due to Acme&rsquo;s interestingly limited take on the whole tabs/spaces/indenting thing, I did end up having to write my own indention commands. However, they were staggeringly easy. I have started my own Acme commands file, where I can keep a tool set of useful commands. For instance, I wrote this to get rid of trailing spaces:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit , ,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, because of the way this command is written, it has to be run from either the window you want to affect or it&rsquo;s tag line. That means copy/pasting (or rewriting) it every time. I eventually found a stop-gap solution, which let&rsquo;s me specify a regular expression which will run the command in all windows that match. Since I was working in PHP, I wrote this to remove trailing white space in all open PHP windows:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit X/\.php$/ ,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Still not satisfied, I delved deeper into the capabilities of the 2-1 mouse chord. What this chord lets you do is select some text with the left mouse button, then select a command with the middle button, and, <em>while still pressing the middle button</em>, press the left button. The end result is that the text that was selected with the left button is passed as an argument to the text selected with the middle button. That was a lot to type to explain it, and it makes way more sense when you actually just do it. It&rsquo;s not as complicated as it sounds (or reads, in this case). Anyway, the point is because of that chord, I can just put this in the tag line for any window:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit ,</span></code></pre></td></tr></table></div></figure>
+
+
+<p>select that text with the left button, then middle-button select this text from anywhere (like my Acme commands file or even this very file):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and left-click while still holding the middle button. It&rsquo;s a lot to type, but it&rsquo;s actually quite awesome and pretty ingenious. This whole mouse chording thing has opened my eyes to new ways to use Acme.</p>
+
+<p>This post was written in Acme.</p>
+
+<p>In the <a href="http://echosa.github.io/blog/2014/06/27/lets-try-acme-ep-5-well/">next episode</a>, I discuss my first big mistake in Acme and the price I paid. You can read the previous post <a href="http://echosa.github.io/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Ep. 3 - Problem Solving]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/"/>
+    <updated>2014-06-19T17:26:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/19/lets-try-acme-ep-3-problem-solving</id>
+    <content type="html"><![CDATA[<p>The last few posts have shown some issues and complaints I&rsquo;ve had with Acme so far. Surprisingly, these issues have quickly begun dissipating.</p>
+
+<!--more-->
+
+
+<p>First things first. If I&rsquo;m going to be using <code>win</code>, I had to take care of the issues with prompt colors. <code>win</code> doesn&rsquo;t play nicely with the ansi color codes my bash prompt uses. This was an easy enough fix. I simply added a condition in <code>.profile</code> to only use color codes when I&rsquo;m not in Acme (or in a Plan9 environment/application, really).</p>
+
+<p>Problem solved.</p>
+
+<p>Next, the big issue. Mouse vs trackpad clicking vs trackpad tapping. As I&rsquo;ve stated before, I&rsquo;m very much a tap guy. Luckily, I came across <a href="http://research.swtch.com/acme">this video</a>, which anyone considering or wondering about Acme should be required to watch. Anyway, looking through the comments, I learned that when using my MacBook&rsquo;s trackpad, if I hold down Option and tap (or click), it sends a middle click to Acme. If I hold down Command, it sends a right click, as usual.</p>
+
+<p>&ldquo;But what about chording?&rdquo;, you might be asking yourself. Well, I have three finger drag turned on. The interesting thing about three finger drag is that you don&rsquo;t actually have to drag with with all three fingers. You can simply place three fingers down and drag with just your index finger, just as you would move a mouse - including being able to pick your finger up and down to continue moving in the same direction. So, effectively, this becomes a single left-click drag.</p>
+
+<p>The end result? I can put three fingers down, drag with my index finger to select some text, then while still keeping my fingers down, press Option to cause a middle click (which cuts the text), then press Command to cause a right click (which pastes the text). I can then move the cursor somewhere else, put three fingers down and press Command to paste again. Touchpad tap chording!</p>
+
+<p>Problem solved.</p>
+
+<p>Though to be fair, I haven&rsquo;t gotten holding down button two then pressing button one to work yet. Then again, I haven&rsquo;t needed it yet, either.</p>
+
+<p>Moving on, I decided to try and edit some code. The first glaring issue with Acme was the default font. I prefer, nay, <em>need</em> a monospaced font when coding. The default Acme font didn&rsquo;t cut it. Luckily, the font is one of the few things that Acme lets you easily customize. Just add a <code>-f</code> option, like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>9 acme -a -f /usr/local/Cellar/plan9port/20140306/libexec/font/fixed/unicode.9x18.font &</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Remember, the plan9port for OS X makes it such that you run plan9 commands through the <code>9</code> wrapper command. Also, I added the &amp; to my Acme command so that it doesn&rsquo;t hijack a whole terminal that has to stay open.</p>
+
+<p>Problem solved.</p>
+
+<p>Now that I had a monospaced font, code was easier to work with. However, I missed the ability to do things like <code>ci"</code> in Vi(m). What that does is delete all text in between the surrounding double quotes so you can replace the text. Well, Acme has its own version. Simply double-click just after the opening quote (or just before the closing quote) so select all text inside. This also works with parentheses, braces, etc. Nice.</p>
+
+<p>Problem solved.</p>
+
+<p>With all these solutions, Acme has become more than usable for me. To be fair, though, there are a remaining number of issues, complaints, and hangups I still have.</p>
+
+<p>The lack of colors, especially syntax highlighting, is still up in the air as to whether it is an issue or not. We&rsquo;ll see what time will tell.</p>
+
+<p>The mouse focusing windows simply by moving over them still trips me up. It&rsquo;s great when I remember it and use it. It&rsquo;s not so great when I forget, move my mouse cursor out of the way (due to habit), then start typing only to have the text inserted in the wrong window. This will just take some getting used to.</p>
+
+<p><code>win</code> comes through as just a dumb terminal, so not everything works. For instance, <code>git diff</code>. I can get by with just using my regular terminal instead. That&rsquo;s what I normally do, anyway, when I&rsquo;m not using magit inside Emacs.</p>
+
+<p>I&rsquo;m starting to see why some people keep a file around with tags they commonly use. It would appear that, while I can add my own tags to the tag bar, they are not persistent. I have to add them again everytime I close and open Acme.</p>
+
+<p>Speaking of files, file navigation is still a bit clunky. Right-clicking down a long directory tree is cumbersome (especially having to find the right directory to click on in each window), and leaves lots of unwanted and unnecessary windows around until I manually delete them. The only other option I see is to use the file name part of the tag bar (all the way to the left) to type in a full path. Luckily, the <code>Ctrl-f</code> completion makes this faster.</p>
+
+<p>Still, even with all this, Acme is, at this point, a completely useable and worthwhile editor for me. I look forward to using it more and learning more about it.</p>
+
+<p>This post was written in Acme.</p>
+
+<p>In <a href="http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/">the next post</a>, I finally get down to writting some code.
+You can read the previous post <a href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Ep. 2 - Wat]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat/"/>
+    <updated>2014-06-18T09:17:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat</id>
+    <content type="html"><![CDATA[<p>Now that <a href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-1-hello/">I&rsquo;ve got Acme running</a>, it&rsquo;s time to start giving it a fair shot.</p>
+
+<!--more-->
+
+
+<p>The first thing I notice is the color scheme. Not bad, but not changeable either. Makes me wonder what code syntax highlighting will look like.</p>
+
+<p>&hellip;</p>
+
+<p>Ah. No syntax highlighting, either. Well, ok then. I suppose I don&rsquo;t <em>need</em> syntax highlighting.</p>
+
+<p>Welp, let&rsquo;s try typing some text. I open up a couple of editor windows, click in one of them, then move my mouse out of the way to start typing. I don&rsquo;t see any text. Scratching my head, I try typing some more text. Something catches my eye.</p>
+
+<p>Huh. There&rsquo;s the text I typed. In a different window. Baffled for a bit, I click in the original window I was trying to type in again (maybe my first click didn&rsquo;t focus the window properly?), move the mouse out of the way again, and type some text. Again, I see no text in my window. I don&rsquo;t see text in the previously accidentally typed in window, either. A quick glance shows my text in yet another window.</p>
+
+<p>Now I&rsquo;m confused for a while, until I realize what&rsquo;s going on. Acme has mouse follow focus. The window that has focus is the one that the mouse is actually hovering over. When I moved my mouse of the way, I refocused Acme&rsquo;s cursor. Not what I was expected at all, and certainly not preferable.</p>
+
+<p>Oh well. At least I figured that one out. I move the mouse over the still empty window I&rsquo;ve been trying to type into this whole time. I type some some text and, hey, look at that! The text I typed is in the correct window!</p>
+
+<p>I gleefully type some more text, pleased with my own achievement, all the while envisioning an Xbox style &ldquo;achievement unlocked&rdquo; screen. Now, let&rsquo;s try to save the file.</p>
+
+<p>I know from my research that I need to middle-click <code>Put</code> to save. However, there&rsquo;s no <code>Put</code> tag for this window. That&rsquo;s simple enough to fix, I presume. Using the knowledge I have from my research, I simply type &ldquo;Put&rdquo; into the tags area for this window (making sure the mouse is over the tags area so it stays focused) and middle-click it. Certainly, since I&rsquo;m trying to save a file that hasn&rsquo;t been saved before, it&rsquo;ll ask me where I want to save the file and what to name it.</p>
+
+<p>Nope.</p>
+
+<p>In fact, nothing happens. Nothing at all. I try middle-clicking a few more times to make sure I didn&rsquo;t do something wrong. Still nothing. After thinking about it for a while, I open an existing file to see how it works. Interestingly enough, it also does not have &ldquo;Put&rdquo; in its tag area. I type some text into it (ok, this mouse focus thing isn&rsquo;t so bad, except for the mouse cursor visibly being in the way sometimes), and notice that I then get the Put option. Ok, cool. You only see &ldquo;Put&rdquo; if there are unsaved changes.</p>
+
+<p>Why am I not seeing &ldquo;Put&rdquo; in my other window, though? I gaze it at with all my staring power (learned from being a programmer for years) noting the differences. Ah. I see that there are several file related tags not present in my window that are present in the existing file&rsquo;s window. Obviously, this window isn&rsquo;t being considered a file window yet. The only other difference I see is that the first part of the tags area for the existing file is the file path.</p>
+
+<p>Let&rsquo;s fix that. I type a file path into the left side of the tag area of my new window. Hey! I have <code>Put</code> now! I middle-click it, and voila! The file is saved!</p>
+
+<p>Achievement unlocked.</p>
+
+<p>It then dawns on me that having to manually type the a new file name every time is going to be inefficient at worst and annoying at best. A little Internet searching leads me to a partial solution (really, more of a helper). <code>Ctrl-f</code> will do completion, so I at least don&rsquo;t have to type the entire file path out by hand. Not the best solution, but better than <em>not</em> having completion.</p>
+
+<p>Speaking of completion, I wonder if I can complete text in my windows? I go to a window, type a word, then starting typing the same word and press <code>Ctrl-f</code>. Nope. It tries to complete file names only. That&rsquo;s a shame. If there&rsquo;s a way to do text completion, I haven&rsquo;t found it.</p>
+
+<p>I decide to try one last thing before ending this Acme session. Coming from using Emacs and Vim, cursor movement is an important factor in my text editing. Obviously, Acme is mouse based, but certainly some basic cursor movement can be done with the keyboard.</p>
+
+<p>I press the left and right arrows, and they work normally. I press the up and down arrows, and they scroll the window. Hm. I try a couple of other ways to move up and down between lines of text with the keyboard, including Emacs&#8217; <code>Ctrl-n</code> and <code>Ctrl-p</code> to no avail. As far as I can tell, you <em>have</em> to use the mouse to move the cursor between different lines. I understand that Acme (and Plan9) are very mouse-heavy, but this just seems ridiculous. Hopefully, I&rsquo;m just missing something as the Acme noob I am. Either way, this whole using the mouse thing is new (especially having to use it this much), so there&rsquo;s going to have to be some concession on my part. We&rsquo;ll see how long it takes me to adjust, if I even can.</p>
+
+<hr />
+
+
+<p>A couple of side notes. This entire time I&rsquo;m having to use an actually three button mouse. I attempted simply using my Mac&rsquo;s trackpad, but it has some issues with things like middle-clicking. Specifically, middle-clicking and <em>holding</em> the click down, especially when tapping instead of actually clicking (which I prefer, as I exclusively use tapping in my everyday work). I tried <a href="http://www.bettertouchtool.net">BetterTouchTool</a>, and it helped with clicking, but not with tapping and holding.</p>
+
+<p>Also, for those who don&rsquo;t get the &ldquo;Wat&rdquo; reference in the title, <a href="https://www.destroyallsoftware.com/talks/wat">watch this</a> (it&rsquo;s less than 5 min log).</p>
+
+<p>In the <a href="http://echosa.github.io/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/">next post</a>, I discuss how many of my issues were resolved. You can read the previous post <a href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-1-hello/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Ep. 1 - Hello, World]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-1-hello/"/>
+    <updated>2014-06-18T09:02:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-1-hello</id>
+    <content type="html"><![CDATA[<p>After my <a href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-0-research/">initial research</a>, it&rsquo;s time to give ol&#8217; Acme a try.</p>
+
+<!--more-->
+
+
+<p>First things first - I needed to install Acme. <a href="http://brew.sh">Homebrew</a> made that quite easy.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew install acme</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then running it was just as easy.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ acme
+</span><span class='line'>
+</span><span class='line'>ACME - the ACME Crossassembler for Multiple Environments
+</span><span class='line'>  Copyright (C) 1998-2006 Marco Baye
+</span><span class='line'>This is ACME, release 0.91 ("Gargravarr"), 26 Mar 2006
+</span><span class='line'>  Platform independent version.
+</span><span class='line'>Current maintainer Krzysztof Dabrowski aka BruSH/ElysiuM
+</span><span class='line'>ACME comes with ABSOLUTELY NO WARRANTY; for details read the help file.
+</span><span class='line'>  This is free software, and you are welcome to redistribute it under
+</span><span class='line'>  certain conditions; as outlined in the GNU General Public License.
+</span><span class='line'>Dedicated to the wisest being I ever had the pleasure of reading
+</span><span class='line'>  books of (currently spending some time dead for tax reasons).
+</span><span class='line'>The newest version can be found at the ACME homepage:
+</span><span class='line'>  http://home.pages.de/~mac_bacon/smorbrod/acme/
+</span><span class='line'>
+</span><span class='line'>Usage: acme [OPTION...] [FILE]...
+</span><span class='line'>  -h, --help             show this help and exit.
+</span><span class='line'>  -f, --format FORMAT    select output format.
+</span><span class='line'>  -o, --outfile FILE     select output file.
+</span><span class='line'>  -l, --labeldump FILE   select label dump file.
+</span><span class='line'>      --setpc NUMBER     set program counter.
+</span><span class='line'>      --cpu CPU          select target processor.
+</span><span class='line'>      --initmem NUMBER   define 'empty' memory.
+</span><span class='line'>      --maxerrors NUMBER set number of errors before exiting.
+</span><span class='line'>      --maxdepth NUMBER  set recursion depth for macro calls and !src.
+</span><span class='line'>  -vDIGIT                set verbosity level.
+</span><span class='line'>  -V, --version          show version and exit.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Or maybe not. I turns out that this particular Acme is not the text editor I was looking for. A bit of digging around showed me where I&rsquo;d gone wrong.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew rm acme
+</span><span class='line'>$ brew install plan9port</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Acme comes as part of the plan9port package. However, since this package installs a mostly completely Plan9 system (from what I can tell, anyway), it installs certain utilities that are common, like <code>ls</code>. In order to not stomp on your existing system, though, plan9port wraps it&rsquo;s version of these commands in it&rsquo;s own wrapper command <code>9</code>. Now, finally, I can open Acme!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ 9 acme</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Success! On top of it all, it has native OS X full screen support! Bonus!</p>
+
+<p>Now I&rsquo;m starting at the default Acme window. Time to play around. Middle-click on <code>New</code> to open a new window. Middle-click on <code>Del</code> to close it. Right click on a file to open it. Awesome. Acme seems to be working.</p>
+
+<p>The real fun will continue in the <a href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-2-wat/">next episode</a>. You can read the previous post <a href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-0-research/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Let's Try Acme: Ep. 0 - Research]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-0-research/"/>
+    <updated>2014-06-18T08:43:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-0-research</id>
+    <content type="html"><![CDATA[<p>In the vein of the popular &ldquo;Let&rsquo;s Play&rdquo; videos, I&rsquo;ve decided to start a blog post series of &ldquo;Let&rsquo;s Try&rdquo;&rsquo;s on my attempt to use the <a href="https://en.wikipedia.org/wiki/Acme_%28text_editor%29">Acme</a> text editor.</p>
+
+<!--more-->
+
+
+<p>So, first things first. Before jumping into something with no foreknowledge, I decided to do a bit of research on the editor. Below are some of the resources I used.</p>
+
+<h2>Documents</h2>
+
+<p><a href="http://cm.bell-labs.com/magic/man2html?man=acme&amp;sect=1">The Acme Man Page</a></p>
+
+<p><a href="http://cm.bell-labs.com/magic/man2html?man=sam&amp;sect=1">The Sam Man Page</a> (useful for explaining Acme&rsquo;s -a flag)</p>
+
+<h2>Videos</h2>
+
+<p><a href="http://www.youtube.com/watch?v=dopu3ZtdCsg">Plan9 Acme Intro - Part 1</a></p>
+
+<p><a href="http://www.youtube.com/watch?v=2vjD_B__SbQ">Plan9 Acme Intro - Part 2</a></p>
+
+<p><a href="http://www.youtube.com/watch?v=cR96WQ6OR00">Plan9 Acme Intro - Part 3</a></p>
+
+<p>You can read the next post <a href="http://echosa.github.io/blog/2014/06/18/lets-try-acme-ep-1-hello/">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Possible Paradigm Shift]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift/"/>
+    <updated>2014-06-17T08:57:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift</id>
+    <content type="html"><![CDATA[<p>Lately I&rsquo;ve been experiencing a change in the way I look at, think about, and use Emacs.</p>
+
+<!--more -->
+
+
+<p>Emacs was always a one-stop shop for me. If I <em>could</em> do it in Emacs, I did. Email. Web browsing. Twitter. Listening to music. Games. Shells and terminals. Even <a href="http://echosa.github.io/blog/2010/11/10/google-maps-in-emacs/">Google Maps</a>. Of course, I did coding and actual text editing as well.</p>
+
+<p>Well, a while back a gave ol&#8217; vim a shot. I like it. Quite a bit, actually. It is my second preferred editor, and I even use <a href="https://gitorious.org/evil/pages/Home">evil-mode</a> in Emacs now. I learned a lot during my time with vim, and I have been applying lessons learned to my other work flows. It has created a dichotomy in me that I&rsquo;ve been struggling back and forth with for a while now.</p>
+
+<p>Vi(m)&rsquo;s big motive, so to speak, is to do one thing and do it well. It accomplishes this. It&rsquo;s fast and efficient. Editing in Vim is fast and efficient. This is largely why I have adopted evil-mode. However, I found myself asking &ldquo;where is X?&rdquo;, where X could be terminals, web browsers, etc. These things simply don&rsquo;t exist in Vim (and, really, rightfully shouldn&rsquo;t). Those things aren&rsquo;t part of the One Thing it does well. That forced me to outsource these things to other programs. Programs I already used, mind you. This was, as crazy as it seems, a revelation. If I&rsquo;m going to have a terminal, a web browser, etc. open <em>anyway</em>, I may as well make use of them.</p>
+
+<p>So, here I am, years into my Emacs experience, finding myself with, once again, a new look on all things Emacs. Emacs is a <a href="http://echosa.github.io/blog/2009/09/25/oh-yeah-its-text-editor/">hell of a text editor</a>. It does lots of other things as well, some of which it does <a href="https://github.com/magit/magit">extremely well</a>. However, not <em>everything</em> needs to be done, or <em>should</em> be done, in Emacs. It hurts me just a little to say that, but I&rsquo;m increasingly believing that to be true. Heresy, thy name is me.</p>
+
+<p>I&rsquo;d be remiss if I didn&rsquo;t mention another potential factor in this recent change of mind and heart. I&rsquo;m slowly (but not <em>that</em> slowly) severing ties with the Google Machine. In doing so, I&rsquo;ve become aware of just how tied in I was. It was eye opening and scary. Having all your eggs in one basket, so to speak, has its benefits, but also can basically be a self-imposed lock down.</p>
+
+<p>As I was untangling myself from this web (heh&hellip; <em>get it?</em>), I began recognizing other similar situations I was in. Emacs was at the forefront. Being so tied in to Emacs, when it crashed (which, to be fair, is rare), an update went badly, or anything else prevented Emacs from working appropriately, it was detrimental. Spreading tasks to the appropriate <em>separate</em> handlers is important. This is the same reason why micro-frameworks have become a huge deal, especially in the PHP world. It&rsquo;s piecing together your own solutions with several parts that each do one thing and do it well.</p>
+
+<p>The end result of all this is I&rsquo;m going to use Emacs for what it&rsquo;s good for: development and text editing. This includes things like running terminals for tests or other things, using version control (seriously, magit is the shit [technical term]), and other development and text editing related things. Other tasks will be delegated elsewhere, including <a href="https://github.com/sprang/emacs-2048">2048</a>.</p>
+
+<p>If you go through the history of Emacs posts on this blog, you&rsquo;ll see that I&rsquo;ve flip-flopped on several topics and not kept up with various changes I&rsquo;ve made (<em>cough</em> org-mode <em>cough</em>). This may very well fall into that category as well, and I may find myself back to doing as much in Emacs as possible. For now, though, I&rsquo;ll be spreading my work across multiple applications.</p>
+
+<hr />
+
+
+<p>Side notes:</p>
+
+<p>You&rsquo;ll notice the title of this article says &ldquo;possible&rdquo;. That&rsquo;s largely due to what I said in the last paragraph.</p>
+
+<p>Also, as far as getting myself away from the Google Machine, to be fair, I&rsquo;ve basically just jumped ship to Apple (for most, but not all, things). This may sound hypocritical, but a.) as I&rsquo;m basically all Apple hardware these days anyway, it at least makes more sense than being tied into Google, and b.) Apple is now at least on par with Google <a href="http://9to5mac.com/2014/05/15/eff-marks-apples-remarkable-improvement-in-protecting-customer-data-from-governments/">as far as the EFF is concerned</a>. I&rsquo;m not a complete hypocrite, though, as I&rsquo;ve been looking at what Apple services I can move to other providers, so I&rsquo;m at least trying to apply this same separation of services thought to my Apple tie-ins as well.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacsagist]]></title>
+    <link href="http://echosa.github.io/blog/2014/03/31/emacsagist/"/>
+    <updated>2014-03-31T15:06:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/03/31/emacsagist</id>
+    <content type="html"><![CDATA[<p>I recently released <a href="https://github.com/echosa/emacsagist">Emacsagist</a>, an Emacs front-end for searching <a href="http://packagist.org">Packagist</a>.</p>
+
+<!--more-->
+
+
+<p>You can download Emacsagist via the <a href="http://melpa.milkbox.net/">MELPA repository</a> with <code>M-x list-packages</code> or <a href="http://cask.github.io">Cask</a>. From there, you can run <code>M-x emacsagist-search</code>, type in a search term, and Emacsagist will give you search results. You can press return on any package name to get full details.</p>
+
+<p>Now there&rsquo;s one less reason to leave Emacs for PHP developers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Solarized Dark (Color Theme) for Eclipse]]></title>
+    <link href="http://echosa.github.io/blog/2014/03/17/solarized-dark-color-theme-for-eclipse/"/>
+    <updated>2014-03-17T10:41:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/03/17/solarized-dark-color-theme-for-eclipse</id>
+    <content type="html"><![CDATA[<p>I have released a version of the <a href="http://ethanschoonover.com/solarized">Solarized color theme</a> for Eclipse.</p>
+
+<!--more-->
+
+
+<p>If you use Eclipse, you should know about <a href="http://eclipsecolorthemes.org/?view=plugin">Eclipse Color Themes</a>. It&rsquo;s great. You can easily install and switch between color themes for your editor windows without having to mess with those nasty Eclipse preference files.</p>
+
+<p>Once you got it installed, you can go to the <a href="http://eclipsecolorthemes.org/">eclipsecolorthemes.org</a> and get themes. If you search for &ldquo;solarized dark (echosa)&rdquo; you find <a href="http://eclipsecolorthemes.org/?view=theme&amp;id=25128">the theme I created</a>. I based it off of existing Solarized Dark themes which were incorrect in a few ways. I corrected the colors to match the original Solarized Dark. All you need to do to install and use it is download the color theme XML, import it from the Color Theme preferences area in Eclipse, and select it from the list of available themes.</p>
+
+<p>If you like Solarized, you can now have it (properly) in Eclipse. If you&rsquo;ve never used Solarized, give it a shot, or at least read about it at the official page. <a href="http://ethanschoonover.com/solarized">Here&rsquo;s the link again</a> for the lazy (like me).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gopherpedia]]></title>
+    <link href="http://echosa.github.io/blog/2014/03/17/gopherpedia/"/>
+    <updated>2014-03-17T10:37:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/03/17/gopherpedia</id>
+    <content type="html"><![CDATA[<p>So, <a href="http://gopherpedia.com">this</a> exists.</p>
+
+<!--more-->
+
+
+<p>That&rsquo;s right. Someone wrote a Gopher wrapper/front end for Wikipedia! It&rsquo;s not quite perfect (links and stuff don&rsquo;t work) but it&rsquo;s Good Enough©.</p>
+
+<p>The link above takes you to the web front end, but you can reach it the site through Gopher itself at gopher://gopherpedia.com.</p>
+
+<p>Long live Gopher!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clojure Time]]></title>
+    <link href="http://echosa.github.io/blog/2014/02/25/clojure-time/"/>
+    <updated>2014-02-25T13:27:00-06:00</updated>
+    <id>http://echosa.github.io/blog/2014/02/25/clojure-time</id>
+    <content type="html"><![CDATA[<p>Anyone who knows me knows I really enjoy Lisp, especially Common Lisp (sbcl) and elisp (Emacs). I can now add to that list <a href="http://clojure.org">Clojure</a>.</p>
+
+<!--more-->
+
+
+<p>Clojure is awesome. It&rsquo;s a Lisp language that runs in the JVM (Java Virtual Machine). Lisp + Java. Who&rsquo;d have ever thought&hellip;</p>
+
+<p>Certainly not me, but the end result is an excellent language. It has some differences from the Lisps I&rsquo;m used to, like argument lists being vectors instead of lists and docstrings going before argument lists. However, these habits were easy enough to break, and were never a hindrance enough to bog me down.</p>
+
+<p>So off I went, writing my first Clojure program, which can be find <a href="https://github.com/echosa/clojure-greed">here</a>. I plan to continue working on it and improving it, and will be looking for some code reviews from more experience Clojure developers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New GOPHER Library for PHP]]></title>
+    <link href="http://echosa.github.io/blog/2014/02/25/new-gopher-library-for-php/"/>
+    <updated>2014-02-25T11:45:00-06:00</updated>
+    <id>http://echosa.github.io/blog/2014/02/25/new-gopher-library-for-php</id>
+    <content type="html"><![CDATA[<p>Well, I&rsquo;ve gone and done it. I&rsquo;ve created a library for reading and parsing <a href="http://en.wikipedia.org/wiki/Gopher_(protocol%29">GOPHER</a> files from PHP.</p>
+
+<!--more-->
+
+
+<p>I&rsquo;ve recently been playing with GOPHER again, and it&rsquo;s been a great blast from the past. I even started a phlog (a GOPHER blog, basically). However, I realized that not everyone is awesome enough to use GOPHER, so I wanted to make my new phlog available via HTTP as well. Enter gopher-php.</p>
+
+<p>You can find the library <a href="https://github.com/echosa/gopher-php">here on GitHub</a>. It is quite tailor-made for my own usage, so it is pretty incomplete in terms of GOPHER features and support.</p>
+
+<p>To see it in action, you can check out <a href="http://echosa.freeshell.org">my phlog&rsquo;s http web frontend</a>. In comparision, you can see my phlog via the GOPHER protocol by either visiting <a href="gopher://sdf.org/1/users/echosa/phlog">this link</a> using a GOPHER client (<a href="http://en.wikipedia.org/wiki/Lynx_(web_browser%29">lynx</a> recommended) or by using a GOPHER web interface such as <a href="http://gopherproxy.meulie.net/sdf.org/1/users/echosa/phlog">this one</a> (link will take you to the phlog).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Going (Back to) Gopher]]></title>
+    <link href="http://echosa.github.io/blog/2013/08/29/going-back-to-gopher/"/>
+    <updated>2013-08-29T09:45:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2013/08/29/going-back-to-gopher</id>
+    <content type="html"><![CDATA[<p>Remember <a href="http://en.wikipedia.org/wiki/Gopher_(protocol)">Gopher</a>? I do, barely. We learned/used it in grade school a couple of decades ago. Turns out it is still around.</p>
+
+<!--more-->
+
+
+<p>There are several resources for the existing gopher community. First and foremost, I&rsquo;d say check out <a href="http://gopher.floodgap.com">Floodgap</a>. They have a public gopher server, including a web interface that will let you read gopher pages in your browser. There&rsquo;s even several articles about <a href="http://gopher.floodgap.com/gopher/gw?gopher://gopher.floodgap.com:70/1/gopher">gopher&rsquo;s usage and relevance today</a>. Definitely worth at least a cursory glance.</p>
+
+<p>Of course, having found this, I had to jump back in. You can find my own gopherspace hosted <a href="gopher://sdf.org/1/users/echosa">here</a> at <a href="http://sdf.org">SDF</a>. There you find, among other things, my phlog, which is gopher&rsquo;s version of a blog (blog = weB LOG, phlog = goPHer LOG).</p>
+
+<p>Anyway, I figured I&rsquo;d just help spread the word. Long live gopher!</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Triangle | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/triangle/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Triangle Game Update]]></title>
+    <link href="http://echosa.github.io/blog/2012/09/09/triangle-game-update/"/>
+    <updated>2012-09-09T18:12:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/09/09/triangle-game-update</id>
+    <content type="html"><![CDATA[<p>So, I&rsquo;ve recently pushed a number of changes to my Triangle Game project I&rsquo;m using to learn Java again. Updates include:</p>
+
+<ul>
+<li>Bug fixes and display improvements</li>
+<li>Various effects that are randomly assigned to the spaces on the board</li>
+<li>Missing turns (after landing on spaces with that effect)</li>
+<li>Refactored code</li>
+</ul>
+
+
+<!--more-->
+
+
+<p>Specifically, I&rsquo;m pretty proud of the randomly assigned space effects. I achieved this using a technique that I also use in my test script. The test script will automatically pull in all test classes, given they are in the right directory and package. In order to randomly assign effects to the board I do something quite similar. Each time I create a space to assign to the board (except the first and last spaces), I make a call <code>Play.getRandomEffect()</code>, which looks like this:</p>
+
+<pre><code class="java">public static SpecialEffectInterface getRandomEffect()
+{
+    List&lt;String&gt; effectClasses = new ArrayList&lt;String&gt;();
+
+    File thisPath = new File(SpecialEffectInterface.class.getResource("SpecialEffectInterface.class").getPath());
+    String thisPackage = SpecialEffectInterface.class.getPackage().getName() + ".";
+
+    File dir = new File(thisPath.getParent());
+    File[] children = dir.listFiles(new EffectFilter());
+    if (null != children) {
+        for (int i=0; i&lt;children.length; i++) {
+            String filename = children[i].getName();
+            effectClasses.add(thisPackage + filename.substring(0, filename.length()-6));
+        }
+    }
+    int choice = 0 + (int)(Math.random() * (effectClasses.size() - 1));
+    String classChoice = effectClasses.get(choice);
+    SpecialEffectInterface effect = null;
+    try {
+        effect = (SpecialEffectInterface) Class.forName(classChoice).newInstance();
+    } catch (ClassNotFoundException e) {
+        System.out.println("Class Not Found: " + e.getMessage());
+        System.exit(1);
+    } catch (InstantiationException e) {
+        System.out.println("Instantiation Exception: " + e.getMessage());
+        System.exit(1);
+    } catch (IllegalAccessException e) {
+        System.out.println("Illegal Access Exception: " + e.getMessage());
+        System.exit(1);
+    }
+    return effect;
+}
+</code></pre>
+
+<p>SpecialEffectInterface is the common interface used by all space effect classes, and is what this function returns. Let&rsquo;s take a look at this function in pieces.</p>
+
+<pre><code class="java">List&lt;String&gt; effectClasses = new ArrayList&lt;String&gt;();
+</code></pre>
+
+<p>First I set up a list to hold all the names of my special effect classes to be used later.</p>
+
+<pre><code class="java">File thisPath = new File(SpecialEffectInterface.class.getResource("SpecialEffectInterface.class").getPath());
+</code></pre>
+
+<p>Next I get the file path to where my effects are kept. Since all the effects are in the same directory as their common interface, I use that to find the path.</p>
+
+<pre><code class="java">String thisPackage = SpecialEffectInterface.class.getPackage().getName() + ".";
+</code></pre>
+
+<p>Then I get the package that they are all in. This is necessary later, as you&rsquo;ll see.</p>
+
+<p>Now comes the fun part: generating a list of the effect classes.</p>
+
+<pre><code class="java">File dir = new File(thisPath.getParent());
+File[] children = dir.listFiles(new EffectFilter());
+if (null != children) {
+    for (int i=0; i&lt;children.length; i++) {
+        String filename = children[i].getName();
+        effectClasses.add(thisPackage + filename.substring(0, filename.length()-6));
+    }
+}
+</code></pre>
+
+<p>This code creates a File object with the path we found to the effect classes, then creates a list of the items (children) in that directory given the <code>EffectFilter</code> class, which looks like this:</p>
+
+<pre><code class="java">package triangle_game.effects;
+
+import java.io.*; 
+
+public class EffectFilter implements FilenameFilter
+{ 
+    public boolean accept(File dir, String name)
+    { 
+        return name.endsWith("Effect.class");
+    } 
+}
+</code></pre>
+
+<p>This filter basically gives us everything in the directory that ends with &ldquo;Effect.class&rdquo; (for instance, NullEffect.class). So, as long as all effects are named &ldquo;SomethingEffect&rdquo; and are in the same directory as the interface, they will be found.</p>
+
+<p>Continuing on, we then loop through the children, provided there are any. During this loop, we get the name of the files that matched our filter (the effect classes), then add the class name (without the .class extension) to our list of effect classes we created earlier. After all this, we now have a list of all the special effects we can use to assign to the board.</p>
+
+<pre><code class="java">int choice = 0 + (int)(Math.random() * (effectClasses.size() - 1));
+String classChoice = effectClasses.get(choice);
+SpecialEffectInterface effect = null;
+try {
+    effect = (SpecialEffectInterface) Class.forName(classChoice).newInstance();
+} catch (ClassNotFoundException e) {
+    System.out.println("Class Not Found: " + e.getMessage());
+    System.exit(1);
+} catch (InstantiationException e) {
+    System.out.println("Instantiation Exception: " + e.getMessage());
+    System.exit(1);
+} catch (IllegalAccessException e) {
+    System.out.println("Illegal Access Exception: " + e.getMessage());
+    System.exit(1);
+}
+return effect;
+</code></pre>
+
+<p>Finally, we get a random number from 0 to one less than the size of the list. This number serves as the index of the list that will be the chosen effect. We get the effect name from the list, then in a fairly large try/catch block we get our random effect with a call to <code>Class.forName()</code> (which gives us the class object) followed by <code>.newInstance()</code> which actually returns the special effect object we need, which we then return from our function.</p>
+
+<p>I&rsquo;m sure there&rsquo;s a better way to do what I&rsquo;ve done, but this is the way I figured out, and I&rsquo;m pretty proud of it for now.</p>
+
+<p>Anyway, I think I&rsquo;ve come quite a long way in my development, and I&rsquo;ve been trying to apply my new found knowledge of design patterns as I go. If you have any comments, concerns, or corrections, please feel free to comment.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[So I'm Learning Java]]></title>
+    <link href="http://echosa.github.io/blog/2012/08/17/so-im-learning-java/"/>
+    <updated>2012-08-17T10:37:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/08/17/so-im-learning-java</id>
+    <content type="html"><![CDATA[<p>Yep, that&rsquo;s right. After not touching it for <em>years</em> since college, I&rsquo;m learning Java. This has been prompted by many things, but mostly I just enjoy learning new languages; having a reason to do so is just an added bonus.</p>
+
+<p>The project I&rsquo;m using to teach myself is a command-line program: a board game idea I came up with. You can watch my progress at the <a href="https://github.com/echosa/triangle_game">GitHub repo</a> if you wish.</p>
+
+<p>I have to say that, so far, I&rsquo;m really enjoying Java. Coming from doing PHP for half a decade, its actually a nice change of pace to work in a statically typed language. There&rsquo;s an added layer of accomplishment and confidence in the code when it compiles properly. Also, the fact that everything, and I mean <em>everything</em>, is a class in Java, it really forces me to think about separation of duties, dependency injection, etc. The fact that I&rsquo;m also reading Head First Design Patterns helps too.</p>
+]]></content>
+  </entry>
+  
+</feed>

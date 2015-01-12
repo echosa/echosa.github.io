@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Buffers and Windows and Frames, Oh My! - Dev and Such</title>
+  <meta name="author" content="Brian Zwahr">
+
+  
+  <meta name="description" content="One thing that I really like about emacs is how it manages open files (buffers) and the diversity one has in customizing the workspace. Of course, I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://echosa.github.io/blog/2009/06/16/buffers-and-windows-and-frames-oh-my">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dev and Such</a></h1>
+  
+    <h2>A blog pertaining to my own development experiences.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="echosa.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/php">PHP</a></li>
+  <li><a href="/blog/categories/java">Java</a></li>
+  <li><a href="/blog/categories/ios">iOS</a></li>
+  <li><a href="/blog/categories/node-js">Node.js</a></li>
+  <li><a href="/blog/categories/emacs">Emacs</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Buffers and Windows and Frames, Oh My!</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2009-06-16T18:13:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2009</span></span> <span class='time'>6:13 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>One thing that I really like about emacs is how it manages open files (buffers) and the diversity one has in customizing the workspace. Of course, I didn&rsquo;t always like it. It took some getting used to, but after not that long of a time frame I got the hang of it and started to enjoy it. Soon after that, I started customizing my emacs workspace to be even more efficient and productive for me.</p>
+
+<!--more-->
+
+
+<p>One thing I&rsquo;ve found is that I really like to see everything thats going on, if possible. This is why I typically use a tiling window manager (preferably <a href="http://www.nongnu.org/stumpwm/">StumpWM</a> or <a href="http://www.nongnu.org/ratpoison/">Ratpoison</a>). I also try to avoid using the mouse. This has been the basis for the way I work in emacs and has led to the setup I&rsquo;m current using. I run lots of processes inside emacs: <a href="http://www.mew.org/">Mew</a> for email, <a href="http://www.mew.org/">elim</a> for instant messaging, <a href="http://www.busydoingnothing.co.uk/twitter-el/">twitter.el</a> for checking Twitter, <a href="http://www.emacswiki.org/emacs/AnsiTerm">ansi-term</a> for a terminal, etc. (I&rsquo;m sure I&rsquo;ll go into more detail on these in later posts). Of course, in order to see all these at once, I have two choices: multiple frames or multiple windows.</p>
+
+<p>First things first: what emacs calls a &ldquo;frame&rdquo; and a &ldquo;window&rdquo; is opposite of what just about every other program calls them. For instance, a web browser &ldquo;window&rdquo; can be split into multiple &ldquo;frames&rdquo; (top heading, menu on the left, copyright footer, content in the middle, etc). A &ldquo;window&rdquo; is usually thought of as being one of the windows open in a window manager, complete with maximize, minimize, and close buttons. Emacs is the reverse. When you first open emacs, the &ldquo;window&rdquo; that pops up is actually called a &ldquo;frame&rdquo;. There can be multiple frames open that can be switched between like normal &ldquo;windows&rdquo;, using Alt-\&lt;Tab>. Each of these &ldquo;frames&rdquo; can then be split into &ldquo;windows&rdquo; of various sizes. Each window can show a different (or the same) buffer: whether its a source code file, a terminal, or a web browser, whatever.</p>
+
+<p>I think that most people work with mutliple frames and a few windows in some frames. I work with one maximized frame (at my work, this means 1900x1280) split into many windows, and I mean many. My current setup uses 17 different windows inside one emacs frame. <a href="http://sites.google.com/site/bzwahr/emacs-screenshot-1/2009-06-12-100259_1920x1200_scrot.png?attredirects=0">(Screenshot)</a> If I has multiple frames, I would have to Alt-\&lt;Tab> a bunch of times or use the mouse to switch between the frames. My way, I can use emacs commands to switch between windows in the same frame. The basic command is C-x o (other-window) which basically moves focus to the next window. With 17 windows, that&rsquo;s no better than using Alt-\&lt;Tab> as I would have to type C-x o many times, or prefix it with a number of times (i.e. C-u 1 0 C-x o to run other-window 10 times). The latter, of course, requires me to know exactly how many windows are in between where I am and where I want to be.</p>
+
+<p>This brings me to a very useful mode I have found and was actually brought up in the comments of my last post: <a href="http://www.emacswiki.org/emacs/window-number.el">window-number-mode</a>. This is a wonderful minor mode that gives each window in a frame a number (in red in the mode line by default) from the top-left to the bottom-right. You can then use a command (mine is C-x j \&lt;number>) to switch directly to the window with number \&lt;number>. There is a short version allowing M-\&lt;number>, but it has the drawback (for me, anyway) of only taking one digit, meaning it is only useful for 10 or less windows. I suggest window-number-mode to anyone who works with any number of multiple-window frames regularly.</p>
+
+<p>Somehow, though, 17 windows isn&rsquo;t always enough to show me every buffer I have open! (Ok, granted, I don&rsquo;t always want to see <em>every</em> buffer, and of the 17 windows, only one is used for editing/programming). Therefore, I still have to do some buffer switching. The standard C-x b (switch-to-buffer) works fine for a bit, but I found myself wanting to type less and be more efficient. I found several switch-to-buffer modifiers and replacements, and I&rsquo;ve come to really enjoy and rely on <a href="http://www.emacswiki.org/emacs/InteractivelyDoThings">ido-mode</a>. Ido-mode adds context and matching to switch-to-buffer. Using ido-mode, when I type C-x b, I get (in the echo area) a list of the files in the current directory. I can start typing to filter the list (typing &lsquo;ser&rsquo; would match, for instance, User.php, server.txt, etc.). I can use C-s and C-r to cycle through the currently shown files, so if I type &lsquo;ser&rsquo; and am left with User.php first and server.txt second, I can hit enter to open the first item or type C-s to &ldquo;slide over&rdquo; to the second item, and press enter to open it instead. Ido also has &ldquo;smart matching&rdquo; (I can&rsquo;t remember what its actually called off hand) meaning I can type U.p and basically get matches for U<em>.p</em> (i.e. User.php, Ultimate.perl, etc). One of my favorite features is that, if I want to go back a directory, I only have to type delete once instead of once for each letter in the directory name. Finally, ido-mode works when opening new files, not just switching buffers. Ido offers many other features and commands as well.</p>
+
+<p>I&rsquo;ve heard some people speak ill of ido-mode. Some people prefer iswitchb, others prefer other solutions. Ido-mode works great for me and I really enjoy it. It has definitely made switching buffers much faster, easier, and more efficient for me.</p>
+
+<p>So, that&rsquo;s a breakdown of how I handle all of the buffers I usually have open in emacs. I hope that it provides some insight into one of many ways of Getting Things Done in emacs, even if my way is (most likely) not a very common practice.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Zwahr</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2009-06-16T18:13:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2009</span></span> <span class='time'>6:13 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emacs/'>emacs</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2009/06/16/buffers-and-windows-and-frames-oh-my/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2009/06/16/buffers-and-windows-and-frames-oh-my/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/05/26/some-improved-navigation/" title="Previous Post: Some Improved Navigation">&laquo; Some Improved Navigation</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/06/25/jira-mode-pt-1/" title="Next Post: jira-mode pt. 1">jira-mode pt. 1 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Brian</h1>
+  Brian has been programming since learning BASIC back in grade school. Having programmed PHP for Texas A&amp;M University for almost 5 years, he is now a Consultant at <a href="http://www.improvingenterprises.com">Improving Enterprises</a> where he mostly writes Java.
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/gopher-php-update/">Gopher-php and Phlog Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">Let&#8217;s Try Acme: Episode 9 - the End</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/echosa">@echosa</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'echosa',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/echosa" class="twitter-follow-button" data-show-count="false">Follow @echosa</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Brian Zwahr -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'devstuff-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://echosa.github.io/blog/2009/06/16/buffers-and-windows-and-frames-oh-my/';
+        var disqus_url = 'http://echosa.github.io/blog/2009/06/16/buffers-and-windows-and-frames-oh-my/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

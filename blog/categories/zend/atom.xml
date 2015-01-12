@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Zend | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/zend/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Demo Video of Zend-mode Now Available!]]></title>
+    <link href="http://echosa.github.io/blog/2011/06/27/demo-video-of-zend-mode-now-available/"/>
+    <updated>2011-06-27T16:17:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2011/06/27/demo-video-of-zend-mode-now-available</id>
+    <content type="html"><![CDATA[<p>You can check it out <a href="http://www.youtube.com/watch?v=X6vs4cEajQA">here on YouTube</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I'm Not Dead... I Feel Happy! Especially for My Zend-mode Updates!]]></title>
+    <link href="http://echosa.github.io/blog/2011/06/24/im-not-dead-i-feel-happy-especially-for/"/>
+    <updated>2011-06-24T09:32:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2011/06/24/im-not-dead-i-feel-happy-especially-for</id>
+    <content type="html"><![CDATA[<p>Well, I&rsquo;ve put in quite a bit of time with zend-mode. Hopefully I&rsquo;m getting close to a public release.</p>
+
+<!--more-->
+
+
+<p>For those who don&rsquo;t know, zend-mode is a minor-mode for use with php-mode in emacs. Simple enough, right? O_o</p>
+
+<p>Anyway, Zend Framework is a PHP framework that I have taken to using which incorporates a pretty strict but quite customizable MVC/templating system that just makes writing applications in PHP nicer, in my opinion. Of course, there&rsquo;s a lot of duplication of efforts (e.g. creating classes, creating php-doc blocks, etc) when writing PHP apps, with or without Zend.</p>
+
+<p>That&rsquo;s why I began working on zend-mode. To make myself more productive, and boy have I succeeded. What started out as just a few elisp functions in a single file has turned into a suite of functions and customizable variables that make up what I now call zend-mode.</p>
+
+<p>Don&rsquo;t let the name fool you, though. While zend-mode is developed with Zend in mind, it can be used by any PHP developers as there are plenty of non-Zend-specific functions and abilities, including php lint, phpunit, and phpcs support.</p>
+
+<p>Like I said, I hope to be coming out with a public release soon. I&rsquo;ll most likely put it on <a href="http://www.emacswiki.org/">Emacs Wiki</a>. Also, I&rsquo;m thinking that I may make a screencast soon basically showing zend-mode in action. Haven&rsquo;t decided for sure, yet, so if it doesn&rsquo;t happen don&rsquo;t sue me. If it does happen, I&rsquo;ll put it on my personal YouTube channel and link to it here.</p>
+
+<p>P.S. shameless lulz@my own Holy Grail reference&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bring Out Your Dead!]]></title>
+    <link href="http://echosa.github.io/blog/2010/10/25/bring-out-your-dead/"/>
+    <updated>2010-10-25T09:30:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2010/10/25/bring-out-your-dead</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m not dead. Honest.</p>
+
+<p>I&rsquo;ve just been really busy with a lot of things. I hadn&rsquo;t posted here in a while, so I thought I&rsquo;d at least let you all know that I haven&rsquo;t stopped. In fact, I been spending a lot of time working on a new suite for emacs that makes it a lot better for programming in PHP, especially (but not necessarily) if you use the Zend Framework.</p>
+
+<p>I&rsquo;ve still got some tweaks and testing to do, but I&rsquo;m really excited about this. Trust me, when I have something I feel comfortable releasing, I will post about it here.</p>
+
+<p>Until then, sorry for the lack of posts or updates.</p>
+]]></content>
+  </entry>
+  
+</feed>

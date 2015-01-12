@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Clojure | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/clojure/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Clojure Time]]></title>
+    <link href="http://echosa.github.io/blog/2014/02/25/clojure-time/"/>
+    <updated>2014-02-25T13:27:00-06:00</updated>
+    <id>http://echosa.github.io/blog/2014/02/25/clojure-time</id>
+    <content type="html"><![CDATA[<p>Anyone who knows me knows I really enjoy Lisp, especially Common Lisp (sbcl) and elisp (Emacs). I can now add to that list <a href="http://clojure.org">Clojure</a>.</p>
+
+<!--more-->
+
+
+<p>Clojure is awesome. It&rsquo;s a Lisp language that runs in the JVM (Java Virtual Machine). Lisp + Java. Who&rsquo;d have ever thought&hellip;</p>
+
+<p>Certainly not me, but the end result is an excellent language. It has some differences from the Lisps I&rsquo;m used to, like argument lists being vectors instead of lists and docstrings going before argument lists. However, these habits were easy enough to break, and were never a hindrance enough to bog me down.</p>
+
+<p>So off I went, writing my first Clojure program, which can be find <a href="https://github.com/echosa/clojure-greed">here</a>. I plan to continue working on it and improving it, and will be looking for some code reviews from more experience Clojure developers.</p>
+]]></content>
+  </entry>
+  
+</feed>

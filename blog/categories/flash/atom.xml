@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Flash | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/flash/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mountain Lion, Safari, and Flash]]></title>
+    <link href="http://echosa.github.io/blog/2012/09/04/mountain-lion-safari-flash/"/>
+    <updated>2012-09-04T08:21:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/09/04/mountain-lion-safari-flash</id>
+    <content type="html"><![CDATA[<p>So, if you&rsquo;re like me and you upgraded to Mountain Lion (OSX 10.8) only to have Safari continuously tell you that Flash is a &ldquo;blocked plugin&rdquo; and is out-of-date (no matter how many times you update and install the latest), you&rsquo;re probably ready to rip your hair out (or use Chrome like a quitter). Well, here&rsquo;s how <em>I</em> fixed the issue. Hopefully this works for you, too.</p>
+
+<!--more-->
+
+
+<p>Either in Finder or Terminal go to <code>/Library/Internet Plugins</code>. If you see <code>_Flash Player.plugin</code> (with the underscore in front), delete that and restart Safari. That fixed the issue for me. I&rsquo;m thinking that was some old version that, for some reason, was overriding the newer installed version (without the underscore). Strange, indeed.</p>
+
+<p>Reference: <a href="https://discussions.apple.com/thread/4251341?start=0&amp;tstart=0">Relevant Apple Support Thread</a></p>
+]]></content>
+  </entry>
+  
+</feed>

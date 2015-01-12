@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Java | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Whole New World]]></title>
+    <link href="http://echosa.github.io/blog/2012/10/26/a-whole-new-world/"/>
+    <updated>2012-10-26T07:42:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/10/26/a-whole-new-world</id>
+    <content type="html"><![CDATA[<p>I started working at <a href="http://improvingenterprises.com">Improving</a> this week which has required a major shift in my development ways. First and foremost is the change from PHP (which I&rsquo;ve been coding for <em>years</em>) to Java. It wouldn&rsquo;t be so bad if it was <em>just</em> Java, though. However, that is not the case.</p>
+
+<!--more-->
+
+
+<p>Oh no, that is not the case by a <em>long</em> shot. I&rsquo;ve been introduced to an entire new world consisting of jboss, maven, JSF, CDI, JPA, hibernate, and annotations, my God, the annotations!</p>
+
+<p>Also Eclipse, but we won&rsquo;t go into that.</p>
+
+<p>This past week has been such a head-stuffer that I&rsquo;m certain I&rsquo;ve lost some older, but valuable, information. (What&rsquo;s my wife&rsquo;s name again?) I&rsquo;m going to quickly go over my experiences with each of these technologies and illustrate what my one week&rsquo;s worth of experience has left me with. I&rsquo;ll be doing so in no particular order.</p>
+
+<p>CDI is pretty straight-forward. It&rsquo;s dependency injection (hence the &ldquo;DI&rdquo;). As long as you understand annotations, you&rsquo;re good. The main ingredient is <code>@Inject</code>, which does exactly that. It injects a dependency into a class, like this:</p>
+
+<pre><code class="java">import javax.inject.Inject;
+
+public class MyClass {
+    @Inject
+    private SomeObject injectedObject;
+
+    ...
+}
+</code></pre>
+
+<p>This will instantiate <code>injectedObject</code> in the class so that it can be used in the class methods without any other preparation. Conceivably, you could then simply replace the SomeObject class with another in the class path and thus change what gets injected, for instance, a mock or stub class for testing purposes. This is made even easier (I think?) with some other annotations (like <code>@Qualifier</code>), which I won&rsquo;t get into this in this post.</p>
+
+<p>JPA and hibernate I&rsquo;ll cover together because hibernate is an implementation of the Java Persistence API (does anyone else get a kick out of nested acronyms, or is it just me?). I should mention that I&rsquo;m working with hibernate 4 which, apparently, is significantly different from previous version from what I&rsquo;ve been told. Hibernate is an ORM and used, obviously, for database access. It can be used with or without the persistence stuff; I am developing with persistence.</p>
+
+<p>Hibernate gave me a lot of trouble. At first it was easy, as I wrote my practice code in the &ldquo;old style&rdquo; using a config XML file. A couple hours of hacking away, and I was able to write to my database from my test application. Then I was told to convert that XML config file usage into annotations (which, humorously enough, require a <em>different</em> XML file). That&rsquo;s when all the trouble started.</p>
+
+<p>I ran into many issues including:
+* being told I need to wrap my calls to <code>persist()</code> (the method that inserts into the database) in transactions,
+* doing so, and being told that transactions can&rsquo;t be used (this and the previous led to a recursive loop of one then the other as I tried to fix both problems)
+* finally getting no errors but not having the data actually be inserted into the database
+* figuring out which versions of certain imported items I needed (there are some duplicates in both the javax.persistence and javax.transaction namespaces)</p>
+
+<p>The second bullet point above lead to lots of research which essentially ended in my realizing that in order to use the <code>@PersistenceContext</code> annotation, you have to have the object using it declared as an EJB (Enterprise Java Bean), like so:</p>
+
+<pre><code class="java">import javax.ejb.EJB;
+
+public class MyClass {
+    @EJB
+    private SomeObject objectThatPerformsCallsToPersist;
+
+    ...
+}
+</code></pre>
+
+<p>This is needed in order to inject EntityManager into the class that needs to call persist, using the <code>@PersistenceContext</code> annotation, like so:</p>
+
+<pre><code class="java">import javax.pesistence.*;
+import javax.transaction.*;
+import static javax.transaction.TransactionAttributeType.REQUIRED;
+
+@Stateless
+@Transaction(REQUIRED)
+public class SomeObject {
+    @PersistenceContext(unit="unit-name")
+    private EntityManager em;
+
+    public void addThing(thing) {
+        em.persist(thing);
+    }
+}
+</code></pre>
+
+<p>You&rsquo;ll notice a few things here. We set transactions as required, which will wrap all database calls in transactions if they aren&rsquo;t already. This is for the first bullet point above. Second, we set as <code>@Stateless</code> in order to make this available to CDI (that&rsquo;s a whole different set of explanations). You&rsquo;ll see what we set the EntityManager to persist. I&rsquo;m <em>pretty sure</em> this means there&rsquo;s only one hanging around (we aren&rsquo;t recreating new ones every time we need one), but I <em>do</em> know that the <code>@PersistenceContext</code> essentially injects the EntityManger in. Also, you&rsquo;ll see the unit was set to some string. This must match a <code>&lt;persistence-unit&gt;</code> you&rsquo;ve set in persistence.xml.</p>
+
+<p>Yeah, so that was the gist of how I got it working after about a day. Then I&rsquo;m told &ldquo;oh, you shouldn&rsquo;t need the <code>@EJB</code> annotation, so practice fixing/refactoring that out&rdquo;. So I did, taking about another half of a day and eventually breaking down and having my manager/superior type person help me out. Long story short, it turns out that <code>@PersistenceContext</code> requires <code>@EJB</code> in the mix, but <code>@PersistenceUnit</code> does not. So, changing the former to the latter lets you not need the <code>@EJB</code> annotation, also requiring some other changes.</p>
+
+<p><em>Or so we thought.</em></p>
+
+<p>The final result that ended up working without needing @EJB looks like this:</p>
+
+<pre><code class="java">@Named
+@RequestScoped
+@TransactionAttribute(REQUIRED)
+public class SomeAction {
+    @Inject
+    private ObjectPersister persister;
+
+    private String storedString;
+
+    public void doSomething() {
+        persister.addToDb("String to add.");
+        storedString = "String to store.";
+    }
+}
+</code></pre>
+
+<p>The <code>doSomething()</code> method is meant to be called from an HTML element (such as a button) via JSF. The <code>@Named</code> annotation allows the .xhtml file(s) to reference <code>{someAction.doSomething}</code>. <code>@RequestScoped</code> is the scoping I used for my test application. This is just a string that gets set then displayed in the web browser (explained later).</p>
+
+<p>However, we need our <code>ObjectPersister</code> class;</p>
+
+<pre><code class="java">import javax.persistence.*;
+import javax.transaction.*;
+import javax.ejb.*;
+import static javax.ejb.TransactionAttributeType.REQUIRED;
+
+@Stateless
+@TransactionAttribute(REQUIRED)
+public class ObjectPersister {
+    @PersistenceContext(unitName="my-unit")
+    private EntityManager em;
+
+    public String addToDb(String stringToAdd) {
+        MyObject myObject = new MyObject(stringToAdd);
+        em.persist(myObject);
+        return myObject.theString;
+    }
+}
+</code></pre>
+
+<p>This is similar to my example above. Fairly straight forward. However, we need our <code>MyObject</code> class:</p>
+
+<pre><code class="java">import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name="quote")
+public class MyObject implements Serializable {
+    @Id
+    @GeneratedValue
+    @Column(name="id")
+    private Integer id;
+
+    @Column(name="theString")
+    private String theString;
+
+    public MyObject() {
+    }
+
+    public MyObject(String str) {
+        theString = str;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTheString() {
+        return theString;
+    }
+
+    public void setTheString(String str) {
+        theString = str;
+    }
+}
+</code></pre>
+
+<p>This class is straight forward; it&rsquo;s basically just a bean. The <code>@Entity</code> annotation essentially labels it as a database object (single entry, sort of), and the <code>@Table</code> gives the database table name these objects should be written to. The rest is mostly self-explanatory.</p>
+
+<p>Ah, but we&rsquo;re still missing a piece to the puzzle. Remember that &ldquo;unit&rdquo; from before? We need to define that, and we do so in our persistence.xml:</p>
+
+<pre><code class="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0"&gt;
+
+  &lt;persistence-unit name="my-unit"&gt;
+
+    &lt;jta-data-source&gt;java:jboss/datasources/MySqlDS&lt;/jta-data-source&gt;
+    &lt;properties&gt;
+      &lt;property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" /&gt;
+      &lt;property name="hibernate.hbm2ddl.auto" value="update"/&gt;
+      &lt;property name="hibernate.show_sql" value="true" /&gt;
+    &lt;/properties&gt;
+
+  &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+</code></pre>
+
+<p>In this case, I&rsquo;m using MySql. The third property, when set to &ldquo;true&rdquo; will print all database queries that are run to jboss&#8217; console, which is good for debugging. See that <code>&lt;jta-data-source&gt;</code>? Yeah, we need that. Turns out that <em>that</em> needs to be defined in the jboss config (not an application specific config)! Here&rsquo;s an example:</p>
+
+<pre><code class="xml">&lt;datasources&gt;
+    &lt;datasource jndi-name="java:jboss/datasources/MySqlDS" pool-name="MySqlDS"&gt;
+        &lt;connection-url&gt;jdbc:mysql://localhost:3306/quotes&lt;/connection-url&gt;
+        &lt;driver&gt;com.mysql&lt;/driver&gt;
+        &lt;transaction-isolation&gt;TRANSACTION_READ_COMMITTED&lt;/transaction-isolation&gt;
+        &lt;pool&gt;
+            &lt;min-pool-size&gt;10&lt;/min-pool-size&gt;
+            &lt;max-pool-size&gt;100&lt;/max-pool-size&gt;
+            &lt;prefill&gt;true&lt;/prefill&gt;
+        &lt;/pool&gt;
+        &lt;security&gt;
+            &lt;user-name&gt;username&lt;/user-name&gt;
+            &lt;password&gt;password&lt;/password&gt;
+        &lt;/security&gt;
+        &lt;statement&gt;
+            &lt;prepared-statement-cache-size&gt;32&lt;/prepared-statement-cache-size&gt;
+            &lt;share-prepared-statements&gt;true&lt;/share-prepared-statements&gt;
+        &lt;/statement&gt;
+    &lt;/datasource&gt;
+    &lt;drivers&gt;
+        &lt;driver name="com.mysql" module="com.mysql"&gt;
+            &lt;xa-datasource-class&gt;com.mysql.jdbc.jdbc2.optional.MysqlXADataSource&lt;/xa-datasource-class&gt;
+        &lt;/driver&gt;
+    &lt;/drivers&gt;
+&lt;/datasources&gt;
+</code></pre>
+
+<p>You&rsquo;ll need to add these to your <code>&lt;datasources&gt;</code> and its <code>&lt;drivers&gt;</code> section. I added them to jboss&#8217; standalone.xml, but apparently you can add them to a domain-specific config as well.</p>
+
+<p>Now we only have one more thing. Since I&rsquo;m using maven, I need to add the appropriated dependencies to my pom.xml file:</p>
+
+<pre><code class="xml">&lt;dependencies&gt;
+   &lt;dependency&gt;  
+     &lt;groupId&gt;javax.persistence&lt;/groupId&gt;  
+     &lt;artifactId&gt;persistence-api&lt;/artifactId&gt;  
+     &lt;version&gt;1.0-rev-1&lt;/version&gt;  
+   &lt;/dependency&gt;  
+
+   &lt;dependency&gt;
+     &lt;groupId&gt;javax.transaction&lt;/groupId&gt;
+     &lt;artifactId&gt;jta&lt;/artifactId&gt;
+     &lt;version&gt;1.1&lt;/version&gt;
+   &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+
+<p>Add these to your <code>&lt;dependencies&gt;</code> tag.</p>
+
+<p>After all of this, you <em>should</em> be set! The only thing missing is the .xhtml file to use the action from above, but I&rsquo;ll get to that below.</p>
+
+<p><em>Whew</em> Moving on&hellip;</p>
+
+<p>Since I&rsquo;ve mentioned them, jboss and maven are just part of the architecture. jboss is the server and maven acts as both a builder (like make) and a dependency manager. Not much else to say right now.</p>
+
+<p>Finally, we get to JSF: Java Server Faces (I believe). This, from what I can tell, is a templating engine to let your .xhtml files access your Java classes (via the <code>@Named</code> annotation as mentioned).</p>
+
+<p>Here&rsquo;s the missing example from our code/setup above:</p>
+
+<pre><code class="html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core"&gt;
+
+&lt;h:head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
+&lt;title&gt;My App&lt;/title&gt;
+&lt;/h:head&gt;
+
+&lt;body&gt;
+   &lt;div id="content"&gt;
+      &lt;div&gt;
+        &lt;h:form id="myForm"&gt;
+          &lt;h:commandButton id="myButton" value="Click Me"&gt;
+            &lt;f:ajax event="click" render="targetElement" listener="#{someAction.doSomething}"/&gt;
+          &lt;/h:commandButton&gt;
+          &lt;h:outputText value="#{someAction.storedString}" id="targetElement"/&gt;
+        &lt;/h:form&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>So, what we have here is a button that runs the <code>someAction.doSomething()</code> method, the renders the <code>targetElement</code> element when it is done. The <code>targetElement</code> has a value equal to whatever <code>someAction.storedString</code> is, so when <code>someAction.doSomething()</code> changes its value and tells <code>targetElement</code> to render, the value displayed in the browser changes to the new value set in the class. JSF provides the <code>#{}</code> interface between xhtml and Java classes.</p>
+
+<hr />
+
+
+<p>I&rsquo;ll be honest, my biggest issue and the reason it took me almost two days to do what I did is old information on the Internet. We are using basically the latest and greatest, so I had to make sure that the information I was reading was jboss 7, hibernate 4, etc. Wading through all the old stuff wasn&rsquo;t easy, though search filters helped. Also, we don&rsquo;t use Spring so I had to make sure I added &ldquo;-spring&rdquo; to my searches, especially when looking up persistence and transaction things.</p>
+
+<p>Once you&rsquo;ve filtered out all the crud, then you find the mess: several different posts showing you several different ways to achieve a particular goal. If you&rsquo;re like me, none of them will work right, and you&rsquo;ll be left picking out the pieces of each that do and trying to smash them together into something coherent that works. (Then, if you&rsquo;re <em>really</em> like me, you fail, get frustrated, and ask for help.) However, the entire experience, though frustrating, leaves you with much more knowledge than you had before.</p>
+
+<p>Well, that&rsquo;s all for now. Hopefully I&rsquo;ll be able to put my newly-obtained information to good use.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Triangle Game Update]]></title>
+    <link href="http://echosa.github.io/blog/2012/09/09/triangle-game-update/"/>
+    <updated>2012-09-09T18:12:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/09/09/triangle-game-update</id>
+    <content type="html"><![CDATA[<p>So, I&rsquo;ve recently pushed a number of changes to my Triangle Game project I&rsquo;m using to learn Java again. Updates include:</p>
+
+<ul>
+<li>Bug fixes and display improvements</li>
+<li>Various effects that are randomly assigned to the spaces on the board</li>
+<li>Missing turns (after landing on spaces with that effect)</li>
+<li>Refactored code</li>
+</ul>
+
+
+<!--more-->
+
+
+<p>Specifically, I&rsquo;m pretty proud of the randomly assigned space effects. I achieved this using a technique that I also use in my test script. The test script will automatically pull in all test classes, given they are in the right directory and package. In order to randomly assign effects to the board I do something quite similar. Each time I create a space to assign to the board (except the first and last spaces), I make a call <code>Play.getRandomEffect()</code>, which looks like this:</p>
+
+<pre><code class="java">public static SpecialEffectInterface getRandomEffect()
+{
+    List&lt;String&gt; effectClasses = new ArrayList&lt;String&gt;();
+
+    File thisPath = new File(SpecialEffectInterface.class.getResource("SpecialEffectInterface.class").getPath());
+    String thisPackage = SpecialEffectInterface.class.getPackage().getName() + ".";
+
+    File dir = new File(thisPath.getParent());
+    File[] children = dir.listFiles(new EffectFilter());
+    if (null != children) {
+        for (int i=0; i&lt;children.length; i++) {
+            String filename = children[i].getName();
+            effectClasses.add(thisPackage + filename.substring(0, filename.length()-6));
+        }
+    }
+    int choice = 0 + (int)(Math.random() * (effectClasses.size() - 1));
+    String classChoice = effectClasses.get(choice);
+    SpecialEffectInterface effect = null;
+    try {
+        effect = (SpecialEffectInterface) Class.forName(classChoice).newInstance();
+    } catch (ClassNotFoundException e) {
+        System.out.println("Class Not Found: " + e.getMessage());
+        System.exit(1);
+    } catch (InstantiationException e) {
+        System.out.println("Instantiation Exception: " + e.getMessage());
+        System.exit(1);
+    } catch (IllegalAccessException e) {
+        System.out.println("Illegal Access Exception: " + e.getMessage());
+        System.exit(1);
+    }
+    return effect;
+}
+</code></pre>
+
+<p>SpecialEffectInterface is the common interface used by all space effect classes, and is what this function returns. Let&rsquo;s take a look at this function in pieces.</p>
+
+<pre><code class="java">List&lt;String&gt; effectClasses = new ArrayList&lt;String&gt;();
+</code></pre>
+
+<p>First I set up a list to hold all the names of my special effect classes to be used later.</p>
+
+<pre><code class="java">File thisPath = new File(SpecialEffectInterface.class.getResource("SpecialEffectInterface.class").getPath());
+</code></pre>
+
+<p>Next I get the file path to where my effects are kept. Since all the effects are in the same directory as their common interface, I use that to find the path.</p>
+
+<pre><code class="java">String thisPackage = SpecialEffectInterface.class.getPackage().getName() + ".";
+</code></pre>
+
+<p>Then I get the package that they are all in. This is necessary later, as you&rsquo;ll see.</p>
+
+<p>Now comes the fun part: generating a list of the effect classes.</p>
+
+<pre><code class="java">File dir = new File(thisPath.getParent());
+File[] children = dir.listFiles(new EffectFilter());
+if (null != children) {
+    for (int i=0; i&lt;children.length; i++) {
+        String filename = children[i].getName();
+        effectClasses.add(thisPackage + filename.substring(0, filename.length()-6));
+    }
+}
+</code></pre>
+
+<p>This code creates a File object with the path we found to the effect classes, then creates a list of the items (children) in that directory given the <code>EffectFilter</code> class, which looks like this:</p>
+
+<pre><code class="java">package triangle_game.effects;
+
+import java.io.*; 
+
+public class EffectFilter implements FilenameFilter
+{ 
+    public boolean accept(File dir, String name)
+    { 
+        return name.endsWith("Effect.class");
+    } 
+}
+</code></pre>
+
+<p>This filter basically gives us everything in the directory that ends with &ldquo;Effect.class&rdquo; (for instance, NullEffect.class). So, as long as all effects are named &ldquo;SomethingEffect&rdquo; and are in the same directory as the interface, they will be found.</p>
+
+<p>Continuing on, we then loop through the children, provided there are any. During this loop, we get the name of the files that matched our filter (the effect classes), then add the class name (without the .class extension) to our list of effect classes we created earlier. After all this, we now have a list of all the special effects we can use to assign to the board.</p>
+
+<pre><code class="java">int choice = 0 + (int)(Math.random() * (effectClasses.size() - 1));
+String classChoice = effectClasses.get(choice);
+SpecialEffectInterface effect = null;
+try {
+    effect = (SpecialEffectInterface) Class.forName(classChoice).newInstance();
+} catch (ClassNotFoundException e) {
+    System.out.println("Class Not Found: " + e.getMessage());
+    System.exit(1);
+} catch (InstantiationException e) {
+    System.out.println("Instantiation Exception: " + e.getMessage());
+    System.exit(1);
+} catch (IllegalAccessException e) {
+    System.out.println("Illegal Access Exception: " + e.getMessage());
+    System.exit(1);
+}
+return effect;
+</code></pre>
+
+<p>Finally, we get a random number from 0 to one less than the size of the list. This number serves as the index of the list that will be the chosen effect. We get the effect name from the list, then in a fairly large try/catch block we get our random effect with a call to <code>Class.forName()</code> (which gives us the class object) followed by <code>.newInstance()</code> which actually returns the special effect object we need, which we then return from our function.</p>
+
+<p>I&rsquo;m sure there&rsquo;s a better way to do what I&rsquo;ve done, but this is the way I figured out, and I&rsquo;m pretty proud of it for now.</p>
+
+<p>Anyway, I think I&rsquo;ve come quite a long way in my development, and I&rsquo;ve been trying to apply my new found knowledge of design patterns as I go. If you have any comments, concerns, or corrections, please feel free to comment.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Try and Variable Initialization]]></title>
+    <link href="http://echosa.github.io/blog/2012/08/21/try-and-variable-initialization/"/>
+    <updated>2012-08-21T21:55:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/08/21/try-and-variable-initialization</id>
+    <content type="html"><![CDATA[<p>So, I learned a valuable lesson today that has taught me how to properly handle a particular error I kept getting when trying to compile some of my Java classes.</p>
+
+<!--more-->
+
+
+<p>Here is the basic offending code:</p>
+
+<pre><code class="java">public class TryClass
+{
+    public static void main(String[] args)
+    {
+        String myString;
+        try {
+            myString = "ohai";
+        } catch (Exception e) {
+        }
+        System.out.println(myString);
+    }
+}
+</code></pre>
+
+<p>The error the Java compiler gives is this:
+    TryClass.java:10: variable myString might not have been initialized
+            System.out.println(myString);
+                               ^
+For the life of me, I couldn&rsquo;t figure out the problem. Everything <em>looked</em> fine to me. Eventually, I realized that I could satiate the compiler by putting everything requiring the offending variable into the try block, like so:</p>
+
+<pre><code class="java">public class TryClass
+{
+    public static void main(String[] args)
+    {
+        String myString;
+        try {
+            myString = "ohai";
+            System.out.println(myString);
+        } catch (Exception e) {
+        }
+    }
+}
+</code></pre>
+
+<p>That allows the code to compile and run just fine. For this small test case its not an issue, but for a much larger method where the variable is used throughout, this just isn&rsquo;t a practical solution.
+Surround your pullquote like this {&#8221; text to be quoted &#8220;}</p>
+
+<pre><code class="java">public class TryClass
+{
+    public static void main(String[] args)
+    {
+        String myString = null;
+        try {
+            myString = "ohai";
+        } catch (Exception e) {
+        }
+        System.out.println(myString);
+    }
+}
+</code></pre>
+
+<p>Notice that I set the variable to null (in this case) prior to the try block, thus initializing (not just declaring) it so that the compiler knows it will always have a value. This really is one of those &ldquo;God I feel so stupid right now&rdquo; moments, but its just part of my adjustment from loosely-typed PHP to staticly-typed Java. There&rsquo;s certainly less room for mistakes, and I definitely like that.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[So I'm Learning Java]]></title>
+    <link href="http://echosa.github.io/blog/2012/08/17/so-im-learning-java/"/>
+    <updated>2012-08-17T10:37:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/08/17/so-im-learning-java</id>
+    <content type="html"><![CDATA[<p>Yep, that&rsquo;s right. After not touching it for <em>years</em> since college, I&rsquo;m learning Java. This has been prompted by many things, but mostly I just enjoy learning new languages; having a reason to do so is just an added bonus.</p>
+
+<p>The project I&rsquo;m using to teach myself is a command-line program: a board game idea I came up with. You can watch my progress at the <a href="https://github.com/echosa/triangle_game">GitHub repo</a> if you wish.</p>
+
+<p>I have to say that, so far, I&rsquo;m really enjoying Java. Coming from doing PHP for half a decade, its actually a nice change of pace to work in a statically typed language. There&rsquo;s an added layer of accomplishment and confidence in the code when it compiles properly. Also, the fact that everything, and I mean <em>everything</em>, is a class in Java, it really forces me to think about separation of duties, dependency injection, etc. The fact that I&rsquo;m also reading Head First Design Patterns helps too.</p>
+]]></content>
+  </entry>
+  
+</feed>

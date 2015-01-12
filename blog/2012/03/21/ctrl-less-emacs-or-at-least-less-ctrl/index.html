@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CTRL-less Emacs? (or, at Least, Less CTRL&#8230;) - Dev and Such</title>
+  <meta name="author" content="Brian Zwahr">
+
+  
+  <meta name="description" content="Things I love about emacs: (E)LISP and the ease with which extensions, modes, functions, etc. can be developed
+Buffer/frame support
+M-x customize &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://echosa.github.io/blog/2012/03/21/ctrl-less-emacs-or-at-least-less-ctrl">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dev and Such</a></h1>
+  
+    <h2>A blog pertaining to my own development experiences.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="echosa.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/php">PHP</a></li>
+  <li><a href="/blog/categories/java">Java</a></li>
+  <li><a href="/blog/categories/ios">iOS</a></li>
+  <li><a href="/blog/categories/node-js">Node.js</a></li>
+  <li><a href="/blog/categories/emacs">Emacs</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">CTRL-less Emacs? (or, at Least, Less CTRL&#8230;)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-03-21T09:39:00-05:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2012</span></span> <span class='time'>9:39 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Things I love about emacs:</p>
+
+<ul>
+<li>(E)LISP and the ease with which extensions, modes, functions, etc. can be developed</li>
+<li>Buffer/frame support</li>
+<li>M-x customize</li>
+<li>Mark/point, registers, kill-ring</li>
+<li>It does everything*</li>
+<li>The power. My God, the power.</li>
+</ul>
+
+
+<p>This is not a complete list, but it goes to show that emacs is great and I love it for reasons. However, especially as of lately, I&rsquo;ve been experiencing the beginnings of emacs pinky. You know what I&rsquo;m talking about. Holding down the ctrl button for significant amounts of time has been leading to the side/pad of my left pinky being sore and uncomfortable, even with using Caps Lock as my control key. (It&rsquo;s <em>way</em> worse when I have to use the real control key.)</p>
+
+<p>This is something I want to fix.</p>
+
+<!--more-->
+
+
+<p>I should probably mention why I&rsquo;m holding down ctrl so much. I&rsquo;m a PHP developer. Lately, I&rsquo;ve been doing a lot of editing/refactoring. This means I spend quite a bit of time moving around the buffer. I don&rsquo;t use arrow keys, I use ctrl-n, -p, -f, and -b (as well as their M- versions). I also use registers and other handy emacs functions. The following hypothetical key stroke sequence is not much different form real usage for me:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C-a C-space C-n C-n C-n C-x r s o C-s C-s C-s C-s C-k C-x r i o C-n C-n C-n C-k C-n C-y C-s C-s C-s C-x r i o</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s a lot of holding down control, especially when I&rsquo;m doing this sort of editing for literally <em>hours</em>. Its no wonder my pinky gets sore. I have been making use of macros (C-x ( ) lately, and that helps a <em>bit</em>, but still, I end up in situations like the above. Therefore, I&rsquo;ve been trying to think of/discover ways to alleviate my pinky of its ctrl-prison. Here are some of the things I&rsquo;ve come up with:</p>
+
+<ul>
+<li>Use arrow keys (I&rsquo;d really like to stay on the home row)</li>
+<li>Use the mouse (Good God, no)</li>
+<li>Use searching to get around instead of line/column movement. This is fine if I need to reach something much further up or down in a buffer, but not when I want to work on consecutive lines. Then its much easier/faster to use line/column movement instead of searching to get where I need to be.</li>
+<li>Use something like viper-mode (or the more recent evil-mode) to give me VI(m) like capabilities. This is honestly something I&rsquo;ve been off and on about using for a while, and I&rsquo;ve tried viper a time or two. I&rsquo;m really considering this again.</li>
+<li>Use control-lock. I&rsquo;ve done this before, but its not as good as it seems (in my experience). Control-lock is a mode which does exactly what the name implies, it &ldquo;locks&rdquo; ctrl as &ldquo;on&rdquo; similar to Caps Lock for shift. That way, you can toggle control-lock on, then just type n, n, n, n, k, n, y to move down four lines, kill the line, move down again, then yank your kill. Its a really good idea, and has proven useful before, but I just couldn&rsquo;t get used to use it for long stretches of editing like my example above. It just didn&rsquo;t feel right, and sometimes got a bit confusing (though the latter is probably more my own fault).</li>
+<li>Find a way to map searching (C-s) the same way that running macros (C-x e) are mapped. That is, with macros, you press C-x e to run the macro, then just press e to run it again and again, whereas with searching, you have to keep pressing C-s to repeat the search.</li>
+</ul>
+
+
+<p>I&rsquo;ve had some other fleeting ideas, but can&rsquo;t remember them at the moment. If you have any tips or suggestions for use emacs with less CTRL, please comment and let me know. For now, I think I may have to try a VI(m) hybrid mode (again).</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Zwahr</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2012-03-21T09:39:00-05:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2012</span></span> <span class='time'>9:39 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emacs/'>emacs</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2012/03/21/ctrl-less-emacs-or-at-least-less-ctrl/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2012/03/21/ctrl-less-emacs-or-at-least-less-ctrl/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/21/it-kills-me-every-time/" title="Previous Post: It Kills Me Every Time...">&laquo; It Kills Me Every Time&#8230;</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/04/16/zf-mode-has-been-released/" title="Next Post: zf-mode has been released!">zf-mode has been released! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Brian</h1>
+  Brian has been programming since learning BASIC back in grade school. Having programmed PHP for Texas A&amp;M University for almost 5 years, he is now a Consultant at <a href="http://www.improvingenterprises.com">Improving Enterprises</a> where he mostly writes Java.
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/gopher-php-update/">Gopher-php and Phlog Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">Let&#8217;s Try Acme: Episode 9 - the End</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/echosa">@echosa</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'echosa',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/echosa" class="twitter-follow-button" data-show-count="false">Follow @echosa</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Brian Zwahr -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'devstuff-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://echosa.github.io/blog/2012/03/21/ctrl-less-emacs-or-at-least-less-ctrl/';
+        var disqus_url = 'http://echosa.github.io/blog/2012/03/21/ctrl-less-emacs-or-at-least-less-ctrl/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

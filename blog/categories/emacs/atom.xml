@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Emacs | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/emacs/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New and Improved Emacs Config!]]></title>
+    <link href="http://echosa.github.io/blog/2014/10/06/new-and-improved-emacs-config/"/>
+    <updated>2014-10-06T16:20:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/10/06/new-and-improved-emacs-config</id>
+    <content type="html"><![CDATA[<p>I finally did it. I moved my Emacs configuration into a .org file.</p>
+
+<!--more-->
+
+
+<p>You can see the results <a href="https://github.com/echosa/emacs.d">here</a> on GitHub. There&rsquo;s not much else to say in this post, honestly. The configuration pretty much speaks for itself.</p>
+
+<p>Thanks to Sacha Chua for <a href="http://sachachua.com/blog/2012/06/literate-programming-emacs-configuration-file/">the inspiration</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Possible Paradigm Shift]]></title>
+    <link href="http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift/"/>
+    <updated>2014-06-17T08:57:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/06/17/a-possible-paradigm-shift</id>
+    <content type="html"><![CDATA[<p>Lately I&rsquo;ve been experiencing a change in the way I look at, think about, and use Emacs.</p>
+
+<!--more -->
+
+
+<p>Emacs was always a one-stop shop for me. If I <em>could</em> do it in Emacs, I did. Email. Web browsing. Twitter. Listening to music. Games. Shells and terminals. Even <a href="http://echosa.github.io/blog/2010/11/10/google-maps-in-emacs/">Google Maps</a>. Of course, I did coding and actual text editing as well.</p>
+
+<p>Well, a while back a gave ol&#8217; vim a shot. I like it. Quite a bit, actually. It is my second preferred editor, and I even use <a href="https://gitorious.org/evil/pages/Home">evil-mode</a> in Emacs now. I learned a lot during my time with vim, and I have been applying lessons learned to my other work flows. It has created a dichotomy in me that I&rsquo;ve been struggling back and forth with for a while now.</p>
+
+<p>Vi(m)&rsquo;s big motive, so to speak, is to do one thing and do it well. It accomplishes this. It&rsquo;s fast and efficient. Editing in Vim is fast and efficient. This is largely why I have adopted evil-mode. However, I found myself asking &ldquo;where is X?&rdquo;, where X could be terminals, web browsers, etc. These things simply don&rsquo;t exist in Vim (and, really, rightfully shouldn&rsquo;t). Those things aren&rsquo;t part of the One Thing it does well. That forced me to outsource these things to other programs. Programs I already used, mind you. This was, as crazy as it seems, a revelation. If I&rsquo;m going to have a terminal, a web browser, etc. open <em>anyway</em>, I may as well make use of them.</p>
+
+<p>So, here I am, years into my Emacs experience, finding myself with, once again, a new look on all things Emacs. Emacs is a <a href="http://echosa.github.io/blog/2009/09/25/oh-yeah-its-text-editor/">hell of a text editor</a>. It does lots of other things as well, some of which it does <a href="https://github.com/magit/magit">extremely well</a>. However, not <em>everything</em> needs to be done, or <em>should</em> be done, in Emacs. It hurts me just a little to say that, but I&rsquo;m increasingly believing that to be true. Heresy, thy name is me.</p>
+
+<p>I&rsquo;d be remiss if I didn&rsquo;t mention another potential factor in this recent change of mind and heart. I&rsquo;m slowly (but not <em>that</em> slowly) severing ties with the Google Machine. In doing so, I&rsquo;ve become aware of just how tied in I was. It was eye opening and scary. Having all your eggs in one basket, so to speak, has its benefits, but also can basically be a self-imposed lock down.</p>
+
+<p>As I was untangling myself from this web (heh&hellip; <em>get it?</em>), I began recognizing other similar situations I was in. Emacs was at the forefront. Being so tied in to Emacs, when it crashed (which, to be fair, is rare), an update went badly, or anything else prevented Emacs from working appropriately, it was detrimental. Spreading tasks to the appropriate <em>separate</em> handlers is important. This is the same reason why micro-frameworks have become a huge deal, especially in the PHP world. It&rsquo;s piecing together your own solutions with several parts that each do one thing and do it well.</p>
+
+<p>The end result of all this is I&rsquo;m going to use Emacs for what it&rsquo;s good for: development and text editing. This includes things like running terminals for tests or other things, using version control (seriously, magit is the shit [technical term]), and other development and text editing related things. Other tasks will be delegated elsewhere, including <a href="https://github.com/sprang/emacs-2048">2048</a>.</p>
+
+<p>If you go through the history of Emacs posts on this blog, you&rsquo;ll see that I&rsquo;ve flip-flopped on several topics and not kept up with various changes I&rsquo;ve made (<em>cough</em> org-mode <em>cough</em>). This may very well fall into that category as well, and I may find myself back to doing as much in Emacs as possible. For now, though, I&rsquo;ll be spreading my work across multiple applications.</p>
+
+<hr />
+
+
+<p>Side notes:</p>
+
+<p>You&rsquo;ll notice the title of this article says &ldquo;possible&rdquo;. That&rsquo;s largely due to what I said in the last paragraph.</p>
+
+<p>Also, as far as getting myself away from the Google Machine, to be fair, I&rsquo;ve basically just jumped ship to Apple (for most, but not all, things). This may sound hypocritical, but a.) as I&rsquo;m basically all Apple hardware these days anyway, it at least makes more sense than being tied into Google, and b.) Apple is now at least on par with Google <a href="http://9to5mac.com/2014/05/15/eff-marks-apples-remarkable-improvement-in-protecting-customer-data-from-governments/">as far as the EFF is concerned</a>. I&rsquo;m not a complete hypocrite, though, as I&rsquo;ve been looking at what Apple services I can move to other providers, so I&rsquo;m at least trying to apply this same separation of services thought to my Apple tie-ins as well.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacsagist]]></title>
+    <link href="http://echosa.github.io/blog/2014/03/31/emacsagist/"/>
+    <updated>2014-03-31T15:06:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2014/03/31/emacsagist</id>
+    <content type="html"><![CDATA[<p>I recently released <a href="https://github.com/echosa/emacsagist">Emacsagist</a>, an Emacs front-end for searching <a href="http://packagist.org">Packagist</a>.</p>
+
+<!--more-->
+
+
+<p>You can download Emacsagist via the <a href="http://melpa.milkbox.net/">MELPA repository</a> with <code>M-x list-packages</code> or <a href="http://cask.github.io">Cask</a>. From there, you can run <code>M-x emacsagist-search</code>, type in a search term, and Emacsagist will give you search results. You can press return on any package name to get full details.</p>
+
+<p>Now there&rsquo;s one less reason to leave Emacs for PHP developers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How My Emacs Setup Changed Me (and Is It Time to Change Again)]]></title>
+    <link href="http://echosa.github.io/blog/2013/07/05/how-my-emacs-setup-changed-me-and-is-it-time-to-change-again/"/>
+    <updated>2013-07-05T09:08:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2013/07/05/how-my-emacs-setup-changed-me-and-is-it-time-to-change-again</id>
+    <content type="html"><![CDATA[<p>A little over a year ago, I committed <a href="https://github.com/echosa/emacs-setup">emacs-setup to GitHub</a>. emacs-setup is a package I&rsquo;d written previously and had tweaked and used enough to finally warrant putting out to the public (it is available through <a href="http://melpa.milkbox.net">MELPA</a>.</p>
+
+<!-- more -->
+
+
+<p>emacs-setup came about when during a time when I became very fond of Emacs making things really easy to do, or flat out doing things for me. As I was adding/removing packages, and changing my .emacs file in general, I thought to myself &ldquo;certainly, there&rsquo;s a more interactive way to do this.&rdquo; As I found, there wasn&rsquo;t. Not in the capacity I was looking for, anyway.</p>
+
+<p>So, I began writing some basic functions, the base of what would become emacs-setup. I have since been using the package for over a year.</p>
+
+<p>What does any of this have to do with anything? Well, put simply, I <em>just realized</em> that it has been over a year since I started using emacs-setup. This was a shocking realization, for a couple of reasons.</p>
+
+<p>First, I realized that I had written software that was usable and had become such a part of my Emacs usage that I almost forgot about it and began to take advantage of it. As a developer, knowing that I&rsquo;ve written software that&rsquo;s &ldquo;good&rdquo; (for lack of a better term or metric) is an extremely positive feeling. I often struggle with my own developer skills, worrying that I&rsquo;m not &ldquo;good enough&rdquo; at times. Realizing that software I wrote has been up and running for a year or more was a huge boost, even though (most likely) I&rsquo;m one of a <em>very</em> few people using it or who even knows it exists. Which brings me to my second point.</p>
+
+<p>I have always, er, obsessed over making software for people, and by &ldquo;people&rdquo; I mean &ldquo;other people&rdquo;. I think that&rsquo;s wrong. I should be obsessed over writing good, useful software. If others find and use it, all the better. If not, then I still wrote some awesome software that I can personally use. The inherent realization here is that writing software shouldn&rsquo;t be about fame and not <em>completely</em> about money (paying bills is one thing, being Bill Gates is a bit much). As a programmer, I should enjoy programming, which I do, but I should not let the fact that no one will ever see a program I wrote, or even know it exists, deter my enjoyment or pursuit of programming.</p>
+
+<p>Ok, ok. Enough with all the philosophy. I&rsquo;ve explained how my Emacs setup has changed me and taught me some life lessons about what I love to do. However, what about the second part of this article&rsquo;s title?</p>
+
+<p>Simply put, emacs-setup has served me well, in many capacities. That said there are a few limiting factors to handling my Emacs setup in an interactive way through my package. For instance, temporarily commenting out a piece of your .emacs for testing/debugging purposes is easy, but not so easy with my package.</p>
+
+<p>Therefore, I&rsquo;ve begun rethinking if emacs-setup has completed its usefulness to me. Perhaps it is time for me to go back to working with straight init files again. I honestly haven&rsquo;t decided yet, but it is always in the back of my mind these days. Like with many things (emacs vs vi, evil vs default, GUI vs CLI, etc) I tend to flip-flop philosophies alarmingly regularly. Is my desire to go back to .emacs management a manifestation of my desire to be closer to pure, base Emacs? Is it, instead, in response to the few drawbacks emacs-setup has? Yet still, is it purely that I want to change again, to be different than I have been for so long? Put succinctly, if I switch back away from using emacs-setup, am I doing so for good reason or on a whim?</p>
+
+<hr />
+
+
+<p>Side note: if you are using, or have used, emacs-setup. Let me know what you think. I&rsquo;d be curious to see if it has helped or hurt anyone.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs, Paredit, and Multiple Cursors]]></title>
+    <link href="http://echosa.github.io/blog/2013/04/12/emacs-paredit-multiple-cursors/"/>
+    <updated>2013-04-12T14:58:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2013/04/12/emacs-paredit-multiple-cursors</id>
+    <content type="html"><![CDATA[<p>Inspired by <a href="http://emacsrocks.com">Emacs Rocks</a>, I made <a href="http://www.youtube.com/watch?v=4wvLGJQxEjQ">my own video</a> showing some of the power of using Emacs with paredit and multiple cursors.</p>
+]]></content>
+  </entry>
+  
+</feed>

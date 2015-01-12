@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Emacs-setup | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/emacs-setup/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Major Emacs-setup Update!]]></title>
+    <link href="http://echosa.github.io/blog/2012/07/27/major-emacs-setup-update/"/>
+    <updated>2012-07-27T11:29:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/07/27/major-emacs-setup-update</id>
+    <content type="html"><![CDATA[<p>I recently updated my <a href="https://github.com/echosa/emacs-setup">emacs-setup package</a> (available through <a href="http://melpa.milkbox.net/">MELPA</a>) and made some major changes!</p>
+
+<!--more-->
+
+
+<p>First, emacs-setup no longer handles window/frame management or layout. There are other packages out there that do this much better than I, including revive.el and my new favorite toy e2wm.</p>
+
+<p>Secondly, emacs-setup-elisp-base-dir is now emacs-setup-require-base-dir, and emacs-setup-elisp-ignore-dirs is gone. I also got rid of the pre-sexp and pre-layout-sexp variables.</p>
+
+<p>The most exciting part is how easy it is to use now! Instead of the several lines of code needed before, now all you have to load is include a (load-file /path/to/emacs-setup.el) in your .emacs.</p>
+
+<p>The other remaining features have been improved as well:</p>
+
+<ul>
+<li>adding/removing packages from being required during setup</li>
+<li>adding/removing extra load-path directories</li>
+<li>adding/removing PATH entries</li>
+<li>adding/removing keybindings (when binding a function to a key, the functions list now completes)</li>
+</ul>
+
+
+<p>Much of the improvement is internal, but I have fixed several bugs and made some of the interactivity better. Either way, this is a major release, and I&rsquo;m quite excited for it.</p>
+]]></content>
+  </entry>
+  
+</feed>

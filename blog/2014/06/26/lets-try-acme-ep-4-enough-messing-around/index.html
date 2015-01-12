@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Let&#8217;s Try Acme: Ep. 4 - Enough Messing Around - Dev and Such</title>
+  <meta name="author" content="Brian Zwahr">
+
+  
+  <meta name="description" content="This is it, folks. It&rsquo;s time to finally roll up my sleeves and do some programming in Acme. I&rsquo;ll get this out of the way right off the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Dev and Such</a></h1>
+  
+    <h2>A blog pertaining to my own development experiences.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="echosa.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/categories/php">PHP</a></li>
+  <li><a href="/blog/categories/java">Java</a></li>
+  <li><a href="/blog/categories/ios">iOS</a></li>
+  <li><a href="/blog/categories/node-js">Node.js</a></li>
+  <li><a href="/blog/categories/emacs">Emacs</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Let&#8217;s Try Acme: Ep. 4 - Enough Messing Around</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-06-26T15:27:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>3:27 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This is it, folks. It&rsquo;s time to finally roll up my sleeves and do some programming in Acme.</p>
+
+<!--more-->
+
+
+<p>I&rsquo;ll get this out of the way right off the bat. <em>So far</em>, I haven&rsquo;t missed syntax highlighting. Strange as that may sound, it&rsquo;s true. Time will tell on whether or not lack of colors becomes an issue, but for now it isn&rsquo;t.</p>
+
+<p>With that out of the way, a little background. I decided to use a small PHP/Symfony2/Angular.js app as my first foray into coding in Acme. That means I don&rsquo;t need to compile, but I already had a Makefile written that runs various checks and test on the code. Also, this application is already a git repo. Coming from Emacs, and having read about Acme being an &ldquo;integrating editor&rdquo; that integrates with your existing system and lets you run things and use tools you already have on your system, I decided I should be able to work with make and git from Acme.</p>
+
+<p>Long story short: both were large successes.</p>
+
+<p>Since I hadn&rsquo;t touched this code in a while, my first steps were to check to see if git was clean (make sure I didn&rsquo;t have any uncommitted changes hanging around from before) and to make sure my application still passed all its tests. I decided to start with the later. Since commands in Acme run in the context of the window in which they are run, I needed to get to my project directory to run make.</p>
+
+<p>First, I simply opened a <code>win</code> window, changed to my project directory, and ran make from there. So far so good, but did I really need a shell window open for this? Certainly not. I closed the window, and navigated to my project root in the directory listing window(s). I knew it was only a couple of directories away from the starting directory window Acme gives me every time I open it, otherwise I would have simply opened a new window, typed in the directory, and used <code>Get</code>.</p>
+
+<p>Anyway, now that I had a directory window open to my project&rsquo;s root, I simply typed <code>make</code> into the tag bar and middle-clicked. The Makefile ran perfectly, and showed me that I had some outstanding issues. Part of the output of make, of course, was the file name of the offending file. Could it be so easy? I right-clicked the file, and it opened in a new window. Awesome. That&rsquo;ll certainly save time.</p>
+
+<p>I fixed the issue, and ran <code>make</code> again. Everything passed. Awesome. Now, let&rsquo;s go see what my git status is like. Next to <code>make</code> in the project directory window&rsquo;s tag bar, I add <code>git status</code>. Since there&rsquo;s more than one word in this command, I know I need to highlight it to run it. Luckily, I remember that simply pressing <code>Esc</code> will select the most previously written text. I do so, <code>git status</code> is highlighted, and I middle-click. Git runs as expected, and the output is appended to the same window as the <code>make</code> results. I thought this would be an issue, but it actually never hindered me the entire time.</p>
+
+<p>Inspecting my git results, I see that there was a file modified that hadn&rsquo;t been previously committed. I couldn&rsquo;t remember what was in that file, so I needed to run <code>git diff</code> on it. Since Acme is just text, I actually typed &ldquo;git diff &rdquo; before the file name right there in the git output, selected and right-clicked (I&rsquo;m working with a scroll wheel for a third button, so middle-button dragging is a pain), and the diff was run and the output once again appended to this window. Very convenient being able to turn the previous output into my next command quite easily.</p>
+
+<p>I see the diff and remember what I had done. A couple of minor changes that just hadn&rsquo;t been committed yet. Well, may as well commit it now. I made a <code>git commit -am "some message"</code> command in the tag bar, but unfortunately it actually didn&rsquo;t work. Sadly, I don&rsquo;t recall the issue right now (I really should have taken notes), but it was easy enough to circumvent this by simply opening a <code>win</code> window to run the commit. I could have just as easily switched to regular terminal, but again, the goal was to try and work in Acme. I&rsquo;m still investigating the <code>git commit</code> issue, though. I haven&rsquo;t given up on that yet.</p>
+
+<p>Now that I knew I could run my tests and use git, it was time to actually do some coding. I checked my TODO list for the app, and chose a task. Opening the first file I needed was pretty easy, though the whole right-click to navigate directory windows is still a little cumbersome at times (mostly, its finding the right directory or file to click on each time that&rsquo;s the issue). I knew the function I needed to get to as a starting point, so I typed part of its name in the tag bar and right-clicked to search and get to it in the code. This as it turns out, became a very important and useful part of navigating code.</p>
+
+<p>I made some changes in the code and ran <code>make</code> again. Easy. As a bonus, everything still passed. Rinse and repeat, throwing in a few git commits for good measure. Honestly, the only trip ups I really had were when I tried to use the keyboard for navigation (those up and down arrows still get me).</p>
+
+<p>The end results is that the programming session went well, Acme stayed out of my way but was also there when I needed it to be, and all the tags and mouse clicks and other stuff that make Acme what it is quickly started becoming natural and intuitive.</p>
+
+<p>I like Acme, y&#8217;all. I can admit that now. I&rsquo;m not ready to call it my editor of choice, but I like it. It&rsquo;s neat. It&rsquo;s quirky. It&rsquo;s fun. Most importantly, it&rsquo;s useful.</p>
+
+<p>One final thing I want to mention. Due to Acme&rsquo;s interestingly limited take on the whole tabs/spaces/indenting thing, I did end up having to write my own indention commands. However, they were staggeringly easy. I have started my own Acme commands file, where I can keep a tool set of useful commands. For instance, I wrote this to get rid of trailing spaces:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit , ,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, because of the way this command is written, it has to be run from either the window you want to affect or it&rsquo;s tag line. That means copy/pasting (or rewriting) it every time. I eventually found a stop-gap solution, which let&rsquo;s me specify a regular expression which will run the command in all windows that match. Since I was working in PHP, I wrote this to remove trailing white space in all open PHP windows:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit X/\.php$/ ,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Still not satisfied, I delved deeper into the capabilities of the 2-1 mouse chord. What this chord lets you do is select some text with the left mouse button, then select a command with the middle button, and, <em>while still pressing the middle button</em>, press the left button. The end result is that the text that was selected with the left button is passed as an argument to the text selected with the middle button. That was a lot to type to explain it, and it makes way more sense when you actually just do it. It&rsquo;s not as complicated as it sounds (or reads, in this case). Anyway, the point is because of that chord, I can just put this in the tag line for any window:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit ,</span></code></pre></td></tr></table></div></figure>
+
+
+<p>select that text with the left button, then middle-button select this text from anywhere (like my Acme commands file or even this very file):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and left-click while still holding the middle button. It&rsquo;s a lot to type, but it&rsquo;s actually quite awesome and pretty ingenious. This whole mouse chording thing has opened my eyes to new ways to use Acme.</p>
+
+<p>This post was written in Acme.</p>
+
+<p>In the <a href="/blog/2014/06/27/lets-try-acme-ep-5-well/">next episode</a>, I discuss my first big mistake in Acme and the price I paid. You can read the previous post <a href="/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/">here</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Zwahr</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-06-26T15:27:00-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>3:27 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/acme/'>acme</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/" title="Previous Post: Let's Try Acme: Ep. 3 - Problem Solving">&laquo; Let&#8217;s Try Acme: Ep. 3 - Problem Solving</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/06/27/lets-try-acme-ep-5-well/" title="Next Post: Let's Try Acme: Ep. 5 - Well, Shit">Let&#8217;s Try Acme: Ep. 5 - Well, Shit &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Brian</h1>
+  Brian has been programming since learning BASIC back in grade school. Having programmed PHP for Texas A&amp;M University for almost 5 years, he is now a Consultant at <a href="http://www.improvingenterprises.com">Improving Enterprises</a> where he mostly writes Java.
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/12/gopher-php-update/">Gopher-php and Phlog Update</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">Let&#8217;s Try Acme: Episode 9 - the End</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/echosa">@echosa</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'echosa',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/echosa" class="twitter-follow-button" data-show-count="false">Follow @echosa</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Brian Zwahr -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'devstuff-blog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/';
+        var disqus_url = 'http://echosa.github.io/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

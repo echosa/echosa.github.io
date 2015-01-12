@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Term | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/term/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Back to the Terminal]]></title>
+    <link href="http://echosa.github.io/blog/2011/06/09/back-to-terminal/"/>
+    <updated>2011-06-09T16:50:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2011/06/09/back-to-terminal</id>
+    <content type="html"><![CDATA[<p>Well, I&rsquo;ve decided to start using emacs via the terminal again, for a few reasons.</p>
+
+<!--more-->
+
+
+<p>1.) Performance</p>
+
+<p>Keeping in mind I run Mac OS X and use the emacs from MacPorts, the terminal emacs loads much quicker than Emacs.app.</p>
+
+<p>2.) Portability</p>
+
+<p>I&rsquo;ve recently begun using tmux (like screen, but in my opinion better). I can run my emacs inside tmux at work, then if I need to do some work remotely, I can just ssh into my work computer and reattach the tmux session to continue my work. At least, that&rsquo;s the theory. Haven&rsquo;t actually done this yet.</p>
+
+<p>3.) Because I Want To</p>
+
+<p>Really, I just felt like getting back to a terminal work style, partially for reason numbers 1 and 2 above, and partially just to do it because I can.</p>
+
+<p>I&rsquo;ve had a couple of hiccups here and there, and I&rsquo;ve definitely had to relearn and unlearn habits (its amazing how much I use the mouse, even though I consider myself a mostly keyboard kinda guy). So far, though, just about everything seems to be working.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Proper (Ansi-)Term Yank/Paste]]></title>
+    <link href="http://echosa.github.io/blog/2011/02/10/proper-ansi-term-yankpaste/"/>
+    <updated>2011-02-10T19:49:00-06:00</updated>
+    <id>http://echosa.github.io/blog/2011/02/10/proper-ansi-term-yankpaste</id>
+    <content type="html"><![CDATA[<p>So, I&rsquo;ve found myself using ansi-term quite a bit, including to run finch for my instant messaging needs. However, there&rsquo;s one main issue with which I found myself becoming frustrated: yanking (aka pasting).</p>
+
+<!--more-->
+
+
+<p>Ansi-term has two &ldquo;mode&rdquo;: line and char. One acts as a terminal would (e.g. the up arrow will scroll through the output, as in scrolling through a call to <code>less</code>), and the other acts as an emacs buffer. The default is to be in the former, which sort of traps the cursor (mostly correctly), since no raw cursor movement commands are sent to the terminal just because you click elsewhere in the buffer.</p>
+
+<p>This becomes mostly frustrating because it keeps yank from working properly. For example, if I wish to copy/paste a url into an instant message to a friend using finch inside ansi-term, the paste part doesn&rsquo;t work unless I enter the second ansi-term &ldquo;mode&rdquo;. However, this makes the buffer not treat anything as special (i.e. window bounds, text areas, etc) and can wreak havoc on the message I&rsquo;m trying to send.</p>
+
+<p>For this reason, I wrote a quick little function that allows me to yank text into a terminal properly without switch modes. I present to you, my-term-paste:</p>
+
+<pre><code class="cl">(defun my-term-paste (&amp;optional string)
+  (interactive)
+  (process-send-string
+   (get-buffer-process (current-buffer))
+   (if string string (current-kill 0))))
+</code></pre>
+
+<p>Basically all this does is send the current copied text (current-kill 0) to the terminal using process-send-string which sends it as raw terminal input, as if I had manually typed each letter. The result? I can copy some text, for instance a url from Chrome, then focus my ansi-term and run (my-term-paste) to paste the copied text properly into the buffer. Very handy for those who use terminal modes in emacs.</p>
+]]></content>
+  </entry>
+  
+</feed>

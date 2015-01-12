@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ios | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My First iOS App]]></title>
+    <link href="http://echosa.github.io/blog/2012/08/26/my-first-ios-app/"/>
+    <updated>2012-08-26T00:29:00-05:00</updated>
+    <id>http://echosa.github.io/blog/2012/08/26/my-first-ios-app</id>
+    <content type="html"><![CDATA[<p>So, I decided that learning Java just wasn&rsquo;t time consuming enough, so I decided to learn iOS development, too! The result? I wrote a number slider game in less than a working day&rsquo;s worth of time (including research, reading, and tutorials.)</p>
+
+<!--more-->
+
+
+<p>First off, let me just say that XCode is awesome, and the latest versions are even better than the old ones used to be! Sure, they make my 2008 MacBook chug a bit from time to time, but it wasn&rsquo;t unbearable or unworkable. Also, storyboard is <em>awesome</em>. I definitely don&rsquo;t miss the old Interface Builder.</p>
+
+<p>Moving on, if you&rsquo;d like to see the code, I have it on GitHub <a href="https://github.com/echosa/NumberSlide-iOS">here</a>. In the Readme, you&rsquo;ll find a link to <a href="http://youtu.be/N3LO-KHWgFI">a YouTube video</a> that is a screencast demo of the game being played in the iPhone Simulator that comes with XCode. Also in the Readme, you&rsquo;ll find some information about the game as well as some future development I&rsquo;d like to continue.</p>
+
+<p>Final thoughts: This has been a great experience making for a really entertaining day. I really do love programming, and Objective-C is such a cool language that I really had no chance at <em>not</em> enjoying it! I especially love how they sort of half adopted the prefix notation style that is common to LISP. I liked that XCode now has support for, and helps you set up, unittests (which I did write). Add in Git support and, as I&rsquo;ve already mentioned, storyboard for UI design and, well, you&rsquo;ve got a recipe for an awesome programming experience.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Freedom | Dev and Such]]></title>
+  <link href="http://echosa.github.io/blog/categories/freedom/atom.xml" rel="self"/>
+  <link href="http://echosa.github.io/"/>
+  <updated>2015-01-12T15:32:29-06:00</updated>
+  <id>http://echosa.github.io/</id>
+  <author>
+    <name><![CDATA[Brian Zwahr]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Software Freedom]]></title>
+    <link href="http://echosa.github.io/blog/2015/01/12/software-freedom/"/>
+    <updated>2015-01-12T15:08:36-06:00</updated>
+    <id>http://echosa.github.io/blog/2015/01/12/software-freedom</id>
+    <content type="html"><![CDATA[<p>Over on my personal blog, I posted <a href="http://echosa.freeshell.org/phlog/0014-software-freedom">an article</a> concerning software freedom.</p>
+
+<!--more-->
+
+
+<p>The post was the product of a few days of thinking and consideration after watching a presentation by Richard Stallman concerning freedom and free (as in liberty) software. There&rsquo;s a link to the video in the blog post, as well.</p>
+
+<p>I don&rsquo;t usually cross-post blogs like this, but in this case the information is both personal and developer-oriented in nature. Therefore, I decided to mention it here as well. It is an important topic which deserves discussion.</p>
+]]></content>
+  </entry>
+  
+</feed>
