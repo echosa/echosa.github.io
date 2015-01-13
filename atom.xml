@@ -4,7 +4,7 @@
   <title><![CDATA[Dev and Such]]></title>
   <link href="http://echosa.github.io/atom.xml" rel="self"/>
   <link href="http://echosa.github.io/"/>
-  <updated>2015-01-12T15:32:29-06:00</updated>
+  <updated>2015-01-13T08:50:56-06:00</updated>
   <id>http://echosa.github.io/</id>
   <author>
     <name><![CDATA[Brian Zwahr]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing the Release of Etchist]]></title>
+    <link href="http://echosa.github.io/blog/2015/01/13/announcing-the-release-of-etchist/"/>
+    <updated>2015-01-13T08:34:53-06:00</updated>
+    <id>http://echosa.github.io/blog/2015/01/13/announcing-the-release-of-etchist</id>
+    <content type="html"><![CDATA[<p>Last night, I released the first version of my first ever <a href="https://getpebble.com">Pebble</a> app: <a href="https://apps.getpebble.com/applications/54b49f22daa5498e85000006">Etchist</a>!</p>
+
+<!--more-->
+
+
+<p>Having recently purchased a Pebble, I couldn&rsquo;t wait to write my first app and dust off my C chops. This is the result, and I&rsquo;m pretty pleased with it, especially for version 1. I have some updates in mind, but I don&rsquo;t know when I&rsquo;ll get around to them. Until then, I offer this usable (and fun!) version to all.</p>
+
+<p>I have to say that I&rsquo;m really impressed with <a href="https://cloudpebble.net/">CloudPebble</a>, Pebble&rsquo;s online IDE. It makes getting into Pebble development very easy with very little overhead. The speed with which I was able to write, test, and deploy Etchist is largely a product of using CloudPebble. It is similar to the online IDE provided by <a href="http://duckduckhack.com">DuckDuckHack</a> for <a href="https://duckduckgo.com">DuckDuckGo</a> instant answer development. I&rsquo;m really coming to appreciate these online, specialized, project specific IDEs. Being able to just login with an account and start coding, complete with the proper build and testing tools required, is invaluable. I&rsquo;m curious to see how far this idea spreads. The Emacs guy in me is a bit put-off, but that guy can deal with it. ;-)</p>
+
+<p>You can see the source for Etchist <a href="https://github.com/echosa/Etchist">here on Github</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Software Freedom]]></title>
@@ -775,24 +793,6 @@ You can read the previous post <a href="http://echosa.github.io/blog/2014/06/18/
 <p>You can find the library <a href="https://github.com/echosa/gopher-php">here on GitHub</a>. It is quite tailor-made for my own usage, so it is pretty incomplete in terms of GOPHER features and support.</p>
 
 <p>To see it in action, you can check out <a href="http://echosa.freeshell.org">my phlog&rsquo;s http web frontend</a>. In comparision, you can see my phlog via the GOPHER protocol by either visiting <a href="gopher://sdf.org/1/users/echosa/phlog">this link</a> using a GOPHER client (<a href="http://en.wikipedia.org/wiki/Lynx_(web_browser%29">lynx</a> recommended) or by using a GOPHER web interface such as <a href="http://gopherproxy.meulie.net/sdf.org/1/users/echosa/phlog">this one</a> (link will take you to the phlog).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Going (Back to) Gopher]]></title>
-    <link href="http://echosa.github.io/blog/2013/08/29/going-back-to-gopher/"/>
-    <updated>2013-08-29T09:45:00-05:00</updated>
-    <id>http://echosa.github.io/blog/2013/08/29/going-back-to-gopher</id>
-    <content type="html"><![CDATA[<p>Remember <a href="http://en.wikipedia.org/wiki/Gopher_(protocol)">Gopher</a>? I do, barely. We learned/used it in grade school a couple of decades ago. Turns out it is still around.</p>
-
-<!--more-->
-
-
-<p>There are several resources for the existing gopher community. First and foremost, I&rsquo;d say check out <a href="http://gopher.floodgap.com">Floodgap</a>. They have a public gopher server, including a web interface that will let you read gopher pages in your browser. There&rsquo;s even several articles about <a href="http://gopher.floodgap.com/gopher/gw?gopher://gopher.floodgap.com:70/1/gopher">gopher&rsquo;s usage and relevance today</a>. Definitely worth at least a cursory glance.</p>
-
-<p>Of course, having found this, I had to jump back in. You can find my own gopherspace hosted <a href="gopher://sdf.org/1/users/echosa">here</a> at <a href="http://sdf.org">SDF</a>. There you find, among other things, my phlog, which is gopher&rsquo;s version of a blog (blog = weB LOG, phlog = goPHer LOG).</p>
-
-<p>Anyway, I figured I&rsquo;d just help spread the word. Long live gopher!</p>
 ]]></content>
   </entry>
   

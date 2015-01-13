@@ -9,7 +9,7 @@
   <meta name="author" content="Brian Zwahr">
 
   
-  <meta name="description" content="So, if you use graphical emacs on Mac OS X and you also use linum-mode (to show the line numbers in the left part of a window), you have probably &hellip;">
+  <meta name="description" content="In &ldquo;why the hell isn&rsquo;t the more known or documented better&rdquo; news, a coworker of mine discovered and shared with me a neat little &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +71,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/17/mac-os-x-screen-locking/">Mac OS X Screen Locking Made Easy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-07-17T11:49:00-05:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>11:49 am</span></time>
+        
+           | <a href="/blog/2012/07/17/mac-os-x-screen-locking/#disqus_thread"
+             data-disqus-identifier="http://echosa.github.io/blog/2012/07/17/mac-os-x-screen-locking/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In &ldquo;why the hell isn&rsquo;t the more known or documented better&rdquo; news, a coworker of mine discovered and shared with me a neat little trick for locking Mac OS X: Control-Shift-Eject.</p>
+
+<p>Mind you, this will only work if you are using an actual Apple keyboard with an eject key. However, prior to this, the screen locking solutions I found were as follows:</p>
+
+<ul>
+<li>have the screen saver turn on, possibly via a hot corner or hot key that I&rsquo;d have to manual set</li>
+<li>choose &lsquo;Lock Screen&rsquo; from the menulet that you can enable via Keychain Access -> Preferences -> General -> Show keychain status in menu bar</li>
+<li>write a custom applescript or Automator app/service to lock the screen, then set that to a key binding (per bullet point 1, above)</li>
+<li>Do a fast logout by clicking on the user switching menulet (if it is turned on in System Preferences) and selecting &ldquo;Login Window&rdquo;</li>
+</ul>
+
+
+<p>Each of these either is a hassle or has unwanted side-effects that I didn&rsquo;t like. For instance, the fast logout option wasn&rsquo;t so bad, except instead of being left at a lock screen, it leaves you at a login screen, which means two things:</p>
+
+<ol>
+<li>you have to select your account before entering your password (two step process, explained below), and</li>
+<li>other people have the option to login (not a <em>huge</em> deal, but not really desired by me at this point, and yes there are other accounts on my system).</li>
+</ol>
+
+
+<p>The biggest of these two, for me, was number 1. When the screen is <em>locked</em>, all I have to do is press any key to &ldquo;wake up&rdquo;, then type my password. That&rsquo;s not the case when you&rsquo;re at a login screen, of course. Having to use the mouse or keyboard to first select my user, <em>then</em> be prompted for my password became a hassle.</p>
+
+<p>I&rsquo;m not sure if this was added in Lion or previous versions of OS X, but I&rsquo;m certainly glad to know it exists. So much so, in fact, I decided I should share this knowledge with the world. I know it doesn&rsquo;t particularly pertain to development, but I wanted to record it somewhere, if for no other reason than to have a resource where I can go back and remember &ldquo;what was the locking key command?&rdquo; in case I forget in the future.</p>
+
+<p>So, yeah. There you go. Enjoy.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -412,40 +468,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/07/packages-now-available-from-melpa/">Packages Now Available From MELPA!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2012-05-07T09:59:00-05:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2012</span></span> <span class='time'>9:59 am</span></time>
-        
-           | <a href="/blog/2012/05/07/packages-now-available-from-melpa/#disqus_thread"
-             data-disqus-identifier="http://echosa.github.io/blog/2012/05/07/packages-now-available-from-melpa/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>That&rsquo;s right, I&rsquo;ve submitted three of the packages I&rsquo;ve written (zf-mode, mysql2sqlite, and emacs-setup) to the MELPA repository for package.el and they have been added. This makes installed them easier for you! Now you can simply <code>M-x package-list-packages</code> then search for whichever packaged you&rsquo;d like to install, then press i (mark for installation) followed by x (execute marked actions). Easy!</p>
-
-<p>For more information on MELPA, go to <a href="http://melpa.milkbox.net/">http://melpa.milkbox.net/</a> and check it out.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/7">&larr; Older</a>
@@ -468,6 +490,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/13/announcing-the-release-of-etchist/">Announcing the Release of Etchist</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/12/software-freedom/">Software Freedom</a>
       </li>
     
@@ -481,10 +507,6 @@
     
       <li class="post">
         <a href="/blog/2014/10/06/new-and-improved-emacs-config/">New and Improved Emacs Config!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">Let&#8217;s Try Acme: Episode 8 - Scrolling and Plumbing</a>
       </li>
     
   </ul>
