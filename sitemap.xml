@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2/</loc>
+    <lastmod>2015-03-29T15:56:04-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://echosa.github.io/blog/2015/03/29/clojure-greed-update-static-typing/</loc>
+    <lastmod>2015-03-29T15:45:51-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://echosa.github.io/blog/2015/01/13/announcing-the-release-of-etchist/</loc>
     <lastmod>2015-01-13T08:34:53-06:00</lastmod>
     <priority>0.8</priority>
@@ -452,20 +462,14 @@
   </url>
   <url>
     <loc>http://echosa.github.io/blog/archives/</loc>
-    <lastmod>2015-01-13T09:01:07-06:00</lastmod>
+    <lastmod>2015-03-29T16:21:31-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://echosa.github.io/</loc>
-    <lastmod>2015-01-13T09:01:07-06:00</lastmod>
+    <lastmod>2015-03-29T16:21:31-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://echosa.github.io/about/</loc>
-    <lastmod>2015-01-13T09:01:07-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

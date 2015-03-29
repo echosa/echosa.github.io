@@ -4,7 +4,7 @@
   <title><![CDATA[Dev and Such]]></title>
   <link href="http://echosa.github.io/atom.xml" rel="self"/>
   <link href="http://echosa.github.io/"/>
-  <updated>2015-01-13T09:01:07-06:00</updated>
+  <updated>2015-03-29T16:21:31-05:00</updated>
   <id>http://echosa.github.io/</id>
   <author>
     <name><![CDATA[Brian Zwahr]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zork Fortress Update: 0.0.2]]></title>
+    <link href="http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2/"/>
+    <updated>2015-03-29T15:56:04-05:00</updated>
+    <id>http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2</id>
+    <content type="html"><![CDATA[<p>I recently released version 0.0.2 of my zork-fortress project, and by &ldquo;released&rdquo; I mean &ldquo;added a new git tag&rdquo;.</p>
+
+<!--more-->
+
+
+<p>In spite of my lack of work on the project the past few months, it is far from dead! I finally got some time to work on it, so here&rsquo;s the list of 0.0.2 updates from the <a href="https://github.com/echosa/zork-fortress/blob/0.0.2/CHANGELOG">CHANGELOG</a>:</p>
+
+<ul>
+<li>Added the <code>help</code> command.</li>
+<li>Added the <code>chop</code> command.</li>
+<li>Added the <code>inventory</code> command.</li>
+<li>Reformatted <code>history</code> output.</li>
+</ul>
+
+
+<p>I also did some code refactoring and got all <a href="http://typedclojure.org">core.typed</a> static typing in place.</p>
+
+<p>As is, when you run version 0.0.2 of the game, you can look around (you&rsquo;ll see a single tree until you chop it down), chop that tree down, check your inventory (it&rsquo;ll be empty until you chop the tree), get help for commands, and see your recent command history. It&rsquo;s not much, but it&rsquo;s a start.</p>
+
+<p>I&rsquo;ve got quite a few ideas for 0.0.3 and beyond, including some major changes to the chop command, so don&rsquo;t get too comfortable with how it works now.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clojure Greed Update: Static Typing!]]></title>
+    <link href="http://echosa.github.io/blog/2015/03/29/clojure-greed-update-static-typing/"/>
+    <updated>2015-03-29T15:45:51-05:00</updated>
+    <id>http://echosa.github.io/blog/2015/03/29/clojure-greed-update-static-typing</id>
+    <content type="html"><![CDATA[<p>Well, folks. This was long overdue, but I finally did it! My <a href="https://github.com/echosa/clojure-greed">clojure-greed</a> project now has static typing thanks to <a href="http://typedclojure.org">core.typed</a>!</p>
+
+<!--more-->
+
+
+<p>Using core.typed is an interesting experience, for sure. However, I&rsquo;ve found that being able to have custom types (like &ldquo;grid&rdquo; for the game board, etc.) and then annotate functions with things like &ldquo;take a grid and a direction the player should move and return the (updated) grid&rdquo; is very helpful. It allows me to think more abstractly and to specifically mark that intention down. It also makes sure that my functions meet those intentions.</p>
+
+<p>For what it&rsquo;s worth, that example annotation text would look something like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(ann-form update-player [Grid Direction -&gt; Grid])</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I should note that sometimes using core.typed means writing slightly less elegant and more verbose code than would normally be required. If you&rsquo;re looking through my source code and think &ldquo;Why is he doing it that way?&rdquo;, chances are you&rsquo;ve found a relic of core.typed.</p>
+
+<p>Anyway, feel free to look at the code to see how it looks and works. I like it, and have been making sure to use core.typed in my other clojure project <a href="https://github.com/echosa/zork-fortress">zork-fortress</a>. The difference there is, instead of going back and adding typing to a finished projects, I&rsquo;m actually using &ldquo;Type-Driven Development&rdquo;, meaning I&rsquo;m writing my annotations and custom types <em>first</em>, and then writing my functions to satisfy them.</p>
+
+<p>I&rsquo;d be remiss if I didn&rsquo;t recognize Ambrose, creator of core.typed, in this article. He has always helped me with any questions, concerns, or confusion I&rsquo;ve had concerning core.typed, whether I asked on Twitter or IRC. Thank you, Ambrose. Your help has been greatly appreciated.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing the Release of Etchist]]></title>
@@ -757,42 +811,6 @@ You can read the previous post <a href="http://echosa.github.io/blog/2014/06/18/
 <p>The link above takes you to the web front end, but you can reach it the site through Gopher itself at gopher://gopherpedia.com.</p>
 
 <p>Long live Gopher!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Clojure Time]]></title>
-    <link href="http://echosa.github.io/blog/2014/02/25/clojure-time/"/>
-    <updated>2014-02-25T13:27:00-06:00</updated>
-    <id>http://echosa.github.io/blog/2014/02/25/clojure-time</id>
-    <content type="html"><![CDATA[<p>Anyone who knows me knows I really enjoy Lisp, especially Common Lisp (sbcl) and elisp (Emacs). I can now add to that list <a href="http://clojure.org">Clojure</a>.</p>
-
-<!--more-->
-
-
-<p>Clojure is awesome. It&rsquo;s a Lisp language that runs in the JVM (Java Virtual Machine). Lisp + Java. Who&rsquo;d have ever thought&hellip;</p>
-
-<p>Certainly not me, but the end result is an excellent language. It has some differences from the Lisps I&rsquo;m used to, like argument lists being vectors instead of lists and docstrings going before argument lists. However, these habits were easy enough to break, and were never a hindrance enough to bog me down.</p>
-
-<p>So off I went, writing my first Clojure program, which can be find <a href="https://github.com/echosa/clojure-greed">here</a>. I plan to continue working on it and improving it, and will be looking for some code reviews from more experience Clojure developers.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[New GOPHER Library for PHP]]></title>
-    <link href="http://echosa.github.io/blog/2014/02/25/new-gopher-library-for-php/"/>
-    <updated>2014-02-25T11:45:00-06:00</updated>
-    <id>http://echosa.github.io/blog/2014/02/25/new-gopher-library-for-php</id>
-    <content type="html"><![CDATA[<p>Well, I&rsquo;ve gone and done it. I&rsquo;ve created a library for reading and parsing <a href="http://en.wikipedia.org/wiki/Gopher_(protocol%29">GOPHER</a> files from PHP.</p>
-
-<!--more-->
-
-
-<p>I&rsquo;ve recently been playing with GOPHER again, and it&rsquo;s been a great blast from the past. I even started a phlog (a GOPHER blog, basically). However, I realized that not everyone is awesome enough to use GOPHER, so I wanted to make my new phlog available via HTTP as well. Enter gopher-php.</p>
-
-<p>You can find the library <a href="https://github.com/echosa/gopher-php">here on GitHub</a>. It is quite tailor-made for my own usage, so it is pretty incomplete in terms of GOPHER features and support.</p>
-
-<p>To see it in action, you can check out <a href="http://echosa.freeshell.org">my phlog&rsquo;s http web frontend</a>. In comparision, you can see my phlog via the GOPHER protocol by either visiting <a href="gopher://sdf.org/1/users/echosa/phlog">this link</a> using a GOPHER client (<a href="http://en.wikipedia.org/wiki/Lynx_(web_browser%29">lynx</a> recommended) or by using a GOPHER web interface such as <a href="http://gopherproxy.meulie.net/sdf.org/1/users/echosa/phlog">this one</a> (link will take you to the phlog).</p>
 ]]></content>
   </entry>
   
