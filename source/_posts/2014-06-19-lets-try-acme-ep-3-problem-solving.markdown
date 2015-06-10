@@ -52,5 +52,5 @@ Still, even with all this, Acme is, at this point, a completely useable and wort
 
 This post was written in Acme.
 
-In [the next post](/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/), I finally get down to writting some code.
+In [the next post](/blog/2014/06/26/lets-try-acme-ep-4-enough-messing-around/), I finally get down to writing some code.
 You can read the previous post [here](/blog/2014/06/18/lets-try-acme-ep-2-wat/).
