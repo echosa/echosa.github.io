@@ -103,7 +103,7 @@
 
 <p>Long story short: both were large successes.</p>
 
-<p>Since I hadn&rsquo;t touched this code in a while, my first steps were to check to see if git was clean (make sure I didn&rsquo;t have any uncommitted changes hanging around from before) and to make sure my application still passed all its tests. I decided to start with the later. Since commands in Acme run in the context of the window in which they are run, I needed to get to my project directory to run make.</p>
+<p>Since I hadn&rsquo;t touched this code in a while, my first steps were to check to see if git was clean (make sure I didn&rsquo;t have any uncommitted changes hanging around from before) and to make sure my application still passed all its tests. I decided to start with the latter. Since commands in Acme run in the context of the window in which they are run, I needed to get to my project directory to run make.</p>
 
 <p>First, I simply opened a <code>win</code> window, changed to my project directory, and ran make from there. So far so good, but did I really need a shell window open for this? Certainly not. I closed the window, and navigated to my project root in the directory listing window(s). I knew it was only a couple of directories away from the starting directory window Acme gives me every time I open it, otherwise I would have simply opened a new window, typed in the directory, and used <code>Get</code>.</p>
 
@@ -126,13 +126,13 @@
 <p>One final thing I want to mention. Due to Acme&rsquo;s interestingly limited take on the whole tabs/spaces/indenting thing, I did end up having to write my own indention commands. However, they were staggeringly easy. I have started my own Acme commands file, where I can keep a tool set of useful commands. For instance, I wrote this to get rid of trailing spaces:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Edit , ,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit , s, *$,,g</span></code></pre></td></tr></table></div></figure>
 
 
 <p>However, because of the way this command is written, it has to be run from either the window you want to affect or it&rsquo;s tag line. That means copy/pasting (or rewriting) it every time. I eventually found a stop-gap solution, which let&rsquo;s me specify a regular expression which will run the command in all windows that match. Since I was working in PHP, I wrote this to remove trailing white space in all open PHP windows:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Edit X/\.php$/ ,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit X/\.php$/ s, *$,,g</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Still not satisfied, I delved deeper into the capabilities of the 2-1 mouse chord. What this chord lets you do is select some text with the left mouse button, then select a command with the middle button, and, <em>while still pressing the middle button</em>, press the left button. The end result is that the text that was selected with the left button is passed as an argument to the text selected with the middle button. That was a lot to type to explain it, and it makes way more sense when you actually just do it. It&rsquo;s not as complicated as it sounds (or reads, in this case). Anyway, the point is because of that chord, I can just put this in the tag line for any window:</p>
@@ -144,7 +144,7 @@
 <p>select that text with the left button, then middle-button select this text from anywhere (like my Acme commands file or even this very file):</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>,s, *$,,g</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>s, *$,,g</span></code></pre></td></tr></table></div></figure>
 
 
 <p>and left-click while still holding the middle button. It&rsquo;s a lot to type, but it&rsquo;s actually quite awesome and pretty ingenious. This whole mouse chording thing has opened my eyes to new ways to use Acme.</p>
@@ -211,11 +211,7 @@
 
 <aside class="sidebar">
   
-    <section>
-  <h1>Presentations</h1>
-  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
-</section>
-
+    
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
@@ -253,9 +249,10 @@
   
 </section>
 
-
-
-
+<section>
+  <h1>Presentations</h1>
+  You can view slides from presentations I&#8217;ve given <a href="https://speakerdeck.com/echosa">here on Speaker Deck</a>.
+</section>
 
   
 </aside>
