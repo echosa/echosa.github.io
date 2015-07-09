@@ -46,19 +46,25 @@ However, because of the way this command is written, it has to be run from eithe
 Edit X/\.php$/ s, *$,,g
 ```
 
-Still not satisfied, I delved deeper into the capabilities of the 2-1 mouse chord. What this chord lets you do is select some text with the left mouse button, then select a command with the middle button, and, *while still pressing the middle button*, press the left button. The end result is that the text that was selected with the left button is passed as an argument to the text selected with the middle button. That was a lot to type to explain it, and it makes way more sense when you actually just do it. It's not as complicated as it sounds (or reads, in this case). Anyway, the point is because of that chord, I can just put this in the tag line for any window:
+Still not satisfied, I delved deeper into the capabilities of the 2-1 mouse chord. What this chord lets you do is select some text with the left mouse button, then select a command with the middle button, and, *while still holding the middle button down*, press the left button. This is called a 2-1 chord, because you're holding down button 2 (middle-click) and pressig button 1 (left-click).
+
+The end result is that the text that was selected is passed as an argument to the command executed with 2-1. It's not as complicated as it sounds (or reads, in this case). For example, I can put this in the tag line for a window in which I want to perform an edit command:
 
 ```
-Edit ,
+Edit
 ```
 
-select that text with the left button, then middle-button select this text from anywhere (like my Acme commands file or even this very file):
+and then have this command text anywhere (like my Acme commands file or even this very file):
 
 ```
-s, *$,,g
+s/ *$//g
 ```
 
-and left-click while still holding the middle button. It's a lot to type, but it's actually quite awesome and pretty ingenious. This whole mouse chording thing has opened my eyes to new ways to use Acme. 
+Then, I can select the command text and, with it selected, perform a 2-1 chord by middle-click holding then left-clicking Edit. It's a lot to type, but it's actually quite awesome and pretty ingenious. This whole mouse chording thing has opened my eyes to new ways to use Acme. 
+
+Addendum (July 9, 2015): Having been using Acme as my primary editor for a while, I have to say it is almost imperitive to get a mouse with a real middle button. I recently broke down and finally bought an [Evoluent mouse](http://evoluent.com) to try. It's nice, although quite different. However, having a three-button mouse makes 2-1 chords way easier and faster to perform.
+
+Additionally, if you want to be able to 2-1 on a MacBook, [this blog post](http://www.mostlymaths.net/2013/04/just-as-mario-using-plan9-plumber.html) has a patch you can apply to the plan9port source file and recompile. Look for it towards the end of the post, just above "Final Remarks".
 
 This post was written in Acme.
 
