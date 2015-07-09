@@ -4,7 +4,7 @@
   <title><![CDATA[Dev and Such]]></title>
   <link href="http://echosa.github.io/atom.xml" rel="self"/>
   <link href="http://echosa.github.io/"/>
-  <updated>2015-06-10T08:28:55-05:00</updated>
+  <updated>2015-07-09T08:35:13-05:00</updated>
   <id>http://echosa.github.io/</id>
   <author>
     <name><![CDATA[Brian Zwahr]]></name>
@@ -463,19 +463,25 @@ You can read the previous post <a href="http://echosa.github.io/blog/2014/06/27/
 </pre></td><td class='code'><pre><code class=''><span class='line'>Edit X/\.php$/ s, *$,,g</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Still not satisfied, I delved deeper into the capabilities of the 2-1 mouse chord. What this chord lets you do is select some text with the left mouse button, then select a command with the middle button, and, <em>while still pressing the middle button</em>, press the left button. The end result is that the text that was selected with the left button is passed as an argument to the text selected with the middle button. That was a lot to type to explain it, and it makes way more sense when you actually just do it. It&rsquo;s not as complicated as it sounds (or reads, in this case). Anyway, the point is because of that chord, I can just put this in the tag line for any window:</p>
+<p>Still not satisfied, I delved deeper into the capabilities of the 2-1 mouse chord. What this chord lets you do is select some text with the left mouse button, then select a command with the middle button, and, <em>while still holding the middle button down</em>, press the left button. This is called a 2-1 chord, because you&rsquo;re holding down button 2 (middle-click) and pressig button 1 (left-click).</p>
+
+<p>The end result is that the text that was selected is passed as an argument to the command executed with 2-1. It&rsquo;s not as complicated as it sounds (or reads, in this case). For example, I can put this in the tag line for a window in which I want to perform an edit command:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Edit ,</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Edit</span></code></pre></td></tr></table></div></figure>
 
 
-<p>select that text with the left button, then middle-button select this text from anywhere (like my Acme commands file or even this very file):</p>
+<p>and then have this command text anywhere (like my Acme commands file or even this very file):</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>s, *$,,g</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>s/ *$//g</span></code></pre></td></tr></table></div></figure>
 
 
-<p>and left-click while still holding the middle button. It&rsquo;s a lot to type, but it&rsquo;s actually quite awesome and pretty ingenious. This whole mouse chording thing has opened my eyes to new ways to use Acme.</p>
+<p>Then, I can select the command text and, with it selected, perform a 2-1 chord by middle-click holding then left-clicking Edit. It&rsquo;s a lot to type, but it&rsquo;s actually quite awesome and pretty ingenious. This whole mouse chording thing has opened my eyes to new ways to use Acme.</p>
+
+<p>Addendum (July 9, 2015): Having been using Acme as my primary editor for a while, I have to say it is almost imperitive to get a mouse with a real middle button. I recently broke down and finally bought an <a href="">Evoluent mouse</a> to try. It&rsquo;s nice, although quite different. However, having a three-button mouse makes 2-1 chords way easier and faster to perform.</p>
+
+<p>Additionally, if you want to be able to 2-1 on a MacBook, <a href="http://www.mostlymaths.net/2013/04/just-as-mario-using-plan9-plumber.html">this blog post</a> has a patch you can apply to the plan9port source file and recompile. Look for it towards the end of the post, just above &ldquo;Final Remarks&rdquo;.</p>
 
 <p>This post was written in Acme.</p>
 
