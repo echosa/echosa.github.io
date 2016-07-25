@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Acme | Dev and Such]]></title>
   <link href="http://echosa.github.io/blog/categories/acme/atom.xml" rel="self"/>
   <link href="http://echosa.github.io/"/>
-  <updated>2016-05-17T23:51:10-05:00</updated>
+  <updated>2016-07-25T11:10:38-05:00</updated>
   <id>http://echosa.github.io/</id>
   <author>
     <name><![CDATA[Brian Zwahr]]></name>
@@ -30,6 +30,8 @@
 <p>We had some good times. We laughed. We cried. We learned a lot. I hope you all enjoyed reading these posts and that y&#8217;all learned as much from them as I learned from the experiment and all the comments.</p>
 
 <p>I&rsquo;ll end with a big thank you to all who commented on my blog posts or responded to my questions on Twitter. Your information was invaluable to the experience.</p>
+
+<p>You can read the previous episode <a href="/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/">here</a>.</p>
 ]]></content>
   </entry>
   
@@ -106,6 +108,8 @@ plumb client $editor
 <p>So, you can see how the plumber can be quite useful. It has certainly helped me, and I will definitely be making more rules as the need arises.</p>
 
 <p>The next episode of &ldquo;Let&rsquo;s Try Acme&rdquo; might be a bit different. Now that I&rsquo;ve used Acme for over two months straight, I&rsquo;m considering going back to Emacs to see how it feels, what I miss, what I enjoy, and really allow myself to compare and contrast the two different workflows. Then again, I might not, so I make no promises. You can read the previous post <a href="/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/">here</a>.</p>
+
+<p>Edit: The <a href="/blog/2014/10/06/lets-try-acme-episode-9-the-end/">next episode</a> is the end of the road. (For now?)</p>
 ]]></content>
   </entry>
   
