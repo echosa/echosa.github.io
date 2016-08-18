@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Zork Fortress Update: 0.0.2 - Dev and Such</title>
+  <title>Git, GPG, and IDE - Dev and Such</title>
   <meta name="author" content="Brian Zwahr">
 
   
-  <meta name="description" content="I recently released version 0.0.2 of my zork-fortress project, and by &ldquo;released&rdquo; I mean &ldquo;added a new git tag&rdquo;. In spite of my &hellip;">
+  <meta name="description" content="Today, I discovered that git allows for signing commits and tags with gpg. Awesome. However, I&rsquo;ve gotten rather used to using the git &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2">
+  <link rel="canonical" href="http://echosa.github.io/blog/2016/08/18/git-gpg-ide">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Dev and Such" type="application/atom+xml">
@@ -73,7 +73,7 @@
   
   <header>
     
-      <h1 class="entry-title">Zork Fortress Update: 0.0.2</h1>
+      <h1 class="entry-title">Git, GPG, and IDE</h1>
     
     
       <p class="meta">
@@ -82,7 +82,7 @@
 
 
 
-<time class='entry-date' datetime='2015-03-29T15:56:04-05:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:56 pm</span></time>
+<time class='entry-date' datetime='2016-08-18T09:23:06-05:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:23 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://echosa.github.io">Comments</a>
@@ -92,26 +92,54 @@
   </header>
 
 
-<div class="entry-content"><p>I recently released version 0.0.2 of my zork-fortress project, and by &ldquo;released&rdquo; I mean &ldquo;added a new git tag&rdquo;.</p>
+<div class="entry-content"><p>Today, I discovered that <code>git</code> allows for signing commits and tags with <code>gpg</code>. Awesome. However, I&rsquo;ve gotten rather used to using the git integration in IntelliJ&rsquo;s IDEA IDE, which is actually quite nice. In order to get the git/gpg stuff working, though, a few tweaks were required. I&rsquo;m writing those here so I can remember them in the future.</p>
 
 <!--more-->
 
 
-<p>In spite of my lack of work on the project the past few months, it is far from dead! I finally got some time to work on it, so here&rsquo;s the list of 0.0.2 updates from the <a href="https://github.com/echosa/zork-fortress/blob/0.0.2/CHANGELOG">CHANGELOG</a>:</p>
+<p>A quick overview of the problem and the solution. The issue is that when you tell git to sign commits or tags (either via a command line argument or git config change), gpg will require your passphrase for the key. Makes sense. If you&rsquo;re using git from the command line, there&rsquo;s no issue. However, since gpg defaults to a CLI prompt for the password, if you try to make a git commit from an external program (say, an IDE, like IntelliJ IDEA), you won&rsquo;t be prompted for a passphrase and the commit won&rsquo;t be made. The solution, then, is to get gpg to ask for the passphrase in a way compatible with external applications, beyond pure CLI usage.</p>
 
-<ul>
-<li>Added the <code>help</code> command.</li>
-<li>Added the <code>chop</code> command.</li>
-<li>Added the <code>inventory</code> command.</li>
-<li>Reformatted <code>history</code> output.</li>
-</ul>
+<p>Note: these instructions will be specific to OS X (soon to be macOS [again]).</p>
+
+<p>Required installs (can be installed with <a href="http://brew.sh">homebrew</a>): git, gpg, pinentry-mac</p>
+
+<ol>
+<li><p>Create a new gpg key (or use an existing one), and configure git to use it. GitHub has <a href="https://help.github.com/articles/generating-a-gpg-key/">excellent documentation</a> about how to do this.</p></li>
+<li><p>Tell gpg to use a GUI program, not the terminal, to ask for passphrase when signing things by adding this to <code>~/.gnupg/gpg.conf</code>:</p></li>
+</ol>
 
 
-<p>I also did some code refactoring and got all <a href="http://typedclojure.org">core.typed</a> static typing in place.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>no-tty
+</span><span class='line'>use-agent</span></code></pre></td></tr></table></div></figure>
 
-<p>As is, when you run version 0.0.2 of the game, you can look around (you&rsquo;ll see a single tree until you chop it down), chop that tree down, check your inventory (it&rsquo;ll be empty until you chop the tree), get help for commands, and see your recent command history. It&rsquo;s not much, but it&rsquo;s a start.</p>
 
-<p>I&rsquo;ve got quite a few ideas for 0.0.3 and beyond, including some major changes to the chop command, so don&rsquo;t get too comfortable with how it works now.</p>
+<ol>
+<li>Tell gpg-agent to use the <code>pinentry-mac</code> program by adding this to <code>~/.gnupg/gpg-agent.conf</code> (you&rsquo;ll need to create the file if it doesn&rsquo;t exist):</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pinentry-program /usr/local/bin/pinentry-mac</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The pinentry-mac program exactly as it sounds: a pin entry program for Macs. This is the GUI program that will replace the default CLI passphrase prompt.</p>
+
+<ol>
+<li>[Optional] If you don&rsquo;t want to have to tell git to sign every commit manually by using <code>git commit -S</code>, you can tell git to always sign. I&rsquo;ve done so globally, but you could do so on a project-by-project basis:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global commit.gpgsign true</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, whenever you commit and have git sign with gpg, you&rsquo;ll be prompted with a GUI popup instead of gpg trying to ask for a password on the command-line. Added bonus: pinentry-mac allows you to check &ldquo;Save in keychain&rdquo; so you don&rsquo;t have to put in your passphrase every single time. <em>WARNING</em> Only select this option if your computer already has other security precautions, is not used by anyone else, and is safe and secure. Otherwise, anyone with access to your computer would be able to make commits signed by your key!</p>
+
+<p>So, there you have it. That should be all that&rsquo;s requried to get git&rsquo;s gpg signing playing nice with external programs.</p>
+
+<p>One last thing: just so you know, GitHub now has <a href="https://github.com/blog/2144-gpg-signature-verification">built-in GPG verification</a>.</p>
 </div>
 
 
@@ -127,12 +155,12 @@
 
 
 
-<time class='entry-date' datetime='2015-03-29T15:56:04-05:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:56 pm</span></time>
+<time class='entry-date' datetime='2016-08-18T09:23:06-05:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:23 am</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/clojure/'>clojure</a>, <a class='category' href='/blog/categories/zork-fortress/'>zork-fortress</a>
+    <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/gpg/'>gpg</a>
   
 </span>
 
@@ -141,7 +169,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://echosa.github.io/blog/2016/08/18/git-gpg-ide/" data-via="echosa" data-counturl="http://echosa.github.io/blog/2016/08/18/git-gpg-ide/" >Tweet</a>
   
   
   
@@ -152,10 +180,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/03/29/clojure-greed-update-static-typing/" title="Previous Post: Clojure Greed Update: Static Typing!">&laquo; Clojure Greed Update: Static Typing!</a>
+        <a class="basic-alignment left" href="/blog/2015/03/29/zork-fortress-update-0-dot-0-2/" title="Previous Post: Zork Fortress Update: 0.0.2">&laquo; Zork Fortress Update: 0.0.2</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/08/18/git-gpg-ide/" title="Next Post: Git, GPG, and IDE">Git, GPG, and IDE &raquo;</a>
       
     </p>
   </footer>
@@ -221,8 +247,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2/';
-        var disqus_url = 'http://echosa.github.io/blog/2015/03/29/zork-fortress-update-0-dot-0-2/';
+        var disqus_identifier = 'http://echosa.github.io/blog/2016/08/18/git-gpg-ide/';
+        var disqus_url = 'http://echosa.github.io/blog/2016/08/18/git-gpg-ide/';
         var disqus_script = 'embed.js';
       
     (function () {
