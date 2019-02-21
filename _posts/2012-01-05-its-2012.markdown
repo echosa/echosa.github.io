@@ -1,0 +1,13 @@
+---
+layout: post
+title: "It's 2012!"
+date: 2012-01-05T04:49:00-08:00
+comments: true
+tags:
+- emacs
+---
+Where's my flying car?
+
+Seriously, though, I haven't had much time to do much with emacs over the holidays, other than use it at work. We're still working on zf-mode, and I've improved my emacs-setup package a bit (not sure if I've ever mentioned that on this blog before, but its another emacs package I wrote).
+
+Basically, long story short, emacs still rocks.
