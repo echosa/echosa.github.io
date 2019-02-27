@@ -5,7 +5,7 @@ date: 2011-02-10T17:49:00-08:00
 comments: true
 tags:
 - emacs
-- term
+- terminal
 ---
 So, I've found myself using ansi-term quite a bit, including to run finch for my instant messaging needs. However, there's one main issue with which I found myself becoming frustrated: yanking (aka pasting).
 <!--more-->

@@ -5,8 +5,6 @@ date: 2012-09-27 09:11
 comments: true
 tags: 
 - php
-- behat
-- mink
 ---
 So, here's a tip that would have saved me about 10 minutes of frustrated work today. As [clearly stated in the PHP manual](http://php.net/manual/en/function.chmod.php), when you're setting the mode for a file via a number, the number must be expressed as octal. What this means is that the leading zero that is typically implicit when using chmod from the command like (e.g. `chmod 777 <file>`) is **not** implicit when calling chmod from PHP. You have to supply the leading zero, meaning you call something like `chmod(<file>, 0777)`.
 <!--more-->

@@ -6,8 +6,6 @@ comments: true
 tags:
 - php
 - behat
-- acl
-- zendframework
 ---
 A bit of disclosure before I begin. I'm completely new to behat, so I have little knowledge of it beyond what little bit of work I've done with ecukes (which is basically Cucumber for Emacs). That said, I'm trying to setup behat to test various parts of a web application I am writing. Specifically, I have a really, really long form that I'm tired of manually filling out and submitting in the browser. However, I believe I'm running into an issue accessing the form's page in the first place.
 <!-- more -->

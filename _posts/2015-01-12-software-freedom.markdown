@@ -3,9 +3,6 @@ layout: post
 title: "Software Freedom"
 date: 2015-01-12 15:08:36 -0600
 comments: true
-tags: 
-- freedom
-- fsf
 ---
 Over on my personal blog, I posted [an article](http://echosa.freeshell.org/phlog/0014-software-freedom) concerning software freedom.
 <!--more-->

@@ -5,7 +5,6 @@ date: 2012-07-27T09:29:00-07:00
 comments: true
 tags:
 - emacs
-- emacs-setup
 ---
 I recently updated my [emacs-setup package](https://github.com/echosa/emacs-setup) (available through [MELPA](http://melpa.milkbox.net/)) and made some major changes!
 <!--more-->

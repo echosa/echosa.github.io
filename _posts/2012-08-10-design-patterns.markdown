@@ -5,8 +5,6 @@ date: 2012-08-10 10:41
 comments: true
 tags: 
 - programming
-- design
-- books
 ---
 So, at the recommendation of [a good guy I know](http://www.chrisweldon.net) I am reading ["Head First Design Patterns"](http://www.headfirstlabs.com/books/hfdp/). So far I've read the first two chapters and ZOMG WHY HAVEN'T I READ THIS SOONER?!
 

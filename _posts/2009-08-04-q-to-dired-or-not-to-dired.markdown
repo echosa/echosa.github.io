@@ -5,7 +5,6 @@ date: 2009-08-04T07:32:00-07:00
 comments: true
 tags:
 - emacs
-- QandA dired
 ---
 Ok, emacs community, it's Q&A time. I ask the question, and you answer!
 <!--more-->

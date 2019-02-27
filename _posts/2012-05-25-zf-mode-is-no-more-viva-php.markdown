@@ -5,7 +5,7 @@ date: 2012-05-25T13:22:00-07:00
 comments: true
 tags:
 - emacs
-- php+
+- php
 - zf-mode
 ---
 My emacs package for working with php has just undergone a significant change. It is no longer called zf-mode.

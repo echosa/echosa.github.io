@@ -5,7 +5,6 @@ date: 2012-10-10 09:23
 comments: true
 tags: 
 - php
-- repl
 ---
 After a recent conversation on Twitter, I felt like I should explain why I feel that `php -a`, the PHP Interactive Shell, isn't a REPL, and where it falls short because of this.
 <!--more-->

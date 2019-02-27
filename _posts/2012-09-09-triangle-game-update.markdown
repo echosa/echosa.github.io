@@ -5,7 +5,6 @@ date: 2012-09-09 18:12
 comments: true
 tags: 
 - java
-- triangle
 ---
 So, I've recently pushed a number of changes to my Triangle Game project I'm using to learn Java again. Updates include:
 

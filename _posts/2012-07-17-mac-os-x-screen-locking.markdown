@@ -4,7 +4,7 @@ title: "Mac OS X Screen Locking Made Easy"
 date: 2012-07-17 11:49
 comments: true
 tags: 
-- macosx
+- mac
 ---
 In "why the hell isn't the more known or documented better" news, a coworker of mine discovered and shared with me a neat little trick for locking Mac OS X: Control-Shift-Eject.
 

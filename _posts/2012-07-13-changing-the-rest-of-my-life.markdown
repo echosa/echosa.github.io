@@ -5,8 +5,6 @@ date: 2012-07-13 14:53
 comments: true
 tags:
 - php 
-- rest
-- slim
 ---
 I have more "OMG, why didn't I know about this sooner!?" moments than I care to admit. In the past week, I've had yet another.
 

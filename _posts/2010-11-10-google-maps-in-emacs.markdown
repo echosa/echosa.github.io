@@ -5,8 +5,6 @@ date: 2010-11-10T20:30:00-08:00
 comments: true
 tags:
 - emacs
-- maps
-- awesome
 - google
 ---
 [Awesome.](http://julien.danjou.info/google-maps-el.html) 'nuff said...
