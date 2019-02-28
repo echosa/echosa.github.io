@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Improving ansi-term"
 date: 2012-06-06T12:02:00-07:00
 comments: true

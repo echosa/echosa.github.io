@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "New GOPHER Library for PHP"
 date: 2014-02-25 11:45
 comments: true

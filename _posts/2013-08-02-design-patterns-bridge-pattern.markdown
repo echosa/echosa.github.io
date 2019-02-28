@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Design Patterns: Bridge Pattern"
 date: 2013-08-02 14:57
 comments: true

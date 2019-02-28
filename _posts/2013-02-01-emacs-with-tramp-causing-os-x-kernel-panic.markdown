@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Emacs with TRAMP Causing OS X Kernel Panic"
 date: 2013-02-01 09:25
 comments: true

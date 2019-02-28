@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "jira-mode 0.3.3 available!"
 date: 2009-10-12T14:30:00-07:00
 comments: true

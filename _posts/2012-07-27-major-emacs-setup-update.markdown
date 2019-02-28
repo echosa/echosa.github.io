@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Major emacs-setup update!"
 date: 2012-07-27T09:29:00-07:00
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "I'm Slowly Getting ORGanized"
 date: 2010-05-11T15:04:00-07:00
 comments: true

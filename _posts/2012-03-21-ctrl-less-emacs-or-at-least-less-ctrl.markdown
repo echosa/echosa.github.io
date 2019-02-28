@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "CTRL-less emacs? (Or, at least, less CTRL...)"
 date: 2012-03-21T07:39:00-07:00
 comments: true

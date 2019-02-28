@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "So I'm Learning Java"
 date: 2012-08-17 10:37
 comments: true

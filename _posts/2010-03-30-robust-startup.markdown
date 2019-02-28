@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Robust Startup"
 date: 2010-03-30T14:17:00-07:00
 comments: true

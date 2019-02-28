@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Let's Try Acme: Episode 9 - The End"
 date: 2014-10-06 16:29
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Press 'q' to quit, 'z' to *really* quit."
 date: 2012-08-30T07:44:00-07:00
 comments: true

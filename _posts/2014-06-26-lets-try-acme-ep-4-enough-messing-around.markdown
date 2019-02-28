@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Let's Try Acme: Ep. 4 - Enough Messing Around"
 date: 2014-06-26 15:27
 comments: true

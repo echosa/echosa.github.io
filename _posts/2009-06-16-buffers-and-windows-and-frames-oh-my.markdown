@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Buffers and Windows and Frames, Oh My!"
 date: 2009-06-16T16:13:00-07:00
 comments: true

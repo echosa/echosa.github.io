@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Announcing the Release of Etchist"
 date: 2015-01-13 08:34:53 -0600
 comments: true

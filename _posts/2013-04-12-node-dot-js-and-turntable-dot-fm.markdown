@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Node.js and TurnTable.fm"
 date: 2013-04-12 14:40
 comments: true

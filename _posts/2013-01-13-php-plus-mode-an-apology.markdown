@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "php+-mode: An apology, a promise, and a call for help"
 date: 2013-01-13 08:47
 comments: true

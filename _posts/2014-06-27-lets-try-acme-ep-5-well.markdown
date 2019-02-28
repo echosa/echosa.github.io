@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Let's Try Acme: Ep. 5 - Well, Shit"
 date: 2014-06-27 16:17
 comments: true

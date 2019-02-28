@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "package-bundle: Keep track of your dependencies!"
 date: 2012-07-27T14:20:00-07:00
 comments: true

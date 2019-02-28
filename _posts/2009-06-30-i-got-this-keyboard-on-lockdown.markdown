@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "I Got This (key)Board On Lockdown"
 date: 2009-06-30T20:23:00-07:00
 comments: true

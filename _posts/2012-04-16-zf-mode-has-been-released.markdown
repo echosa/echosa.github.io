@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "zf-mode has been released!"
 date: 2012-04-16T11:01:00-07:00
 comments: true

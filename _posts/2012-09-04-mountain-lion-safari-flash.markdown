@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Mountain Lion, Safari, and Flash"
 date: 2012-09-04 08:21
 comments: true

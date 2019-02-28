@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Let's Try Acme: Ep. 0 - Research"
 date: 2014-06-18 08:43
 comments: true

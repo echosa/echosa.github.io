@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Q&A: To dired or Not To dired"
 date: 2009-08-04T07:32:00-07:00
 comments: true

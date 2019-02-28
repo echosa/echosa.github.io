@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "The Call of the CLI"
 date: 2012-07-13T12:17:00-07:00
 comments: true

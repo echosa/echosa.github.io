@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Combining Blogs"
 date: 2012-10-16 16:22
 comments: true

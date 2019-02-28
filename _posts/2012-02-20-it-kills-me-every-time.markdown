@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "It Kills Me Every Time..."
 date: 2012-02-20T22:37:00-08:00
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Bring out your dead!"
 date: 2010-10-25T07:30:00-07:00
 comments: true

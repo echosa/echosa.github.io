@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Let's Try Acme: Episode 7 - Equilibrium"
 date: 2014-08-07 09:14
 comments: true

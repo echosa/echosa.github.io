@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Let's Try Acme: Ep. 3 - Problem Solving"
 date: 2014-06-19 17:26
 comments: true

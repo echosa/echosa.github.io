@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Going (back to) Gopher"
 date: 2013-08-29 09:45
 comments: true

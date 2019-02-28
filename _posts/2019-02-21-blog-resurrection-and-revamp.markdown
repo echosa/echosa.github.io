@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Blog Resurrection and Revamp!"
 date: 2019-02-21 17:49:39 -0600
 comments: true

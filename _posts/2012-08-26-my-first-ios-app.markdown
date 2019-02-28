@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "My First iOS App"
 date: 2012-08-26 00:29
 comments: true

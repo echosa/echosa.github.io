@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "XDebug and Truncated Output"
 date: 2012-08-22 08:42
 comments: true

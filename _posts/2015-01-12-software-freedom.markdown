@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Software Freedom"
 date: 2015-01-12 15:08:36 -0600
 comments: true

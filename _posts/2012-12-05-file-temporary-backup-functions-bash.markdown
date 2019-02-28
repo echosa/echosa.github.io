@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "File Temporary Backup/Move Functions (bash)"
 date: 2012-12-05 10:22
 comments: true

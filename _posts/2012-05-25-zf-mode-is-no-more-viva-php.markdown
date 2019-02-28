@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "zf-mode is no more... Viva php+!"
 date: 2012-05-25T13:22:00-07:00
 comments: true

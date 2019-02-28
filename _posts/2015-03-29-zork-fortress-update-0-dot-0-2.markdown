@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Zork Fortress Update: 0.0.2"
 date: 2015-03-29 15:56:04 -0500
 comments: true
