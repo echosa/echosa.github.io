@@ -24,12 +24,14 @@ defaults:
       comments: true
       share: true
       related: true
+      author_profile: true
   # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
+      author_profile: true
 tag_archive:
   type: liquid
   path: /tags/
@@ -37,3 +39,14 @@ paginate: 5
 paginate_path: /page:num/
 include: ["_pages"]
 search: true
+author:
+  name: "Brian Zwahr"
+  bio: "We learn from our mistakes. Learn from mine, too!"
+  location: "USA"
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/echosa"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/echosa"
