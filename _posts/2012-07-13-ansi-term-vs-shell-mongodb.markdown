@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "ansi-term vs shell: mongodb"
 date: 2012-07-13T14:37:00-07:00
-comments: true
 tags:
 - emacs
 ---

@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Version Control Conundrum"
 date: 2009-11-27T05:34:00-08:00
-comments: true
 tags:
 - emacs
 ---

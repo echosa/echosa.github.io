@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "OS X Text Substitution"
 date: 2012-12-04 09:50
-comments: true
 tags: 
 - mac
 ---

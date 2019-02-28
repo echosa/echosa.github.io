@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Design Patterns: Bridge Pattern"
 date: 2013-08-02 14:57
-comments: true
 tags: 
 ---
 I recently have been (re)learning about design patterns and had an assignment of looking into the Bridge Pattern. In fact, part of the assignment was coming up with a good way of describing the pattern. I believe I have done this and felt like I should post my findings here, if only for my future self.

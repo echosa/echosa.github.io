@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "The Journey Begins (sort of...)"
 date: 2009-05-26T09:17:00-07:00
-comments: true
 tags:
 - emacs
 ---

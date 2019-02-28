@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Seek and Hide"
 date: 2009-12-21T14:49:00-08:00
-comments: true
 tags:
 - emacs
 ---

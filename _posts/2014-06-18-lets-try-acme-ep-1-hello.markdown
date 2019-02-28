@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Let's Try Acme: Ep. 1 - Hello, World"
 date: 2014-06-18 09:02
-comments: true
 tags: 
 - acme
 ---

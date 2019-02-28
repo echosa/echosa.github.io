@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Kill Multiple Lines with kill-lines"
 date: 2012-10-16T11:39:00-07:00
-comments: true
 tags:
 - emacs
 ---

@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "jira-mode pt. 1"
 date: 2009-06-25T16:13:00-07:00
-comments: true
 tags:
 - emacs
 - jira

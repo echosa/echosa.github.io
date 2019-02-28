@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "gopher-php and Phlog Update"
 date: 2015-01-12 14:37:53 -0600
-comments: true
 tags: 
 - php
 - gopher

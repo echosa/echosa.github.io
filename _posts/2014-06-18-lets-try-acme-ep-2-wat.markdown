@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Let's Try Acme: Ep. 2 - Wat"
 date: 2014-06-18 09:17
-comments: true
 tags: 
 - acme
 ---

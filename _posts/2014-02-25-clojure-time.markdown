@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Clojure Time"
 date: 2014-02-25 13:27
-comments: true
 tags: 
 - clojure
 ---

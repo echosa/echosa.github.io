@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Let's Try Acme: Episode 8 - Scrolling and Plumbing"
 date: 2014-08-26 14:08
-comments: true
 tags: 
 - acme
 ---

@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "How My Emacs Setup Changed Me (and is it time to change again)"
 date: 2013-07-05 09:08
-comments: true
 tags: 
 - emacs
 ---

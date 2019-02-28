@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Emacs Haiku on Twitter"
 date: 2012-08-07T08:00:00-07:00
-comments: true
 tags:
 - emacs
 ---

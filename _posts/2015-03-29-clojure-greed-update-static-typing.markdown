@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Clojure Greed Update: Static Typing!"
 date: 2015-03-29 15:45:51 -0500
-comments: true
 tags: 
 - clojure
 ---

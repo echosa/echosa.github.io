@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Let's Try Acme: Episode 6 - Trouble in Paradise"
 date: 2014-07-07 09:08
-comments: true
 tags: 
 - acme
 ---

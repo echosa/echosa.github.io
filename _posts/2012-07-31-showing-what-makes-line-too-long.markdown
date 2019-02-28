@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Showing what makes a line too long"
 date: 2012-07-31T07:31:00-07:00
-comments: true
 tags:
 - emacs
 ---

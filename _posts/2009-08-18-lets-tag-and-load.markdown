@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Let's Tag and Load!"
 date: 2009-08-18T14:21:00-07:00
-comments: true
 tags:
 - emacs
 ---

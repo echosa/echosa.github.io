@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "We've created a monster... and it's call zf-mode!"
 date: 2011-11-01T12:44:00-07:00
-comments: true
 tags:
 - emacs
 - php

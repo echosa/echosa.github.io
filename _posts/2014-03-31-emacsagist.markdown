@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Emacsagist"
 date: 2014-03-31 15:06
-comments: true
 tags: 
 - emacs
 ---

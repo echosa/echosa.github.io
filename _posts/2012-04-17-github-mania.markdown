@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "GitHub Mania!"
 date: 2012-04-17T11:51:00-07:00
-comments: true
 tags:
 - emacs
 ---

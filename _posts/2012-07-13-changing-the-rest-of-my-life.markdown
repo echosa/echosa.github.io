@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Changing the REST of My Life"
 date: 2012-07-13 14:53
-comments: true
 tags:
 - php 
 ---

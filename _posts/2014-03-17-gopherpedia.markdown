@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Gopherpedia"
 date: 2014-03-17 10:37
-comments: true
 tags: 
 - gopher
 ---

@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Google Maps in Emacs"
 date: 2010-11-10T20:30:00-08:00
-comments: true
 tags:
 - emacs
 - google

@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "A Whole New World"
 date: 2012-10-26 07:42
-comments: true
 tags: 
 - java
 ---

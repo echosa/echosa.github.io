@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Emacs, Paredit, and Multiple Cursors"
 date: 2013-04-12 14:58
-comments: true
 tags: 
 - emacs
 ---

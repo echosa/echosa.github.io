@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Try and Variable Initialization"
 date: 2012-08-21 21:55
-comments: true
 tags: 
 - java
 ---

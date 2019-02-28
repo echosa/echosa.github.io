@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "checkdoc ... I needn't say anything more"
 date: 2012-05-20T11:05:00-07:00
-comments: true
 tags:
 - emacs
 ---

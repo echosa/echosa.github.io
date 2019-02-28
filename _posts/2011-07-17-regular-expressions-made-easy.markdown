@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Regular Expressions made easy!"
 date: 2011-07-17T07:23:00-07:00
-comments: true
 tags:
 - emacs
 ---

@@ -1,8 +1,6 @@
 ---
-layout: single
 title: "Search Your Open Buffers"
 date: 2012-01-10T07:25:00-08:00
-comments: true
 tags:
 - emacs
 ---
