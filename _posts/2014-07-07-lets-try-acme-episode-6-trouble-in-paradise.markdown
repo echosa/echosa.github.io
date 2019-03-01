@@ -12,7 +12,7 @@ Let's start with the latter. Acme is nice and all, but as you start getting more
 
 In contrast, Emacs hides all those buffers in the background, letting the user get back to them easily and quickly when needed, without them causing clutter. This was becoming a big issue in Acme to where I was having to close convenient windows just to declutter.
 
-Now, to the big one: Projectile. The code base I was working in is large. Really large. Navigating around it in Acme was doable, but not convenient or quick. Finding files or greping text was also inconvenient, especially since Acme uses a plan9port version of grep (as well as other commands... see the [last post](/blog/2014/06/27/lets-try-acme-ep-5-well/) for my issues with rm), so I ended up needing to actually run /usr/bin/grep explicitly to get, in this case, recursive functionality. 
+Now, to the big one: Projectile. The code base I was working in is large. Really large. Navigating around it in Acme was doable, but not convenient or quick. Finding files or greping text was also inconvenient, especially since Acme uses a plan9port version of grep (as well as other commands... see the [last post]({{ site.baseurl }}{% post_url 2014-06-27-lets-try-acme-ep-5-well %}) for my issues with rm), so I ended up needing to actually run /usr/bin/grep explicitly to get, in this case, recursive functionality. 
 
 Projectile makes project navigation and finding what you need simple and fast. It automatically limits searches to the root project directory, allows you to do fuzzy or partial matching with live results, and just makes project navigation a breeze.
 
@@ -25,4 +25,4 @@ I haven't given up on Acme, yet. That time might be coming, but I'm trying to gi
 This post written in Acme.
 
 [Next time](/blog/2014/08/07/lets-try-acme-episode-7-equilibrium), things are significantly better.
-You can read the previous post [here](/blog/2014/06/27/lets-try-acme-ep-5-well/).
+You can read the previous post [here]({{ site.baseurl }}{% post_url 2014-06-27-lets-try-acme-ep-5-well %}).

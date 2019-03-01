@@ -4,7 +4,7 @@ date: 2014-06-18
 categories: [blog]
 tags: [acme]
 ---
-After my [initial research](/blog/2014/06/18/lets-try-acme-ep-0-research/), it's time to give ol' Acme a try.
+After my [initial research]({{ site.baseurl }}{% post_url 2014-06-18-lets-try-acme-ep-0-research %}), it's time to give ol' Acme a try.
 <!--more-->
 First things first - I needed to install Acme. [Homebrew](http://brew.sh) made that quite easy.
 
@@ -61,4 +61,4 @@ Success! On top of it all, it has native OS X full screen support! Bonus!
 
 Now I'm starting at the default Acme window. Time to play around. Middle-click on `New` to open a new window. Middle-click on `Del` to close it. Right click on a file to open it. Awesome. Acme seems to be working.
 
-The real fun will continue in the [next episode](/blog/2014/06/18/lets-try-acme-ep-2-wat/). You can read the previous post [here](/blog/2014/06/18/lets-try-acme-ep-0-research/).
+The real fun will continue in the [next episode]({{ site.baseurl }}{% post_url 2014-06-18-lets-try-acme-ep-2-wat %}). You can read the previous post [here]({{ site.baseurl }}{% post_url 2014-06-18-lets-try-acme-ep-0-research %}).

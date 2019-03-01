@@ -66,4 +66,4 @@ Additionally, if you want to be able to 2-1 on a MacBook, [this blog post](http:
 
 This post was written in Acme.
 
-In the [next episode](/blog/2014/06/27/lets-try-acme-ep-5-well/), I discuss my first big mistake in Acme and the price I paid. You can read the previous post [here](/blog/2014/06/19/lets-try-acme-ep-3-problem-solving/).
+In the [next episode]({{ site.baseurl }}{% post_url 2014-06-27-lets-try-acme-ep-5-well %}), I discuss my first big mistake in Acme and the price I paid. You can read the previous post [here]({{ site.baseurl }}{% post_url 2014-06-19-lets-try-acme-ep-3-problem-solving %}).

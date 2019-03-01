@@ -71,6 +71,6 @@ I might be able to improve or combine these rules, but this is how I was able to
 
 So, you can see how the plumber can be quite useful. It has certainly helped me, and I will definitely be making more rules as the need arises. 
 
-The next episode of "Let's Try Acme" might be a bit different. Now that I've used Acme for over two months straight, I'm considering going back to Emacs to see how it feels, what I miss, what I enjoy, and really allow myself to compare and contrast the two different workflows. Then again, I might not, so I make no promises. You can read the previous post [here](/blog/2014/08/07/lets-try-acme-episode-7-equilibrium/).
+The next episode of "Let's Try Acme" might be a bit different. Now that I've used Acme for over two months straight, I'm considering going back to Emacs to see how it feels, what I miss, what I enjoy, and really allow myself to compare and contrast the two different workflows. Then again, I might not, so I make no promises. You can read the previous post [here]({{ site.baseurl }}{% post_url 2014-08-07-lets-try-acme-episode-7-equilibrium %}).
 
-Edit: The [next episode](/blog/2014/10/06/lets-try-acme-episode-9-the-end/) is the end of the road. (For now?)
+Edit: The [next episode]({{ site.baseurl }}{% post_url 2014-10-06-lets-try-acme-episode-9-the-end %}) is the end of the road. (For now?)

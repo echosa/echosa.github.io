@@ -14,4 +14,4 @@ We had some good times. We laughed. We cried. We learned a lot. I hope you all e
 
 I'll end with a big thank you to all who commented on my blog posts or responded to my questions on Twitter. Your information was invaluable to the experience.
 
-You can read the previous episode [here](/blog/2014/08/26/lets-try-acme-episode-8-scrolling-and-plumbing/).
+You can read the previous episode [here]({{ site.baseurl }}{% post_url 2014-08-26-lets-try-acme-episode-8-scrolling-and-plumbing %}).
