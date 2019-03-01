@@ -1,6 +1,7 @@
 ---
 title: "Git, GPG, and IDE"
 date: 2016-08-18
+categories: [blog]
 tags: 
 - git
 - gpg

@@ -1,6 +1,7 @@
 ---
 title: "The Journey Begins (sort of...)"
 date: 2009-05-26
+categories: [blog]
 tags:
 - emacs
 ---

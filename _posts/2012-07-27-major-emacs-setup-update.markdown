@@ -1,6 +1,7 @@
 ---
 title: "Major emacs-setup update!"
 date: 2012-07-27
+categories: [blog]
 tags:
 - emacs
 ---

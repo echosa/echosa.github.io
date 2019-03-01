@@ -1,6 +1,7 @@
 ---
 title: "So I'm Learning Java"
 date: 2012-08-17
+categories: [blog]
 tags: 
 - java
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Bring out your dead!"
 date: 2010-10-25
+categories: [blog]
 tags:
 - emacs
 - zend

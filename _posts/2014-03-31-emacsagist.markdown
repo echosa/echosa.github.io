@@ -1,6 +1,7 @@
 ---
 title: "Emacsagist"
 date: 2014-03-31
+categories: [blog]
 tags: 
 - emacs
 ---

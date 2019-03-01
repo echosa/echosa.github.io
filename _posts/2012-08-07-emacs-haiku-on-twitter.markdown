@@ -1,6 +1,7 @@
 ---
 title: "Emacs Haiku on Twitter"
 date: 2012-08-07
+categories: [blog]
 tags:
 - emacs
 ---

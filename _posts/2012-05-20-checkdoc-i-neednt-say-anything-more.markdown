@@ -1,6 +1,7 @@
 ---
 title: "checkdoc ... I needn't say anything more"
 date: 2012-05-20
+categories: [blog]
 tags:
 - emacs
 ---

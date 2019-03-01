@@ -1,6 +1,7 @@
 ---
 title: "We've created a monster... and it's call zf-mode!"
 date: 2011-11-01
+categories: [blog]
 tags:
 - emacs
 - php

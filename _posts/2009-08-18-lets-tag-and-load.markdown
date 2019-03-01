@@ -1,6 +1,7 @@
 ---
 title: "Let's Tag and Load!"
 date: 2009-08-18
+categories: [blog]
 tags:
 - emacs
 ---

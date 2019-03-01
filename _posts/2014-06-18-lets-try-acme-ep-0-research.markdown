@@ -1,6 +1,7 @@
 ---
 title: "Let's Try Acme: Ep. 0 - Research"
 date: 2014-06-18
+categories: [blog]
 tags: 
 - acme
 ---

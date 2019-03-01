@@ -1,6 +1,7 @@
 ---
 title: "Demo video of zend-mode now available!"
 date: 2011-06-27
+categories: [blog]
 tags:
 - emacs
 - zend

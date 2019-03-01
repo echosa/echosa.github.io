@@ -1,6 +1,7 @@
 ---
 title: "Clojure Time"
 date: 2014-02-25
+categories: [blog]
 tags: 
 - clojure
 ---

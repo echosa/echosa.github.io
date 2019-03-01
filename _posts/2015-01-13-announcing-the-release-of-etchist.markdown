@@ -1,6 +1,7 @@
 ---
 title: "Announcing the Release of Etchist"
 date: 2015-01-13
+categories: [blog]
 tags: 
 - pebble
 - c

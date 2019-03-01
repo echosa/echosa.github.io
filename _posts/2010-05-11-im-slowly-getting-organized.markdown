@@ -1,6 +1,7 @@
 ---
 title: "I'm Slowly Getting ORGanized"
 date: 2010-05-11
+categories: [blog]
 tags:
 - emacs
 ---

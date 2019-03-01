@@ -1,6 +1,7 @@
 ---
 title: "Emacs, Paredit, and Multiple Cursors"
 date: 2013-04-12
+categories: [blog]
 tags: 
 - emacs
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Proper (Ansi-)Term Yank/Paste"
 date: 2011-02-10
+categories: [blog]
 tags:
 - emacs
 - terminal

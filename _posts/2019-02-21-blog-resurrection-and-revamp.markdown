@@ -1,6 +1,7 @@
 ---
 title: "Blog Resurrection and Revamp!"
 date: 2019-02-21
+categories: [blog]
 ---
 It's been a long, long time since I did anything with this blog. I think it's time to bring it back!
 

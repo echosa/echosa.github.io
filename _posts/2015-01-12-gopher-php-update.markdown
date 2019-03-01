@@ -1,6 +1,7 @@
 ---
 title: "gopher-php and Phlog Update"
 date: 2015-01-12
+categories: [blog]
 tags: 
 - php
 - gopher

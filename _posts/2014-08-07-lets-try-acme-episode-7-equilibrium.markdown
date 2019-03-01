@@ -1,6 +1,7 @@
 ---
 title: "Let's Try Acme: Episode 7 - Equilibrium"
 date: 2014-08-07
+categories: [blog]
 tags:
 - acme
 ---

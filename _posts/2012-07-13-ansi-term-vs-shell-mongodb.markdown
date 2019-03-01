@@ -1,6 +1,7 @@
 ---
 title: "ansi-term vs shell: mongodb"
 date: 2012-07-13
+categories: [blog]
 tags:
 - emacs
 ---

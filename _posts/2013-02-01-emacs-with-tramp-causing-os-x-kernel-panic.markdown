@@ -1,6 +1,7 @@
 ---
 title: "Emacs with TRAMP Causing OS X Kernel Panic"
 date: 2013-02-01
+categories: [blog]
 tags: 
 - emacs
 - mac

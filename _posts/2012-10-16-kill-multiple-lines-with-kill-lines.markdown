@@ -1,6 +1,7 @@
 ---
 title: "Kill Multiple Lines with kill-lines"
 date: 2012-10-16
+categories: [blog]
 tags:
 - emacs
 ---

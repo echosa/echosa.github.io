@@ -1,6 +1,7 @@
 ---
 title: "Design Patterns, or Why Am I Just Learning This Now?!"
 date: 2012-08-10
+categories: [blog]
 tags: 
 - programming
 ---

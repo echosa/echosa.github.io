@@ -1,6 +1,7 @@
 ---
 title: "Showing what makes a line too long"
 date: 2012-07-31
+categories: [blog]
 tags:
 - emacs
 ---

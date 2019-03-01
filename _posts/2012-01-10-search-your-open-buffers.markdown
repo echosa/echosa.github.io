@@ -1,6 +1,7 @@
 ---
 title: "Search Your Open Buffers"
 date: 2012-01-10
+categories: [blog]
 tags:
 - emacs
 ---

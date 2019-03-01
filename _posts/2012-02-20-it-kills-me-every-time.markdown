@@ -1,6 +1,7 @@
 ---
 title: "It Kills Me Every Time..."
 date: 2012-02-20
+categories: [blog]
 tags:
 - emacs
 ---

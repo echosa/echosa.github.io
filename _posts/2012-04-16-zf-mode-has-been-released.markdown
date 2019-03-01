@@ -1,6 +1,7 @@
 ---
 title: "zf-mode has been released!"
 date: 2012-04-16
+categories: [blog]
 tags:
 - emacs
 - zf-mode

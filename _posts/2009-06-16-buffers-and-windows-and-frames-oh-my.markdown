@@ -1,6 +1,7 @@
 ---
 title: "Buffers and Windows and Frames, Oh My!"
 date: 2009-06-16
+categories: [blog]
 tags:
 - emacs
 ---

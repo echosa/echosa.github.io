@@ -1,6 +1,7 @@
 ---
 title: "Packages now available from MELPA!"
 date: 2012-05-07
+categories: [blog]
 tags:
 - emacs
 ---

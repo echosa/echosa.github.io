@@ -1,6 +1,7 @@
 ---
 title: "Oh yeah.... its a text editor!"
 date: 2009-09-25
+categories: [blog]
 tags:
 - emacs
 ---

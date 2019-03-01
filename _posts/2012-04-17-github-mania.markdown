@@ -1,6 +1,7 @@
 ---
 title: "GitHub Mania!"
 date: 2012-04-17
+categories: [blog]
 tags:
 - emacs
 ---

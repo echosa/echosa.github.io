@@ -1,6 +1,7 @@
 ---
 title: "Let's Try Acme: Ep. 2 - Wat"
 date: 2014-06-18
+categories: [blog]
 tags: 
 - acme
 ---

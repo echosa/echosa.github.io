@@ -1,6 +1,7 @@
 ---
 title: "jira-mode pt. 2"
 date: 2009-07-10
+categories: [blog]
 tags:
 - emacs
 - jira

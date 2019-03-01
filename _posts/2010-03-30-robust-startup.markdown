@@ -1,6 +1,7 @@
 ---
 title: "Robust Startup"
 date: 2010-03-30
+categories: [blog]
 tags:
 - emacs
 ---

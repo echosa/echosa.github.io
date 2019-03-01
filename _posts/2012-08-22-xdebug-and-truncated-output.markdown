@@ -1,6 +1,7 @@
 ---
 title: "XDebug and Truncated Output"
 date: 2012-08-22
+categories: [blog]
 tags: 
 - php
 - xdebug

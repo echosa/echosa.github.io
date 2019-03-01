@@ -1,6 +1,7 @@
 ---
 title: "OS X Text Substitution"
 date: 2012-12-04
+categories: [blog]
 tags: 
 - mac
 ---

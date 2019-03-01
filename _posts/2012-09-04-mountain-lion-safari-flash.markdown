@@ -1,6 +1,7 @@
 ---
 title: "Mountain Lion, Safari, and Flash"
 date: 2012-09-04
+categories: [blog]
 tags: 
 - mac
 ---

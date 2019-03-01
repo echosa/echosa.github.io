@@ -1,6 +1,7 @@
 ---
 title: "RE Builder \"query replace this\""
 date: 2012-06-26
+categories: [blog]
 tags:
 - emacs
 ---

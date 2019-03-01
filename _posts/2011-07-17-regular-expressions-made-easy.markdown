@@ -1,6 +1,7 @@
 ---
 title: "Regular Expressions made easy!"
 date: 2011-07-17
+categories: [blog]
 tags:
 - emacs
 ---

@@ -1,6 +1,7 @@
 ---
 title: "The Call of the CLI"
 date: 2012-07-13
+categories: [blog]
 tags:
 - emacs
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Node.js and TurnTable.fm"
 date: 2013-04-12
+categories: [blog]
 tags: 
 - node
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Let's Try Acme: Episode 9 - The End"
 date: 2014-10-06
+categories: [blog]
 tags: 
 - acme
 ---

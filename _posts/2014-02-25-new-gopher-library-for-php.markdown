@@ -1,6 +1,7 @@
 ---
 title: "New GOPHER Library for PHP"
 date: 2014-02-25
+categories: [blog]
 tags: 
 - php
 - gopher

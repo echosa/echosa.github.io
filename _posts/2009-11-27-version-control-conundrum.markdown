@@ -1,6 +1,7 @@
 ---
 title: "Version Control Conundrum"
 date: 2009-11-27
+categories: [blog]
 tags:
 - emacs
 ---

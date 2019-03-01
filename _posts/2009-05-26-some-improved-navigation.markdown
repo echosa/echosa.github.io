@@ -1,6 +1,7 @@
 ---
 title: "Some Improved Navigation"
 date: 2009-05-26
+categories: [blog]
 tags:
 - emacs
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Let's Try Acme: Ep. 5 - Well, Shit"
 date: 2014-06-27
+categories: [blog]
 tags: 
 - acme
 ---

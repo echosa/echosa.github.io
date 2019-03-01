@@ -1,6 +1,7 @@
 ---
 title: "Going (back to) Gopher"
 date: 2013-08-29
+categories: [blog]
 tags:
 - gopher
 ---

@@ -1,6 +1,7 @@
 ---
 title: "I Got This (key)Board On Lockdown"
 date: 2009-06-30
+categories: [blog]
 tags:
 - emacs
 ---

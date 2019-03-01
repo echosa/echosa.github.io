@@ -1,6 +1,7 @@
 ---
 title: "Back to the Terminal"
 date: 2011-06-09
+categories: [blog]
 tags:
 - emacs
 - terminal

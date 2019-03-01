@@ -1,6 +1,7 @@
 ---
 title: "Seek and Hide"
 date: 2009-12-21
+categories: [blog]
 tags:
 - emacs
 ---

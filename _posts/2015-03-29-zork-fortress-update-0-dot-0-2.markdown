@@ -1,6 +1,7 @@
 ---
 title: "Zork Fortress Update: 0.0.2"
 date: 2015-03-29
+categories: [blog]
 tags: 
 - clojure
 - zork-fortress

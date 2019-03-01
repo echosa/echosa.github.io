@@ -1,6 +1,7 @@
 ---
 title: "Vim Influences: Prefixes and Deleting to End of Buffer"
 date: 2012-09-27
+categories: [blog]
 tags:
 - emacs
 ---

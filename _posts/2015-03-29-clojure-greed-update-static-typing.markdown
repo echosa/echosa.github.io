@@ -1,6 +1,7 @@
 ---
 title: "Clojure Greed Update: Static Typing!"
 date: 2015-03-29
+categories: [blog]
 tags: 
 - clojure
 ---

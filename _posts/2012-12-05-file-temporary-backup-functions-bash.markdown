@@ -1,6 +1,7 @@
 ---
 title: "File Temporary Backup/Move Functions (bash)"
 date: 2012-12-05
+categories: [blog]
 tags: 
 - bash
 ---

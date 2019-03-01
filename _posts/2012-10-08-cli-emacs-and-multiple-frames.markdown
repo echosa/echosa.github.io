@@ -1,6 +1,7 @@
 ---
 title: "CLI Emacs and multiple-frames"
 date: 2012-10-08
+categories: [blog]
 tags:
 - emacs
 ---

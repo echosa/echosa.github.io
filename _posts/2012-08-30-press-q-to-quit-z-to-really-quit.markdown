@@ -1,6 +1,7 @@
 ---
 title: "Press 'q' to quit, 'z' to *really* quit."
 date: 2012-08-30
+categories: [blog]
 tags:
 - emacs
 ---

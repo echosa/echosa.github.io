@@ -1,6 +1,7 @@
 ---
 title: "Gopherpedia"
 date: 2014-03-17
+categories: [blog]
 tags: 
 - gopher
 ---
