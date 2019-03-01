@@ -50,3 +50,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/echosa"
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "devstuff-blog"
