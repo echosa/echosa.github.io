@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Ep. 2 - Wat"
 date: 2014-06-18
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 Now that [I've got Acme running](/blog/2014/06/18/lets-try-acme-ep-1-hello/), it's time to start giving it a fair shot.
 <!--more-->

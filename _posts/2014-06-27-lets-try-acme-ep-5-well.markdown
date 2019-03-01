@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Ep. 5 - Well, Shit"
 date: 2014-06-27
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 Well, shit. I made my first huge Acme mistake, and I paid the price.
 <!--more-->

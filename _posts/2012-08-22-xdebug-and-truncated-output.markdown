@@ -2,11 +2,7 @@
 title: "XDebug and Truncated Output"
 date: 2012-08-22
 categories: [blog]
-tags: 
-- php
-- xdebug
-- zendframework
-- zf
+tags: [php, xdebug, zendframework, zf]
 ---
 Having used Zend_Debug::dump() with XDebug for quite some time, I've finally gotten tired of seeing truncated output. What I mean is, when I have Zend_Debug::dump() display a stack trace (for instance), it will show the first few lines then truncate with and ellipsis. This is fairly useless. Sure, I *could* go to the error log, but there's a reason I'm dumping this to the screen (when I'm in developer mode and have the show debug info flag for my application turned on... don't worry, this doesn't happen in production). For a while now I've just put up with it, thinking it an issue with Zend_Debug. 
 <!--more-->

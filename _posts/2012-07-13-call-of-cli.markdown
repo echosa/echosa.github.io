@@ -2,8 +2,7 @@
 title: "The Call of the CLI"
 date: 2012-07-13
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 For some reason, I always find myself *wanting* to run the command-line emacs. However, this proves an issue when it comes to certain control characters, such as C-., C-DELETE, etc. I use Mac OS X and using both Terminal.app and iTerm2, I'm unable to get these control characters to pass through to cli emacs. For that reason, I continue using the cocoa emacs (installed via [homebrew](http://mxcl.github.com/homebrew/)).
 <!--more-->

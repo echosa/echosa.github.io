@@ -2,8 +2,7 @@
 title: "It Kills Me Every Time..."
 date: 2012-02-20
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I *always* forget about the kill ring, or rather I used to. I've made a habit of using it lately. Its just so damn handy, I don't know why I could never grasp it before.
 <!--more-->

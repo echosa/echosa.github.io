@@ -2,8 +2,7 @@
 title: "Emacsagist"
 date: 2014-03-31
 categories: [blog]
-tags: 
-- emacs
+tags: [emacs]
 ---
 I recently released [Emacsagist](https://github.com/echosa/emacsagist), an Emacs front-end for searching [Packagist](http://packagist.org).
 <!--more-->

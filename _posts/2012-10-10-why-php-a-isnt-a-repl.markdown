@@ -2,8 +2,7 @@
 title: "Why the PHP Interactive Shell Isn't a REPL, and Why It Is Lacking"
 date: 2012-10-10
 categories: [blog]
-tags: 
-- php
+tags: [php]
 ---
 After a recent conversation on Twitter, I felt like I should explain why I feel that `php -a`, the PHP Interactive Shell, isn't a REPL, and where it falls short because of this.
 <!--more-->

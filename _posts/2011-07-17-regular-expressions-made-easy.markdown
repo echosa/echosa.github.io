@@ -2,8 +2,7 @@
 title: "Regular Expressions made easy!"
 date: 2011-07-17
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I'm still fairly new to regular expressions. I've read many tutorials and web pages on how to use them, and while I understand and remember a lot of what I read, I often find myself using regular expressions incorrectly. I often find myself writing a regular expression, testing it, finding out its wrong, and starting over.
 <!--more-->

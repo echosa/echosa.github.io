@@ -2,8 +2,7 @@
 title: "Changing the REST of My Life"
 date: 2012-07-13
 categories: [blog]
-tags:
-- php 
+tags: [php]
 ---
 I have more "OMG, why didn't I know about this sooner!?" moments than I care to admit. In the past week, I've had yet another.
 

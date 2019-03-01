@@ -2,8 +2,7 @@
 title: "php+-mode: An apology, a promise, and a call for help"
 date: 2013-01-13
 categories: [blog]
-tags: 
-- emacs
+tags: [emacs]
 ---
 While browsing through some posts in the Google+ [Emacs community](https://plus.google.com/communities/114815898697665598016), I came across at least one post or comment where someone mentioned my [php+-mode](https://github.com/echosa/phpplus-mode). While it pleases me whenever I hear of someone using something I wrote, it reminded me of just how derelict and forgotten php+-mode has become. Thus, this post.
 <!--more-->

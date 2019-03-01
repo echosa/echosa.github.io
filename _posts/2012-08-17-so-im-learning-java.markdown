@@ -2,8 +2,7 @@
 title: "So I'm Learning Java"
 date: 2012-08-17
 categories: [blog]
-tags: 
-- java
+tags: [java]
 ---
 Yep, that's right. After not touching it for *years* since college, I'm learning Java. This has been prompted by many things, but mostly I just enjoy learning new languages; having a reason to do so is just an added bonus.
 

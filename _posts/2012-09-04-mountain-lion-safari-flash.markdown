@@ -2,8 +2,7 @@
 title: "Mountain Lion, Safari, and Flash"
 date: 2012-09-04
 categories: [blog]
-tags: 
-- mac
+tags: [mac]
 ---
 So, if you're like me and you upgraded to Mountain Lion (OSX 10.8) only to have Safari continuously tell you that Flash is a "blocked plugin" and is out-of-date (no matter how many times you update and install the latest), you're probably ready to rip your hair out (or use Chrome like a quitter). Well, here's how *I* fixed the issue. Hopefully this works for you, too.
 <!--more-->

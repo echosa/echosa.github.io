@@ -2,8 +2,7 @@
 title: "Clojure Time"
 date: 2014-02-25
 categories: [blog]
-tags: 
-- clojure
+tags: [clojure]
 ---
 Anyone who knows me knows I really enjoy Lisp, especially Common Lisp (sbcl) and elisp (Emacs). I can now add to that list [Clojure](http://clojure.org).
 <!--more-->

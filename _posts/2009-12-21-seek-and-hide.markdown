@@ -2,8 +2,7 @@
 title: "Seek and Hide"
 date: 2009-12-21
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 Recently I've found myself using [HideShow](http://www.emacswiki.org/emacs/HideShow) more. Its a package that makes it easy to hide or show blocks of code. However, I found it a bit lacking in a particular manner. I wanted to be able to hide all PHP doc blocks and the contents of all methods in a class. There's no one command in HideShow to do this, so I wrote my own (and then added it to my php-mode hook).
 <!--more-->

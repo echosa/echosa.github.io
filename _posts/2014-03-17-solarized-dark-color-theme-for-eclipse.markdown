@@ -2,8 +2,7 @@
 title: "Solarized Dark (Color Theme) for Eclipse"
 date: 2014-03-17
 categories: [blog]
-tags: 
-- eclipse
+tags: [eclipse]
 ---
 I have released a version of the [Solarized color theme](http://ethanschoonover.com/solarized) for Eclipse.
 <!--more-->

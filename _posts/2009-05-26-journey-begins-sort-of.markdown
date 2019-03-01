@@ -2,8 +2,7 @@
 title: "The Journey Begins (sort of...)"
 date: 2009-05-26
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 Welcome to my new blog: Emacs Journey! I'd like to take some time at first to explain what this blog is and will be. (If you care, my personal blog is [here](http://bzwahr.blogspot.com/).)
 <!--more-->

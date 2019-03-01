@@ -2,8 +2,7 @@
 title: "I Got This (key)Board On Lockdown"
 date: 2009-06-30
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 The longer I use emacs, I find myself sticking to my keyboard's home row. Even in my pre-emacs days I was already starting to ignore my mouse, but these days if I can't do something without mostly remaining on "asdf" and "jkl;", I either find a way, create a way, or (rarely) learn to deal with it (and/or try to avoid it). That is not just for emacs either. Other programs, even my tiling window manager, are all used mostly by keyboard. As you can imagine, I've learned a lot of keyboard shortcuts.
 <!--more-->

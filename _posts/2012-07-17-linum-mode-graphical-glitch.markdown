@@ -2,8 +2,7 @@
 title: "linum-mode graphical glitch fix/workaround"
 date: 2012-07-17
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 So, if you use graphical emacs on Mac OS X and you also use linum-mode (to show the line numbers in the left part of a window), you have probably noticed that there is a bit of a graphical glitch. To see what I'm talking about, look at the image that is linked [here](http://i.imgur.com/mt28I.png). There is [some discussion](http://emacswiki.org/emacs/LineNumbers#toc5) on EmacsWiki, but I didn't find an appropriate solution for myself.
 <!--more-->

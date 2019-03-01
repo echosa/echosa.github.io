@@ -2,8 +2,7 @@
 title: "Showing what makes a line too long"
 date: 2012-07-31
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I'm a programmer. In many ways, I'm a bit of an old-school programmer. For instance, I like my lines no longer than 80 characters. I found myself wanting a visual cue warning me when I go over that limit, and in my search for solutions I found a few options.
 <!--more-->

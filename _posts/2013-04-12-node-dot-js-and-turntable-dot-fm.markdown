@@ -2,8 +2,7 @@
 title: "Node.js and TurnTable.fm"
 date: 2013-04-12
 categories: [blog]
-tags: 
-- node
+tags: [node]
 ---
 So, a friend recently turned me on to [TurnTable.fm](https://turntable.fm) which is an awesome place to listen to, discover, and share the music you love. In checking out some of the different rooms, I discovered that some people had written bots that do different things: manage who can play songs, post fun messages, keep stats, etc. Out of curiosity, I decided to try my hand at making a bot.
 <!--more-->

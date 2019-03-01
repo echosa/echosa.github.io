@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Ep. 0 - Research"
 date: 2014-06-18
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 In the vein of the popular "Let's Play" videos, I've decided to start a blog post series of "Let's Try"'s on my attempt to use the [Acme](https://en.wikipedia.org/wiki/Acme_%28text_editor%29) text editor.
 <!--more-->

@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Ep. 1 - Hello, World"
 date: 2014-06-18
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 After my [initial research](/blog/2014/06/18/lets-try-acme-ep-0-research/), it's time to give ol' Acme a try.
 <!--more-->

@@ -2,8 +2,7 @@
 title: "Press 'q' to quit, 'z' to *really* quit."
 date: 2012-08-30
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 Does it ever bug you that when you press 'q' to quit a buffer, like *Help*, it doesn't actually quit but, rather, buries the buffer? Well it bugged me and I looked into the matter. Turns out the answer is right there in front of you, but not very obvious... z!
 <!--more-->

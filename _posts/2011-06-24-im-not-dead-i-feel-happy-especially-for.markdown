@@ -2,9 +2,7 @@
 title: "I'm not dead... I feel happy! Especially for my zend-mode updates!"
 date: 2011-06-24
 categories: [blog]
-tags:
-- emacs
-- zend
+tags: [emacs, zend]
 ---
 Well, I've put in quite a bit of time with zend-mode. Hopefully I'm getting close to a public release.
 <!--more-->

@@ -2,8 +2,7 @@
 title: "Gopherpedia"
 date: 2014-03-17
 categories: [blog]
-tags: 
-- gopher
+tags: [gopher]
 ---
 So, [this](http://gopherpedia.com) exists.
 <!--more-->

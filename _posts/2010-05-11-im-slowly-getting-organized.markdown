@@ -2,8 +2,7 @@
 title: "I'm Slowly Getting ORGanized"
 date: 2010-05-11
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I've found myself using ORG mode a LOT lately, mostly at work. I'm really come to like it, and it has basically because my todo list for work. Of all the useful features ORG has, there is one that I never learned about until recently: links. I'm sure I should have known about these long ago, but for some reason I didn't.
 <!--more-->

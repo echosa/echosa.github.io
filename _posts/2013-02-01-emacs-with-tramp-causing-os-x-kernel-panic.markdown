@@ -2,9 +2,7 @@
 title: "Emacs with TRAMP Causing OS X Kernel Panic"
 date: 2013-02-01
 categories: [blog]
-tags: 
-- emacs
-- mac
+tags: [emacs, mac]
 ---
 I've had a couple of kernel panics while using my MacBook lately, and I have figured out the culprit. It's Emacs, specifically when using TRAMP (in my case, to open a file via sudo).
 <!--more-->

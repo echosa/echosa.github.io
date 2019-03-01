@@ -2,9 +2,7 @@
 title: "Git, GPG, and IDE"
 date: 2016-08-18
 categories: [blog]
-tags: 
-- git
-- gpg
+tags: [git, gpg]
 ---
 Today, I discovered that `git` allows for signing commits and tags with `gpg`. Awesome. However, I've gotten rather used to using the git integration in IntelliJ's IDEA IDE, which is actually quite nice. In order to get the git/gpg stuff working, though, a few tweaks were required. I'm writing those here so I can remember them in the future.
 <!--more-->

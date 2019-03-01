@@ -2,8 +2,7 @@
 title: "File Temporary Backup/Move Functions (bash)"
 date: 2012-12-05
 categories: [blog]
-tags: 
-- bash
+tags: [bash]
 ---
 A lot of the time, when I'm working in a bash terminal, I find myself needing to move a file out of the way temporarily.
 <!--more-->

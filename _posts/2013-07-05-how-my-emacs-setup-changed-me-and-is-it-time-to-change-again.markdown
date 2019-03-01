@@ -2,8 +2,7 @@
 title: "How My Emacs Setup Changed Me (and is it time to change again)"
 date: 2013-07-05
 categories: [blog]
-tags: 
-- emacs
+tags: [emacs]
 ---
 A little over a year ago, I committed [emacs-setup to GitHub](https://github.com/echosa/emacs-setup). emacs-setup is a package I'd written previously and had tweaked and used enough to finally warrant putting out to the public (it is available through [MELPA](http://melpa.milkbox.net).
 <!-- more -->

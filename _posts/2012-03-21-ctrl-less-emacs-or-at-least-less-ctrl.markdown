@@ -2,8 +2,7 @@
 title: "CTRL-less emacs? (Or, at least, less CTRL...)"
 date: 2012-03-21
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 Things I love about emacs:
 

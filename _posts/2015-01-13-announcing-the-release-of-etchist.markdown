@@ -2,9 +2,7 @@
 title: "Announcing the Release of Etchist"
 date: 2015-01-13
 categories: [blog]
-tags: 
-- pebble
-- c
+tags: [pebble, c]
 ---
 Last night, I released the first version of my first ever [Pebble](https://getpebble.com) app: [Etchist](https://apps.getpebble.com/applications/54b49f22daa5498e85000006)!
 <!--more-->

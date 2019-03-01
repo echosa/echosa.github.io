@@ -2,8 +2,7 @@
 title: "Robust Startup"
 date: 2010-03-30
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I've spent quite a bit of time working on my start-up files for emacs. Maybe its my OCD, but I want them as clean as possible (using customize and the [ELPA](http://tromey.com/elpa/) helps) and I want as few annoyances as possible.
 <!--more-->

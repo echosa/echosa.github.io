@@ -2,8 +2,7 @@
 title: "Improving ansi-term"
 date: 2012-06-06
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I use ansi-term quite a bit. Why leave Emacs to have a terminal? However, there were a few issues I had with ansi-term that were quite annoying.
 <!--more-->

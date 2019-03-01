@@ -2,9 +2,7 @@
 title: "jira-mode pt. 1"
 date: 2009-06-25
 categories: [blog]
-tags:
-- emacs
-- jira
+tags: [emacs, jira]
 ---
 Well, folks, it's been only a matter of time. I've begun working on my first major mode project. Where I work we use [Jira](http://www.atlassian.com/software/jira/) for bug tracking, ticketing, and support requests. Naturally, like any obsessed emacs user, I found myself wondering "how can I work with Jira without leaving emacs?" Of course, the first obvious answer was to use the Jira web interface via the w3m web browser in emacs. However, not everything worked.
 <!--more-->

@@ -2,8 +2,7 @@
 title: "A Whole New World"
 date: 2012-10-26
 categories: [blog]
-tags: 
-- java
+tags: [java]
 ---
 I started working at [Improving](http://improvingenterprises.com) this week which has required a major shift in my development ways. First and foremost is the change from PHP (which I've been coding for *years*) to Java. It wouldn't be so bad if it was *just* Java, though. However, that is not the case.
 <!--more-->

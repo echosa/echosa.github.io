@@ -2,8 +2,7 @@
 title: "Q&A: To dired or Not To dired"
 date: 2009-08-04
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 Ok, emacs community, it's Q&A time. I ask the question, and you answer!
 <!--more-->

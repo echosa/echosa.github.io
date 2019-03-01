@@ -2,10 +2,7 @@
 title: "We've created a monster... and it's call zf-mode!"
 date: 2011-11-01
 categories: [blog]
-tags:
-- emacs
-- php
-- zf-mode
+tags: [emacs, php, zf-mode]
 ---
 Ok, so it's been quite a while since I've posted anything here. I've been busy. Sue me. However, I've been busy writing php apps with zf-mode. Why, you may ask? Because 1.) it's awesome, 2.) I'm testing it for bugs, and 3.) its the single most useful emacs mode I've ever used.
 <!--more-->

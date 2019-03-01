@@ -2,8 +2,7 @@
 title: "Vim Influences: Prefixes and Deleting to End of Buffer"
 date: 2012-09-27
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 So, having used Vim for a while previously, there are some things that I learned or liked that have carried over into my Emacs usage, making it even better.
 <!--more-->

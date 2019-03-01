@@ -2,8 +2,7 @@
 title: "New and Improved Emacs Config!"
 date: 2014-10-06
 categories: [blog]
-tags: 
-- emacs
+tags: [emacs]
 ---
 I finally did it. I moved my Emacs configuration into a .org file.
 <!--more-->

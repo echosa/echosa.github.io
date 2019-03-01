@@ -2,9 +2,7 @@
 title: "Zork Fortress Update: 0.0.2"
 date: 2015-03-29
 categories: [blog]
-tags: 
-- clojure
-- zork-fortress
+tags: [clojure, zork-fortress]
 ---
 I recently released version 0.0.2 of my zork-fortress project, and by "released" I mean "added a new git tag".
 <!--more-->

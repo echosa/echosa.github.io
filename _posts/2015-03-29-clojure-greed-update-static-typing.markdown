@@ -2,8 +2,7 @@
 title: "Clojure Greed Update: Static Typing!"
 date: 2015-03-29
 categories: [blog]
-tags: 
-- clojure
+tags: [clojure]
 ---
 Well, folks. This was long overdue, but I finally did it! My [clojure-greed](https://github.com/echosa/clojure-greed) project now has static typing thanks to [core.typed](http://typedclojure.org)!
 <!--more-->

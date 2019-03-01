@@ -2,8 +2,7 @@
 title: "checkdoc ... I needn't say anything more"
 date: 2012-05-20
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 So, in my pursuits to get my emacs packages into MELPA, I learned about checkdoc. In a word, checkdoc is *awesome*, and essential (in my opinion) to any emacs/elisp developer.
 <!--more-->

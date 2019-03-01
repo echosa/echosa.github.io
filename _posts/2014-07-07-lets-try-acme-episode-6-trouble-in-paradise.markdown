@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Episode 6 - Trouble in Paradise"
 date: 2014-07-07
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 So, there I was, doing some PHP work in Acme, when I broke down and went back to Emacs for the night.
 <!--more-->

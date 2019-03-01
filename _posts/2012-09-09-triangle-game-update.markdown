@@ -2,8 +2,7 @@
 title: "Triangle Game Update"
 date: 2012-09-09
 categories: [blog]
-tags: 
-- java
+tags: [java]
 ---
 So, I've recently pushed a number of changes to my Triangle Game project I'm using to learn Java again. Updates include:
 

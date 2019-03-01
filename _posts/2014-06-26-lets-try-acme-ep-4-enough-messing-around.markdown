@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Ep. 4 - Enough Messing Around"
 date: 2014-06-26
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 This is it, folks. It's time to finally roll up my sleeves and do some programming in Acme.
 <!--more-->

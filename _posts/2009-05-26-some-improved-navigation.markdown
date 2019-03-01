@@ -2,8 +2,7 @@
 title: "Some Improved Navigation"
 date: 2009-05-26
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I've added some functions and keybindings to my .emacs file that make navigation quite a bit better for me.
 <!--more-->

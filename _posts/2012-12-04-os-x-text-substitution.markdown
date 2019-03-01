@@ -2,8 +2,7 @@
 title: "OS X Text Substitution"
 date: 2012-12-04
 categories: [blog]
-tags: 
-- mac
+tags: [mac]
 ---
 The last couple of versions of OS X have had a cool feature: user-added text substitutions. Meaning, you can set some placeholder text (like "lod") that will be auto-corrected to something else (in my case, the [Look of Disapproval](http://www.disapprovallook.com)).
 <!--more-->

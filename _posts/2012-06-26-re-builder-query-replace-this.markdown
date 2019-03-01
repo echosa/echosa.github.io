@@ -2,8 +2,7 @@
 title: "RE Builder \"query replace this\""
 date: 2012-06-26
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I use M-x re-builder a *lot*. Its an interactive regular expression builder that really helps build proper regexps and is an excellent learning tool.
 <!--more-->

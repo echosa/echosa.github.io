@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Ep. 3 - Problem Solving"
 date: 2014-06-19
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 The last few posts have shown some issues and complaints I've had with Acme so far. Surprisingly, these issues have quickly begun dissipating.
 <!--more-->

@@ -2,8 +2,7 @@
 title: "Let's Tag and Load!"
 date: 2009-08-18
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 Not too long ago, I learned the wonders of using tags for programming projects, in my case, PHP applications. I read [an article](http://weierophinney.net/matthew/archives/134-exuberant-ctags-with-PHP-in-Vim.html) (geared towards VIM, actually) that talked about tags and how they can be used for completion, reference, etc. I was intrigued and looked into using tags for Emacs.
 <!--more-->

@@ -2,8 +2,7 @@
 title: "package-bundle: Keep track of your dependencies!"
 date: 2012-07-27
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I have just pushed a new project to my github account: [package-bundle](https://github.com/echosa/package-bundle). It acts *sort of* like Vundle for vim, etc. It keeps track of your installed packages/dependencies (installed via package.el of course) and allows you to install them all with one command.
 <!--more-->

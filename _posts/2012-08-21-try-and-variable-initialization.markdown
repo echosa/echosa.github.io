@@ -2,8 +2,7 @@
 title: "Try and Variable Initialization"
 date: 2012-08-21
 categories: [blog]
-tags: 
-- java
+tags: [java]
 ---
 So, I learned a valuable lesson today that has taught me how to properly handle a particular error I kept getting when trying to compile some of my Java classes.
 <!--more-->

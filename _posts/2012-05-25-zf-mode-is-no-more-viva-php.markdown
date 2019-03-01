@@ -2,10 +2,7 @@
 title: "zf-mode is no more... Viva php+!"
 date: 2012-05-25
 categories: [blog]
-tags:
-- emacs
-- php
-- zf-mode
+tags: [emacs, php, zf-mode]
 ---
 My emacs package for working with php has just undergone a significant change. It is no longer called zf-mode.
 <!--more-->

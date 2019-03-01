@@ -2,9 +2,7 @@
 title: "My First iOS App"
 date: 2012-08-26
 categories: [blog]
-tags: 
-- ios
-- xcode
+tags: [ios, xcode]
 ---
 So, I decided that learning Java just wasn't time consuming enough, so I decided to learn iOS development, too! The result? I wrote a number slider game in less than a working day's worth of time (including research, reading, and tutorials.)
 <!--more-->

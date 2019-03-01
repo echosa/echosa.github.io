@@ -2,8 +2,7 @@
 title: "Major emacs-setup update!"
 date: 2012-07-27
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 I recently updated my [emacs-setup package](https://github.com/echosa/emacs-setup) (available through [MELPA](http://melpa.milkbox.net/)) and made some major changes!
 <!--more-->

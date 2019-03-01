@@ -2,8 +2,7 @@
 title: "Oh yeah.... its a text editor!"
 date: 2009-09-25
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 First off, so much for trying to have weekly posts. Sorry for slacking so bad. It's a fail on my end.
 <!--more-->

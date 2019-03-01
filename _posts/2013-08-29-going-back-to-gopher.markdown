@@ -2,8 +2,7 @@
 title: "Going (back to) Gopher"
 date: 2013-08-29
 categories: [blog]
-tags:
-- gopher
+tags: [gopher]
 ---
 Remember [Gopher][1]? I do, barely. We learned/used it in grade school a couple of decades ago. Turns out it is still around.
 <!--more-->

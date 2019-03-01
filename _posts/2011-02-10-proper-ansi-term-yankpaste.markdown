@@ -2,9 +2,7 @@
 title: "Proper (Ansi-)Term Yank/Paste"
 date: 2011-02-10
 categories: [blog]
-tags:
-- emacs
-- terminal
+tags: [emacs, terminal]
 ---
 So, I've found myself using ansi-term quite a bit, including to run finch for my instant messaging needs. However, there's one main issue with which I found myself becoming frustrated: yanking (aka pasting).
 <!--more-->

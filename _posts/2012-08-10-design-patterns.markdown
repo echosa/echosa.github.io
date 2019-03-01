@@ -2,8 +2,7 @@
 title: "Design Patterns, or Why Am I Just Learning This Now?!"
 date: 2012-08-10
 categories: [blog]
-tags: 
-- programming
+tags: [programming]
 ---
 So, at the recommendation of [a good guy I know](http://www.chrisweldon.net) I am reading ["Head First Design Patterns"](http://www.headfirstlabs.com/books/hfdp/). So far I've read the first two chapters and ZOMG WHY HAVEN'T I READ THIS SOONER?!
 

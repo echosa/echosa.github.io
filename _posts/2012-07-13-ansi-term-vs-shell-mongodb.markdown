@@ -2,8 +2,7 @@
 title: "ansi-term vs shell: mongodb"
 date: 2012-07-13
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 So, I've been messing about with MongoDB lately. Its pretty cool. You start the server then run the `mongo` command, which takes you to a repl environment where you can run commands and try it out.
 <!--more-->

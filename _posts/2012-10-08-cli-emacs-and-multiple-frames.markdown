@@ -2,8 +2,7 @@
 title: "CLI Emacs and multiple-frames"
 date: 2012-10-08
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 So, I've been using the CLI Emacs again, because I'm fickle like that. Anyway, I've gotten used to have two frames: one with my code in a few windows and one with a few windows holding magit, compilation buffer, a term, etc.
 

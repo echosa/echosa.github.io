@@ -2,8 +2,7 @@
 title: "Buffers and Windows and Frames, Oh My!"
 date: 2009-06-16
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 One thing that I really like about emacs is how it manages open files (buffers) and the diversity one has in customizing the workspace. Of course, I didn't always like it. It took some getting used to, but after not that long of a time frame I got the hang of it and started to enjoy it. Soon after that, I started customizing my emacs workspace to be even more efficient and productive for me.
 <!--more-->

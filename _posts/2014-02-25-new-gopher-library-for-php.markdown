@@ -2,9 +2,7 @@
 title: "New GOPHER Library for PHP"
 date: 2014-02-25
 categories: [blog]
-tags: 
-- php
-- gopher
+tags: [php, gopher]
 ---
 Well, I've gone and done it. I've created a library for reading and parsing [GOPHER](http://en.wikipedia.org/wiki/Gopher_(protocol%29) files from PHP.
 <!--more-->

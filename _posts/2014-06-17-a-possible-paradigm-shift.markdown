@@ -2,8 +2,7 @@
 title: "A Possible Paradigm Shift"
 date: 2014-06-17
 categories: [blog]
-tags: 
-- emacs
+tags: [emacs]
 ---
 Lately I've been experiencing a change in the way I look at, think about, and use Emacs.
 <!--more -->

@@ -2,9 +2,7 @@
 title: "Back to the Terminal"
 date: 2011-06-09
 categories: [blog]
-tags:
-- emacs
-- terminal
+tags: [emacs, terminal]
 ---
 Well, I've decided to start using emacs via the terminal again, for a few reasons.
 <!--more-->

@@ -2,9 +2,7 @@
 title: "jira-mode pt. 2"
 date: 2009-07-10
 categories: [blog]
-tags:
-- emacs
-- jira
+tags: [emacs, jira]
 ---
 Well, folks, you asked and I'm delivering! I've creating a page on EmacsWiki for [jira-mode](http://www.emacswiki.org/emacs/JiraMode). There you will find information, instructions, and a link to the source code!
 <!--more-->

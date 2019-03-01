@@ -2,8 +2,7 @@
 title: "Version Control Conundrum"
 date: 2009-11-27
 categories: [blog]
-tags:
-- emacs
+tags: [emacs]
 ---
 Ok, so its not really a conundrum, so much as a simple question.
 <!--more-->

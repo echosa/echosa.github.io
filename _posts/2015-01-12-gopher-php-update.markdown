@@ -2,9 +2,7 @@
 title: "gopher-php and Phlog Update"
 date: 2015-01-12
 categories: [blog]
-tags: 
-- php
-- gopher
+tags: [php, gopher]
 ---
 I recently updated my [gopher-php](https://github.com/echosa/gopher-php) package on GitHub as well as the [web interface to my phlog](http://echosa.freeshell.org/) that uses it.
 <!--more-->

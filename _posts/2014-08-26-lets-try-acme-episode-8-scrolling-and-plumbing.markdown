@@ -2,8 +2,7 @@
 title: "Let's Try Acme: Episode 8 - Scrolling and Plumbing"
 date: 2014-08-26
 categories: [blog]
-tags: 
-- acme
+tags: [acme]
 ---
 After using Acme for over two months now, I finally figured out two fairly basic things: scrolling and plumbing.
 <!--more-->
