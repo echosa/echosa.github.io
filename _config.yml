@@ -13,7 +13,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:categories/:year/:month/:day/:title/
 defaults:
   # _posts
   - scope:
