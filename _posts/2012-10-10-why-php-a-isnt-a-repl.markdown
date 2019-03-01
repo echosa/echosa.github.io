@@ -1,6 +1,6 @@
 ---
 title: "Why the PHP Interactive Shell Isn't a REPL, and Why It Is Lacking"
-date: 2012-10-10 09:23
+date: 2012-10-10
 tags: 
 - php
 ---

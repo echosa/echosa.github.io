@@ -1,6 +1,6 @@
 ---
 title: "Going (back to) Gopher"
-date: 2013-08-29 09:45
+date: 2013-08-29
 tags:
 - gopher
 ---

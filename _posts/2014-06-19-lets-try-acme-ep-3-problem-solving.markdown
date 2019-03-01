@@ -1,6 +1,6 @@
 ---
 title: "Let's Try Acme: Ep. 3 - Problem Solving"
-date: 2014-06-19 17:26
+date: 2014-06-19
 tags: 
 - acme
 ---

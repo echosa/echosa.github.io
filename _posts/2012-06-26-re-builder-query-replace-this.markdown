@@ -1,6 +1,6 @@
 ---
 title: "RE Builder \"query replace this\""
-date: 2012-06-26T08:23:00-07:00
+date: 2012-06-26
 tags:
 - emacs
 ---

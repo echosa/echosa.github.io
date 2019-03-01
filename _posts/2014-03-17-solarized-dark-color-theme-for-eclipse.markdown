@@ -1,6 +1,6 @@
 ---
 title: "Solarized Dark (Color Theme) for Eclipse"
-date: 2014-03-17 10:41
+date: 2014-03-17
 tags: 
 - eclipse
 ---

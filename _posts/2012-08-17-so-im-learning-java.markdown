@@ -1,6 +1,6 @@
 ---
 title: "So I'm Learning Java"
-date: 2012-08-17 10:37
+date: 2012-08-17
 tags: 
 - java
 ---

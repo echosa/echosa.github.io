@@ -1,6 +1,6 @@
 ---
 title: "linum-mode graphical glitch fix/workaround"
-date: 2012-07-17T09:46:00-07:00
+date: 2012-07-17
 tags:
 - emacs
 ---

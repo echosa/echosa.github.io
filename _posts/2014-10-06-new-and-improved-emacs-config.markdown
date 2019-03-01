@@ -1,6 +1,6 @@
 ---
 title: "New and Improved Emacs Config!"
-date: 2014-10-06 16:20
+date: 2014-10-06
 tags: 
 - emacs
 ---

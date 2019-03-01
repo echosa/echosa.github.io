@@ -1,6 +1,6 @@
 ---
 title: "The Call of the CLI"
-date: 2012-07-13T12:17:00-07:00
+date: 2012-07-13
 tags:
 - emacs
 ---

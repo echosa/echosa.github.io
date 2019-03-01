@@ -1,6 +1,6 @@
 ---
 title: "My First iOS App"
-date: 2012-08-26 00:29
+date: 2012-08-26
 tags: 
 - ios
 - xcode

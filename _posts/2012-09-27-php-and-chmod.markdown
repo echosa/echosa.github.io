@@ -1,6 +1,6 @@
 ---
 title: "PHP and chmod"
-date: 2012-09-27 09:11
+date: 2012-09-27
 tags: 
 - php
 ---

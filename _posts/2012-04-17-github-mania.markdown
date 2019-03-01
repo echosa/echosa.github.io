@@ -1,6 +1,6 @@
 ---
 title: "GitHub Mania!"
-date: 2012-04-17T11:51:00-07:00
+date: 2012-04-17
 tags:
 - emacs
 ---

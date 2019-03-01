@@ -1,6 +1,6 @@
 ---
 title: "Some Improved Navigation"
-date: 2009-05-26T09:55:00-07:00
+date: 2009-05-26
 tags:
 - emacs
 ---

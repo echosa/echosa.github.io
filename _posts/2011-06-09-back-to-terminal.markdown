@@ -1,6 +1,6 @@
 ---
 title: "Back to the Terminal"
-date: 2011-06-09T14:50:00-07:00
+date: 2011-06-09
 tags:
 - emacs
 - terminal

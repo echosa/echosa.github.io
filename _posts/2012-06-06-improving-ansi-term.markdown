@@ -1,6 +1,6 @@
 ---
 title: "Improving ansi-term"
-date: 2012-06-06T12:02:00-07:00
+date: 2012-06-06
 tags:
 - emacs
 ---

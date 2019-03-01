@@ -1,6 +1,6 @@
 ---
 title: "Let's Tag and Load!"
-date: 2009-08-18T14:21:00-07:00
+date: 2009-08-18
 tags:
 - emacs
 ---

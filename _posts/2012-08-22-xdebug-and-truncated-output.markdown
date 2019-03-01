@@ -1,6 +1,6 @@
 ---
 title: "XDebug and Truncated Output"
-date: 2012-08-22 08:42
+date: 2012-08-22
 tags: 
 - php
 - xdebug

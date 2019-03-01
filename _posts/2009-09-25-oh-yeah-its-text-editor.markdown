@@ -1,6 +1,6 @@
 ---
 title: "Oh yeah.... its a text editor!"
-date: 2009-09-25T20:25:00-07:00
+date: 2009-09-25
 tags:
 - emacs
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Git, GPG, and IDE"
-date: 2016-08-18 09:23:06 -0500
+date: 2016-08-18
 tags: 
 - git
 - gpg

@@ -1,6 +1,6 @@
 ---
 title: "zf-mode is no more... Viva php+!"
-date: 2012-05-25T13:22:00-07:00
+date: 2012-05-25
 tags:
 - emacs
 - php

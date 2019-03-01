@@ -1,6 +1,6 @@
 ---
 title: "A Possible Paradigm Shift"
-date: 2014-06-17 08:57
+date: 2014-06-17
 tags: 
 - emacs
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Packages now available from MELPA!"
-date: 2012-05-07T07:59:00-07:00
+date: 2012-05-07
 tags:
 - emacs
 ---

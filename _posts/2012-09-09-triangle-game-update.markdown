@@ -1,6 +1,6 @@
 ---
 title: "Triangle Game Update"
-date: 2012-09-09 18:12
+date: 2012-09-09
 tags: 
 - java
 ---

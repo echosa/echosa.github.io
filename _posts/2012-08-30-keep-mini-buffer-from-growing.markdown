@@ -1,6 +1,6 @@
 ---
 title: "Keep the mini buffer from growing"
-date: 2012-08-30T08:44:00-07:00
+date: 2012-08-30
 tags:
 - emacs
 ---

@@ -1,6 +1,6 @@
 ---
 title: "I'm not dead... I feel happy! Especially for my zend-mode updates!"
-date: 2011-06-24T07:32:00-07:00
+date: 2011-06-24
 tags:
 - emacs
 - zend

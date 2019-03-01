@@ -1,6 +1,6 @@
 ---
 title: "Clojure Time"
-date: 2014-02-25 13:27
+date: 2014-02-25
 tags: 
 - clojure
 ---

@@ -1,6 +1,6 @@
 ---
 title: "A Whole New World"
-date: 2012-10-26 07:42
+date: 2012-10-26
 tags: 
 - java
 ---

@@ -1,6 +1,6 @@
 ---
 title: "package-bundle: Keep track of your dependencies!"
-date: 2012-07-27T14:20:00-07:00
+date: 2012-07-27
 tags:
 - emacs
 ---

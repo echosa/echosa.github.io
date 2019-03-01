@@ -1,6 +1,6 @@
 ---
 title: "Demo video of zend-mode now available!"
-date: 2011-06-27T14:17:00-07:00
+date: 2011-06-27
 tags:
 - emacs
 - zend

@@ -1,6 +1,6 @@
 ---
 title: "Google Maps in Emacs"
-date: 2010-11-10T20:30:00-08:00
+date: 2010-11-10
 tags:
 - emacs
 - google

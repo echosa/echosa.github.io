@@ -1,6 +1,6 @@
 ---
 title: "Mac OS X Screen Locking Made Easy"
-date: 2012-07-17 11:49
+date: 2012-07-17
 tags: 
 - mac
 ---

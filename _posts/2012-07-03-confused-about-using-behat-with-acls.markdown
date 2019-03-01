@@ -1,6 +1,6 @@
 ---
 title: "Confused about using BEHAT with ACLs (and ACLs in general)"
-date: 2012-07-03 12:54
+date: 2012-07-03
 tags:
 - php
 - behat

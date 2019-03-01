@@ -1,6 +1,6 @@
 ---
 title: "jira-mode pt. 2"
-date: 2009-07-10T09:42:00-07:00
+date: 2009-07-10
 tags:
 - emacs
 - jira

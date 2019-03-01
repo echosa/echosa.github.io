@@ -1,6 +1,6 @@
 ---
 title: "Listing all key commands for a given prefix"
-date: 2012-07-26T06:45:00-07:00
+date: 2012-07-26
 tags:
 - emacs
 ---

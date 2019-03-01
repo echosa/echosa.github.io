@@ -1,6 +1,6 @@
 ---
 title: "zf-mode features teaser #1"
-date: 2011-11-16T14:30:00-08:00
+date: 2011-11-16
 tags:
 - emacs
 - php

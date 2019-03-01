@@ -1,6 +1,6 @@
 ---
 title: "I'm Slowly Getting ORGanized"
-date: 2010-05-11T15:04:00-07:00
+date: 2010-05-11
 tags:
 - emacs
 ---

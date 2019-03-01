@@ -1,6 +1,6 @@
 ---
 title: "Proper (Ansi-)Term Yank/Paste"
-date: 2011-02-10T17:49:00-08:00
+date: 2011-02-10
 tags:
 - emacs
 - terminal
