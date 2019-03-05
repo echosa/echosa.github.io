@@ -52,23 +52,7 @@ author:
       url: "https://github.com/echosa"
 comments:
   provider: "staticman_v2"
-#  provider: "disqus"
-#  disqus:
-#    shortname: "devstuff-blog"
 staticman:
   branch: "master"
   endpoint: "https://dev.staticman.net/v3/entry/github/"
-#  allowedFields: ["name", "email", "url", "message"]
-#  branch: "master"
-#  commitMessage: "Add Staticman comment"
-#  filename: "entry{@timestamp}"
-#  format: "yaml"
   moderation: true
-#  generatedFields:
-#    date:
-#      type: date
-#      options:
-#        format: "timestamp-seconds"
-#  name: "echosa.github.io"
-#  path: "_data/comments/{options.slug}"
-#  requiredFields: ["name", "email", "message"]
