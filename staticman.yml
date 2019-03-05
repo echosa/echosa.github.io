@@ -1,0 +1,17 @@
+comments:
+  branch: "master"
+  endpoint: "https://dev.staticman.net/v3/entry/github/"
+  allowedFields: ["name", "email", "url", "message"]
+  branch: "master"
+  commitMessage: "Add Staticman comment"
+  filename: "entry{@timestamp}"
+  format: "yaml"
+  moderation: true
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+  name: "echosa.github.io"
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "email", "message"]

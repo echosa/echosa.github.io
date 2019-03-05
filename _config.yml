@@ -63,6 +63,7 @@ staticman:
 #  commitMessage: "Add Staticman comment"
 #  filename: "entry{@timestamp}"
 #  format: "yaml"
+  moderation: true
 #  generatedFields:
 #    date:
 #      type: date
