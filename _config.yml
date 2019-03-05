@@ -57,17 +57,17 @@ comments:
 #    shortname: "devstuff-blog"
 staticman:
   branch: "master"
-  endpoint: "https://dev.staticman.net/v3/entry/github/"
-  allowedFields: ["name", "email", "url", "message"]
-  branch: "master"
-  commitMessage: "Add Staticman comment"
-  filename: "entry{@timestamp}"
-  format: "yaml"
-  generatedFields:
-    date:
-      type: date
-      options:
-        format: "timestamp-seconds"
-  name: "echosa.github.io"
-  path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "message"]
+#  endpoint: "https://dev.staticman.net/v3/entry/github/"
+#  allowedFields: ["name", "email", "url", "message"]
+#  branch: "master"
+#  commitMessage: "Add Staticman comment"
+#  filename: "entry{@timestamp}"
+#  format: "yaml"
+#  generatedFields:
+#    date:
+#      type: date
+#      options:
+#        format: "timestamp-seconds"
+#  name: "echosa.github.io"
+#  path: "_data/comments/{options.slug}"
+#  requiredFields: ["name", "email", "message"]
