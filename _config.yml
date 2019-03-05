@@ -57,7 +57,7 @@ comments:
 #    shortname: "devstuff-blog"
 staticman:
   branch: "master"
-#  endpoint: "https://dev.staticman.net/v3/entry/github/"
+  endpoint: "https://dev.staticman.net/v3/entry/github/"
 #  allowedFields: ["name", "email", "url", "message"]
 #  branch: "master"
 #  commitMessage: "Add Staticman comment"
