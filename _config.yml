@@ -54,7 +54,7 @@ comments:
   provider: "staticman_v2"
   staticman:
     branch: "master"
-    endpoint: "https://api.staticman.net/v3/entry/github/"
+    endpoint: "https://dev.staticman.net/v3/entry/github/echosa/echosa.github.io/master"
 #  provider: "disqus"
 #  disqus:
 #    shortname: "devstuff-blog"
