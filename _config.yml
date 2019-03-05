@@ -57,8 +57,8 @@ comments:
 #    shortname: "devstuff-blog"
 staticman:
   branch: "master"
-  endpoint: "https://dev.staticman.net/v3/entry/github/echosa/echosa.github.io/master"
-  allowedFields: ["name", "url", "message"]
+  endpoint: "https://dev.staticman.net/v3/entry/github/
+  allowedFields: ["name", "email", "url", "message"]
   branch: "master"
   commitMessage: "Add Staticman comment"
   filename: "entry{@timestamp}"
@@ -70,4 +70,4 @@ staticman:
         format: "timestamp-seconds"
   name: "echosa.github.io"
   path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "message"]
+  requiredFields: ["name", "email", "message"]
