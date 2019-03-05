@@ -2,7 +2,6 @@ comments:
   branch: "master"
   endpoint: "https://dev.staticman.net/v3/entry/github/"
   allowedFields: ["name", "email", "url", "message"]
-  branch: "master"
   commitMessage: "Add Staticman comment"
   filename: "entry{@timestamp}"
   format: "yaml"
