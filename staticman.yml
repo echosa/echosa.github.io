@@ -1,0 +1,14 @@
+comments:
+  allowedFields: ["name", "url", "message"]
+  branch: "master"
+  commitMessage: "Add Staticman comment"
+  filename: "entry{@timestamp}"
+  format: "yaml"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+  name: "echosa.github.io"
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "message"]
