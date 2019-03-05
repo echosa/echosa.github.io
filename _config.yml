@@ -55,6 +55,19 @@ comments:
   staticman:
     branch: "master"
     endpoint: "https://dev.staticman.net/v3/entry/github/echosa/echosa.github.io/master"
+    allowedFields: ["name", "url", "message"]
+    branch: "master"
+    commitMessage: "Add Staticman comment"
+    filename: "entry{@timestamp}"
+    format: "yaml"
+    generatedFields:
+      date:
+        type: date
+        options:
+          format: "timestamp-seconds"
+    name: "echosa.github.io"
+    path: "_data/comments/{options.slug}"
+    requiredFields: ["name", "message"]
 #  provider: "disqus"
 #  disqus:
 #    shortname: "devstuff-blog"
