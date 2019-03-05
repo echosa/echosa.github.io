@@ -51,6 +51,10 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/echosa"
 comments:
-  provider: "disqus"
-  disqus:
-    shortname: "devstuff-blog"
+  provider: "staticman_v2"
+  staticman:
+    branch: "master"
+    endpoint: "https://api.staticman.net/v3/entry/github/"
+#  provider: "disqus"
+#  disqus:
+#    shortname: "devstuff-blog"
