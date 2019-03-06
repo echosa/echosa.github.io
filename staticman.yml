@@ -1,7 +1,7 @@
 comments:
   branch: "master"
   endpoint: "https://dev.staticman.net/v3/entry/github/"
-  allowedFields: ["name", "email", "url", "message"]
+  allowedFields: ["name", "message"]
   commitMessage: "Add Staticman comment"
   filename: "entry{@timestamp}"
   format: "yaml"
@@ -13,4 +13,4 @@ comments:
         format: "timestamp-seconds"
   name: "echosa.github.io"
   path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "message"]
+  requiredFields: ["name", "message"]

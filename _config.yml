@@ -56,3 +56,5 @@ staticman:
   branch: "master"
   endpoint: "https://dev.staticman.net/v3/entry/github/"
   moderation: true
+  allowedFields: ["name", "message"]
+  requiredFields: ["name", "message"]
