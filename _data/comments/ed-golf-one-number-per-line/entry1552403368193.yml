@@ -1,0 +1,8 @@
+_id: d3797d50-44d8-11e9-a4db-5f6e19ed0d78
+name: unrznbl
+message: >-
+  The beginning comma is not needed in your s command as the current line will
+  be the one you joined together. From the man page: "The current address is set
+  to the resultant line."
+hidden: ''
+date: 1552403368
