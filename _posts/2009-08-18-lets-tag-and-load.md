@@ -10,7 +10,7 @@ Before I knew it, I had tagged a project and was able to auto-complete function 
 
 That prompted me to look for a way to auto-load the correct tags for a given buffer or file. I didn't really find any solutions, though I did find bits of code and script that helped me write my own. I figured I'd share this with you all so you can use or improve it.
 
-First of all, I keep all my tags in one location, specifically a folder named "tags". I name them whatever the project is called. So inside "tags" I might have, for example, "app1", "myproject", "phpgame", etc. (All fake names, of course). I modified the linux script I got from the article above to make my tags:
+First of all, I keep all my tags in one location, specifically a folder named "tags". I name them whatever the project is called. So inside "tags" I might have, for example, "app1", "myproject", "phpgame", etc. (All fake names, of course). I modified the Linux script I got from the article above to make my tags:
 
 ```bash
 #!/bin/bash
@@ -76,7 +76,7 @@ Obviously, the "tags-directory" variable needs to be set to the path where the t
 
 What happens here is that when I switch buffers or open files, load-tags looks to see if the directory of the buffer/file is one of the directories in "tag-list". If so, it loads the appropriate tags file, overwriting the previously loaded one so you don't waste resources.
 
-Ok. You've got your tags file. You've got your directories and projects all set up in your .emacs file. You've loaded a file and the tags were automatically loaded. Now what?
+OK. You've got your tags file. You've got your directories and projects all set up in your .emacs file. You've loaded a file and the tags were automatically loaded. Now what?
 
 The two main uses I get from tags are completion and reference. For this, Emacs actually has two built-in commands: "complete-tag" and "find-tag". I bind these to keys:
 

@@ -37,6 +37,6 @@ git config --global commit.gpgsign true
 
 Now, whenever you commit and have git sign with gpg, you'll be prompted with a GUI popup instead of gpg trying to ask for a password on the command-line. Added bonus: pinentry-mac allows you to check "Save in keychain" so you don't have to put in your passphrase every single time. *WARNING* Only select this option if your computer already has other security precautions, is not used by anyone else, and is safe and secure. Otherwise, anyone with access to your computer would be able to make commits signed by your key!
 
-So, there you have it. That should be all that's requried to get git's gpg signing playing nice with external programs. 
+So, there you have it. That should be all that's required to get git's gpg signing playing nice with external programs. 
 
 One last thing: just so you know, GitHub now has [built-in GPG verification](https://github.com/blog/2144-gpg-signature-verification).

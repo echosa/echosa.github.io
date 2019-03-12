@@ -42,11 +42,11 @@ The mouse focusing windows simply by moving over them still trips me up. It's gr
 
 `win` comes through as just a dumb terminal, so not everything works. For instance, `git diff`. I can get by with just using my regular terminal instead. That's what I normally do, anyway, when I'm not using magit inside Emacs.
 
-I'm starting to see why some people keep a file around with tags they commonly use. It would appear that, while I can add my own tags to the tag bar, they are not persistent. I have to add them again everytime I close and open Acme.
+I'm starting to see why some people keep a file around with tags they commonly use. It would appear that, while I can add my own tags to the tag bar, they are not persistent. I have to add them again every time I close and open Acme.
 
 Speaking of files, file navigation is still a bit clunky. Right-clicking down a long directory tree is cumbersome (especially having to find the right directory to click on in each window), and leaves lots of unwanted and unnecessary windows around until I manually delete them. The only other option I see is to use the file name part of the tag bar (all the way to the left) to type in a full path. Luckily, the `Ctrl-f` completion makes this faster.
 
-Still, even with all this, Acme is, at this point, a completely useable and worthwhile editor for me. I look forward to using it more and learning more about it. 
+Still, even with all this, Acme is, at this point, a completely usable and worthwhile editor for me. I look forward to using it more and learning more about it. 
 
 This post was written in Acme.
 

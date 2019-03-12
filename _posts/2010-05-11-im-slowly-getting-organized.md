@@ -6,7 +6,7 @@ tags: [emacs]
 ---
 I've found myself using ORG mode a LOT lately, mostly at work. I'm really come to like it, and it has basically because my todo list for work. Of all the useful features ORG has, there is one that I never learned about until recently: links. I'm sure I should have known about these long ago, but for some reason I didn't.
 <!--more-->
-Anyway, links are just what the name implies: clickable links to other places (though, the mouse is not necessary). This can be to a url, a file, or even a specific place in a file (i.e. line number, certain word, etc). I find this extremely useful as a programmer.
+Anyway, links are just what the name implies: clickable links to other places (though, the mouse is not necessary). This can be to a URL, a file, or even a specific place in a file (i.e. line number, certain word, etc). I find this extremely useful as a programmer.
 
 For example, I find a bug in a program. I place a TODO item in my org document to fix the bug. Inside the description, I can then place a link to the file where the code to be fixed is, or more specifically, I can link it to an exact function/method or even line number! Then, when I get around to that TODO item, I simply activate the link, and the file loads up, ready to fix!
 

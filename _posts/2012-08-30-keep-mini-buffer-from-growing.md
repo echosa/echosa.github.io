@@ -12,4 +12,4 @@ This may not be the best way, but setting this:
 (setq resize-mini-windows nil)
 ```
 
-seems to do the trick. Note that its simply truncates whatever text is in the minibuffer, but I'm ok with that. For now.
+seems to do the trick. Note that its simply truncates whatever text is in the minibuffer, but I'm OK with that. For now.

@@ -4,7 +4,7 @@ date: 2011-11-01
 categories: [blog]
 tags: [emacs, php, zf-mode]
 ---
-Ok, so it's been quite a while since I've posted anything here. I've been busy. Sue me. However, I've been busy writing php apps with zf-mode. Why, you may ask? Because 1.) it's awesome, 2.) I'm testing it for bugs, and 3.) its the single most useful emacs mode I've ever used.
+OK, so it's been quite a while since I've posted anything here. I've been busy. Sue me. However, I've been busy writing php apps with zf-mode. Why, you may ask? Because 1.) it's awesome, 2.) I'm testing it for bugs, and 3.) its the single most useful emacs mode I've ever used.
 <!--more-->
 Here's the exciting part: I think we're getting really close to a release! I still don't have a date, but it's definitely coming. Prepare yourselves; this is not the little zf-mode you knew before. Here's just a few of the new abilities you can look forward to:
 

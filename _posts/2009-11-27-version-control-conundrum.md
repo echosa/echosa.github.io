@@ -4,7 +4,7 @@ date: 2009-11-27
 categories: [blog]
 tags: [emacs]
 ---
-Ok, so its not really a conundrum, so much as a simple question.
+OK, so its not really a conundrum, so much as a simple question.
 <!--more-->
 Recently, I've found myself using emacs to program both on my MacBook at home, as well as my Gentoo Linux box at work. I've noticed that when I make changes to my .emacs file, add a .el file to my .emacs.d, etc. on one machine, I manually make the same changes to the other. This had made me begin thinking about putting my .emacs and .emacs.d into version control, probably either svn or git, though I'm open to others.
 

@@ -184,7 +184,7 @@ Ah, but we're still missing a piece to the puzzle. Remember that "unit" from bef
 </persistence>
 ```
 
-In this case, I'm using MySql. The third property, when set to "true" will print all database queries that are run to jboss' console, which is good for debugging. See that `<jta-data-source>`? Yeah, we need that. Turns out that *that* needs to be defined in the jboss config (not an application specific config)! Here's an example:
+In this case, I'm using MySQL. The third property, when set to "true" will print all database queries that are run to jboss' console, which is good for debugging. See that `<jta-data-source>`? Yeah, we need that. Turns out that *that* needs to be defined in the jboss config (not an application specific config)! Here's an example:
 
 ```xml
 <datasources>

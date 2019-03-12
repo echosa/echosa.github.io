@@ -38,7 +38,7 @@ Another issue I has was with the display of certain characters and control codes
 (add-hook 'term-exec-hook 'my-term-use-utf8)
 ```
 
-Next, I wanted urls that show up in my terminal (via man pages, help, info, errors, etc) to be clickable. This was solved very easily by hooking `goto-address-mode` into ansi-term. To make add more hooks into ansi-term easier in the future, I defined my own hook function, currently with just `goto-address-mode`:
+Next, I wanted URLs that show up in my terminal (via man pages, help, info, errors, etc) to be clickable. This was solved very easily by hooking `goto-address-mode` into ansi-term. To make add more hooks into ansi-term easier in the future, I defined my own hook function, currently with just `goto-address-mode`:
 
 ```cl
 (defun my-term-hook ()

@@ -12,7 +12,7 @@ PHP+-mode is just that. Its a mode for working with PHP files, *plus* other thin
 
 You can find it at [https://github.com/echosa/phpplus-mode](https://github.com/echosa/phpplus-mode). If you already use zf-mode, I suggest deleting it and getting php+. However, bear in mind that there have been changes to the names of customized variables. Please update (or reset) these accordingly.
 
-If you use zf-mode and got it from MELPA, bear with me. I have submitted a pull request to the MELPA github with a new recipe for php+. Once that has been accepted, you'll be able to download php+ from MELPA once again.
+If you use zf-mode and got it from MELPA, bear with me. I have submitted a pull request to the MELPA GitHub with a new recipe for php+. Once that has been accepted, you'll be able to download php+ from MELPA once again.
 
 In other news, I have just discovered the awesomeness of snippets via yasnippet.el. This has opened a *whole new world* to me, and means some big changes to php+. I've already begun working on some major usage improvement using snippets that will make php+ a lot easier to use and, in my opinion, a lot more fun.
 

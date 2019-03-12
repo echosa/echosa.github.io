@@ -61,4 +61,4 @@ public class TryClass
 }
 ```
 
-Notice that I set the variable to null (in this case) prior to the try block, thus initializing (not just declaring) it so that the compiler knows it will always have a value. This really is one of those "God I feel so stupid right now" moments, but its just part of my adjustment from loosely-typed PHP to staticly-typed Java. There's certainly less room for mistakes, and I definitely like that.
+Notice that I set the variable to null (in this case) prior to the try block, thus initializing (not just declaring) it so that the compiler knows it will always have a value. This really is one of those "God I feel so stupid right now" moments, but its just part of my adjustment from loosely-typed PHP to statically-typed Java. There's certainly less room for mistakes, and I definitely like that.

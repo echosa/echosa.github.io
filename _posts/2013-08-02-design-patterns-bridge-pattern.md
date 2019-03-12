@@ -101,7 +101,7 @@ public class Can extends Container {
 public class PlasticBottle extends Container {
   public void fill() {
     // fill with beverage
-    // screwn on the bottle cap
+    // screw on the bottle cap
   }
 }
 ```

@@ -33,6 +33,6 @@ Put simply, this function finds out how many lines there are in the buffer, then
 * The line numbers are right justified.
 * There is an extra space between the line numbers and the buffer text *that is the same face as the line numbers*. There are other solutions out there to get the extra space, but all the ones I tried had the extra space the same face as the buffer, which I didn't like at all. In fact, the only difference really between setting `linum-format` to my function, and setting it to dynamic is this extra space.
 
-As I said, the only reason this works for me is because I'm ok not having a fringe on the left side. If you must have that fringe, you can still use the function above to format your line numbers, but you'll still have the graphical glitch.
+As I said, the only reason this works for me is because I'm OK not having a fringe on the left side. If you must have that fringe, you can still use the function above to format your line numbers, but you'll still have the graphical glitch.
 
 Also, its worth noting that I made the function anonymous (a lambda function) because I have that function directly inserted into the customize value for `linum-format`. You could just as easily define that function with a defun in your .emacs or some other file, then set the function name (whatever you call it) as the value for `linum-format`.

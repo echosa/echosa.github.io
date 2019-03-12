@@ -16,7 +16,7 @@ First, I realized that I had written software that was usable and had become suc
 
 I have always, er, obsessed over making software for people, and by "people" I mean "other people". I think that's wrong. I should be obsessed over writing good, useful software. If others find and use it, all the better. If not, then I still wrote some awesome software that I can personally use. The inherent realization here is that writing software shouldn't be about fame and not *completely* about money (paying bills is one thing, being Bill Gates is a bit much). As a programmer, I should enjoy programming, which I do, but I should not let the fact that no one will ever see a program I wrote, or even know it exists, deter my enjoyment or pursuit of programming.
 
-Ok, ok. Enough with all the philosophy. I've explained how my Emacs setup has changed me and taught me some life lessons about what I love to do. However, what about the second part of this article's title?
+OK, OK. Enough with all the philosophy. I've explained how my Emacs setup has changed me and taught me some life lessons about what I love to do. However, what about the second part of this article's title?
 
 Simply put, emacs-setup has served me well, in many capacities. That said there are a few limiting factors to handling my Emacs setup in an interactive way through my package. For instance, temporarily commenting out a piece of your .emacs for testing/debugging purposes is easy, but not so easy with my package.
 

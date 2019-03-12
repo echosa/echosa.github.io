@@ -10,4 +10,4 @@ Now, you might be wondering why someone would be calling chmod from PHP anyway. 
 
 Anyway, because of the way Behat works in conjunction with my running Apache/PHP/application setup, I didn't see a way of hooking into Behat in such a way where I could tell the database to run everything in throw away transactions in order to keep my database clean and as expected for each test scenario. Therefore, I simply hooked into Behat before each scenario to copy my pristine test database to a backup, then after each scenario copy it back, essentially rolling back any transactions that occurred during that scenario.
 
-This may not be the best way to do it, but its what I figured out and its working for me, for now at least. Luckily, this is a well established application and the database doesn't change, so the mysql <-> sqlite syncing is a null issue for the foreseeable future.
+This may not be the best way to do it, but its what I figured out and its working for me, for now at least. Luckily, this is a well established application and the database doesn't change, so the MySQL <-> sqlite syncing is a null issue for the foreseeable future.
