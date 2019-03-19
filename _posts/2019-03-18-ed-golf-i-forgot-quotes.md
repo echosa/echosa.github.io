@@ -64,3 +64,13 @@ Well, look at that! 15 strokes - one less than the combined substitution! Perhap
 Is there a way to get a score of less than 15? I'd love to know! Comment below or [on Twitter](https://twitter.com/echosa).
 
 Also, if you're enjoying these ed golf posts, let me know! I'm certainly enjoying them, but I'll definitely keep them coming if you do, too!
+
+### Update
+
+Thanks to [@ed1conf](https://twitter.com/ed1conf/status/1107839605368385536) and [@tpenguinltg](https://twitter.com/tpenguinltg/status/1107841838143234049) for this awesomeness:
+
+```
+,s/a.*/"&"
+```
+
+A score of 11! Amazing. I didn't know that `&` is replaced with the entire matched context in substitutions. That will come in extremely handy in the future!
