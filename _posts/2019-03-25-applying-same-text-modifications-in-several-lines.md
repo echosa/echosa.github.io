@@ -12,11 +12,11 @@ One note before we begin. I have changed the scoring system based on [this sugge
 $ ed
 ### Insert start file
 i
-_auction.StartSellingItem();
-_application.StartBiddingIn(_auction);
-_auction.HasReceivedJoinRequestFromSniper();
-_auction.AnnounceClosed();
-_application.ShowsSniperHasLostAuction();
+Assert.ThrowsAsync<Exception>(() => _auction.StartSellingItem());
+Assert.ThrowsAsync<Exception>(() => _application.StartBiddingIn(_auction));
+Assert.ThrowsAsync<Exception>(() => _auction.HasReceivedJoinRequestFromSniper());
+Assert.ThrowsAsync<Exception>(() => _auction.AnnounceClosed());
+Assert.ThrowsAsync<Exception>(() => _application.ShowsSniperHasLostAuction());
 .
 ####################
 ### GOLF STARTS HERE
@@ -53,11 +53,11 @@ wq
 ####################
 ### Output result
 $ cat golf.txt 
-Assert.ThrowsAsync<Exception>(() => _auction.StartSellingItem());
-Assert.ThrowsAsync<Exception>(() => _application.StartBiddingIn(_auction));
-Assert.ThrowsAsync<Exception>(() => _auction.HasReceivedJoinRequestFromSniper());
-Assert.ThrowsAsync<Exception>(() => _auction.AnnounceClosed());
-Assert.ThrowsAsync<Exception>(() => _application.ShowsSniperHasLostAuction());
+_auction.StartSellingItem();
+_application.StartBiddingIn(_auction);
+_auction.HasReceivedJoinRequestFromSniper();
+_auction.AnnounceClosed();
+_application.ShowsSniperHasLostAuction();
 ```
 
 Whew! Well, that could have gone better... 64. OUCH. Let's take a look at what went wrong. We learn from our mistakes, right?
