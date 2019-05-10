@@ -54,7 +54,7 @@ Then added my hook to term-mode-hook:
 After this, I realized that C-y doesn't work in ansi-term like you'd expect. It pastes into the buffer, sure, but the text doesn't get sent to the process. So if you copy a bash command, then C-y it into the buffer, nothing happens when you press enter (because, as far as ansi-term is concerned, no text was entered at the prompt). The following function will paste whatever is copied into ansi-term in such a way that the process can, well, process it:
 
 ```cl
-(defun my-term-paste (&amp;optional string)
+(defun my-term-paste (&optional string)
  (interactive)
  (process-send-string
   (get-buffer-process (current-buffer))
