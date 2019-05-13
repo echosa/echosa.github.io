@@ -21,7 +21,7 @@ defaults:
       type: posts
     values:
       layout: single
-      comments: true
+      comments: false
       share: true
       related: true
       author_profile: true
